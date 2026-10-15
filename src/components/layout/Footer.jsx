@@ -45,10 +45,10 @@ export default function Footer() {
               className="mt-8 pt-6 border-t border-secondary/15 space-y-1"
               style={{ color: "#ffffff", fontSize: "0.875rem" }}
             >
-              <p style={{ color: "#ffffff !important" }}>
+              <p style={{ color: "#ffffff" }}>
                 {BRAND_INFO.established} • International Practice
               </p>
-              <p style={{ color: "#ffffff !important" }}>{BRAND_INFO.location}</p>
+              <p style={{ color: "#ffffff" }}>{BRAND_INFO.location}</p>
             </div>
           </div>
 
@@ -120,7 +120,7 @@ export default function Footer() {
           className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-light"
           style={{ color: "#ffffff", fontSize: "0.875rem" }}
         >
-          <p style={{ color: "#ffffff !important" }}>
+          <p style={{ color: "#ffffff" }}>
             © {new Date().getFullYear()} {BRAND_INFO.fullName}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
