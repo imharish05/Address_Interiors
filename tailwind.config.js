@@ -2,9 +2,9 @@
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
-      return `color-mix(in srgb, var(${variableName}) calc(${opacityValue} * 100%), transparent)`;
+      return `rgb(var(${variableName}-rgb) / ${opacityValue})`;
     }
-    return `var(${variableName})`;
+    return `rgb(var(${variableName}-rgb))`;
   };
 }
 

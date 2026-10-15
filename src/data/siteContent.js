@@ -1,14 +1,15 @@
 export const BRAND_INFO = {
-  name: "ADDRESS",
-  suffix: "INTERIORS",
-  fullName: "Address Interiors",
-  tagline: "Thoughtful Spaces. Beautiful Living.",
+  name: "THE ADDRESS",
+  suffix: "INTERIOR",
+  fullName: "The Address Interior",
+  tagline: "Where Style Meets Space",
   descriptor: "Luxury & Comfort Interior Architecture",
   established: "Est. 2012",
   location: "Bengaluru • Mumbai • New Delhi",
-  email: "concierge@addressinteriors.com",
+  email: "concierge@theaddressinterior.com",
   phone: "+91 98450 12345",
   address: "42 Richmond Road, Level 4, Bengaluru, Karnataka 560025",
+  logoUrl: "/logo.png",
 };
 
 export const HERO_CONTENT = {
@@ -106,40 +107,80 @@ export const PROCESS_STEPS = [
     name: "Discover",
     title: "Lifestyle Immersion & Spatial Vision",
     duration: "Weeks 1–3",
+    focus: "Rituals & Audit",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
     description:
       "We begin by understanding your personal rituals, spatial aspirations, and aesthetic affinities through in-depth conversations and on-site architectural audits.",
+    deliverables: [
+      "Patron Lifestyle Audit",
+      "Site Feasibility Analysis",
+      "Spatial Masterplan Brief",
+      "Circulation Flow Diagrams",
+    ],
   },
   {
     step: "02",
     name: "Conceptualize",
     title: "Spatial Flow & Material Storyboards",
     duration: "Weeks 4–7",
+    focus: "Tactile Identity",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
     description:
       "Translating ideas into tactile mood trays, floor plans, circulation models, and preliminary architectural elevations infused with light studies.",
+    deliverables: [
+      "Tactile Material Trays",
+      "Architectural Light Studies",
+      "Volumetric 3D Elevations",
+      "Textile & Finish Palettes",
+    ],
   },
   {
     step: "03",
     name: "Design",
     title: "Precision Detailing & Technical Specifications",
     duration: "Weeks 8–14",
+    focus: "Technical Artistry",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
     description:
       "Developing 1:20 joinery drawings, custom furniture schematics, lighting layouts, and curated procurement schedules down to the finest hardware.",
+    deliverables: [
+      "1:20 Bespoke Joinery Sets",
+      "Bespoke Furniture Blueprints",
+      "Circadian Lighting Schedules",
+      "Global Sourcing Catalogue",
+    ],
   },
   {
     step: "04",
     name: "Create",
     title: "Artisanal Fabrication & Construction Oversight",
     duration: "Month 4 Onward",
+    focus: "Master Craft",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
     description:
       "Our dedicated project directors coordinate vetted trades, master stonecutters, and cabinetmakers to ensure uncompromising build quality.",
+    deliverables: [
+      "Master Stonemason Coordination",
+      "Precision On-site Millwork",
+      "Finishing Quality Audits",
+      "Weekly Patron Milestones",
+    ],
   },
   {
     step: "05",
     name: "Deliver",
     title: "Curated White-Glove Staging & Handover",
     duration: "Final Reveal",
+    focus: "Turnkey Sanctuary",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
     description:
       "Complete styling, art installation, and scent profiling before delivering a fully realized, turn-key sanctuary ready for immediate living.",
+    deliverables: [
+      "Art & Sculpture Curation",
+      "Curated Botanical Staging",
+      "Custom Scent Profiling",
+      "White-Glove Key Handover",
+    ],
   },
 ];
 

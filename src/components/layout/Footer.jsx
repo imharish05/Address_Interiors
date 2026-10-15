@@ -16,7 +16,7 @@ export default function Footer() {
       className="relative z-10 w-full bg-primary text-secondary pt-16 pb-10 border-t border-secondary/20 shadow-2xl"
       style={{
         backgroundColor: "var(--primary)",
-        color: "var(--secondary)",
+        color: "#ffffff",
       }}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -26,11 +26,13 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
               <div className="flex flex-col mb-6">
-                <span className="text-2xl sm:text-3xl font-light tracking-[0.25em] text-secondary">
-                  {BRAND_INFO.name}
-                </span>
-                <span className="text-xs tracking-[0.35em] text-secondary/70 uppercase">
-                  {BRAND_INFO.suffix}
+                <img
+                  src="/logo.png"
+                  alt={BRAND_INFO.fullName}
+                  className="h-11 sm:h-12 w-auto object-contain object-left mb-4"
+                />
+                <span className="text-xs tracking-[0.25em] text-secondary/70 uppercase">
+                  {BRAND_INFO.tagline}
                 </span>
               </div>
               <p className="text-sm font-light text-secondary/80 leading-relaxed max-w-sm">
@@ -39,7 +41,10 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-secondary/15 text-xs text-secondary/60 space-y-1">
+            <div
+              className="mt-8 pt-6 border-t border-secondary/15 space-y-1"
+              style={{ color: "#ffffff", fontSize: "0.875rem" }}
+            >
               <p>{BRAND_INFO.established} • International Practice</p>
               <p>{BRAND_INFO.location}</p>
             </div>
@@ -109,7 +114,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-secondary/60 font-light">
+        <div
+          className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-light"
+          style={{ color: "#ffffff", fontSize: "0.875rem" }}
+        >
           <p>© {new Date().getFullYear()} {BRAND_INFO.fullName}. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span className="hover:text-secondary transition-colors cursor-default">

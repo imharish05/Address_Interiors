@@ -7,25 +7,39 @@
 @layer base {
   :root {
     /* STRICTLY TWO PRIMARY BRAND COLORS */
-    --primary: #322922;      /* Deep Espresso Brown */
-    --secondary: #F5F0E8;    /* Warm Ivory */
+    --primary: #BE5037;      /* The Address Interior Terracotta Orange */
+    --secondary: #FFFFFF;    /* Pure Luxury White */
+
+    --primary-rgb: 190 80 55;
+    --secondary-rgb: 255 255 255;
 
     /* Semantic Theme Tokens Mapped Directly to the Two Colors */
     --background: var(--secondary);
     --foreground: var(--primary);
+    --background-rgb: var(--secondary-rgb);
+    --foreground-rgb: var(--primary-rgb);
 
     --card: var(--secondary);
     --card-foreground: var(--primary);
+    --card-rgb: var(--secondary-rgb);
+    --card-foreground-rgb: var(--primary-rgb);
 
     --popover: var(--secondary);
     --popover-foreground: var(--primary);
+    --popover-rgb: var(--secondary-rgb);
+    --popover-foreground-rgb: var(--primary-rgb);
 
     --muted: var(--secondary);
     --muted-foreground: var(--primary);
+    --muted-rgb: var(--secondary-rgb);
+    --muted-foreground-rgb: var(--primary-rgb);
 
     --border: var(--primary);
+    --border-rgb: var(--primary-rgb);
     --input: var(--primary);
+    --input-rgb: var(--primary-rgb);
     --ring: var(--primary);
+    --ring-rgb: var(--primary-rgb);
 
     --radius: 1.25rem;
   }
@@ -45,13 +59,23 @@
 
   body {
     background-color: var(--background);
-    color: var(--foreground);
+    color: #1A1A1A;
     font-family: 'Satoshi', sans-serif;
     overflow-x: hidden;
   }
 
-  /* Universal Satoshi font enforcement */
-  h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select, label {
+  /* Universal Satoshi font enforcement with brand headings and minimal black paragraphs */
+  h1, h2, h3, h4, h5, h6 {
+    color: #BE5037;
+    font-family: 'Satoshi', sans-serif;
+  }
+
+  p {
+    color: #1A1A1A;
+    font-family: 'Satoshi', sans-serif;
+  }
+
+  span, a, button, input, textarea, select, label {
     font-family: 'Satoshi', sans-serif;
   }
 

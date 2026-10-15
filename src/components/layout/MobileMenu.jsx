@@ -30,13 +30,12 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-6 border-b border-primary/10">
-          <div className="flex flex-col">
-            <span className="text-xl font-light tracking-[0.25em] text-primary">
-              {BRAND_INFO.name}
-            </span>
-            <span className="text-[10px] tracking-[0.3em] text-primary/60 uppercase">
-              {BRAND_INFO.suffix}
-            </span>
+          <div className="flex items-center">
+            <img
+              src="/logo.png"
+              alt={BRAND_INFO.fullName}
+              className="h-9 w-auto object-contain rounded-md"
+            />
           </div>
 
           <button

@@ -39,13 +39,13 @@ export default function ExperienceSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header with Warm Ivory Text */}
         <AnimatedSection className="max-w-3xl mb-10 sm:mb-12">
-          <span className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-medium tracking-luxury uppercase bg-secondary/10 text-secondary border border-secondary/20 mb-4">
+          <span className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-medium tracking-luxury uppercase bg-secondary/15 text-secondary border border-secondary/30 mb-4">
             {EXPERIENCE_CONTENT.badge}
           </span>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] text-secondary mb-6 text-balance">
             {EXPERIENCE_CONTENT.heading}
           </h2>
-          <p className="text-base sm:text-xl text-secondary/75 font-light leading-relaxed max-w-2xl text-balance">
+          <p className="text-base sm:text-xl text-secondary/90 font-light leading-relaxed max-w-2xl text-balance">
             {EXPERIENCE_CONTENT.subheading}
           </p>
         </AnimatedSection>
@@ -60,9 +60,9 @@ export default function ExperienceSection() {
                 delay={0.15 * index}
                 className="flex"
               >
-                <div className="w-full p-8 rounded-3xl bg-secondary/[0.04] border border-secondary/10 hover:border-secondary/25 hover:bg-secondary/[0.07] transition-all duration-500 flex flex-col justify-between group">
+                <div className="w-full p-8 rounded-3xl bg-secondary/[0.08] border border-secondary/20 hover:border-secondary/40 hover:bg-secondary/[0.12] transition-all duration-500 flex flex-col justify-between group">
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-secondary/15 flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-6 h-6 stroke-[1.5]" />
                     </div>
 
@@ -70,14 +70,14 @@ export default function ExperienceSection() {
                       {feature.title}
                     </h3>
 
-                    <p className="text-sm text-secondary/70 font-light leading-relaxed">
+                    <p className="text-sm text-secondary/85 font-light leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-secondary/10 flex items-center justify-between text-xs text-secondary/40 font-mono">
+                  <div className="mt-8 pt-6 border-t border-secondary/20 flex items-center justify-between text-xs text-secondary/70 font-mono">
                     <span>Phase 0{index + 1}</span>
-                    <span className="w-8 h-[1px] bg-secondary/20 group-hover:w-12 transition-all duration-300" />
+                    <span className="w-8 h-[1px] bg-secondary/40 group-hover:w-12 transition-all duration-300" />
                   </div>
                 </div>
               </AnimatedSection>

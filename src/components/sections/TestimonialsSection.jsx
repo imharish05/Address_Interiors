@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Testimonial Quote */}
-          <blockquote className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight leading-snug mb-10 min-h-[140px] sm:min-h-[100px] flex items-center">
+          <blockquote className="text-xl sm:text-2xl lg:text-3xl font-light text-[#1A1A1A] tracking-tight leading-snug mb-10 min-h-[140px] sm:min-h-[100px] flex items-center">
             “{current.quote}”
           </blockquote>
 
@@ -68,18 +68,18 @@ export default function TestimonialsSection() {
 
               <button
                 onClick={prev}
-                className="w-11 h-11 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-secondary transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary"
+                className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary shadow-sm hover:shadow"
                 aria-label="Previous testimonial"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform duration-200" />
               </button>
 
               <button
                 onClick={next}
-                className="w-11 h-11 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-secondary transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary"
+                className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary shadow-sm hover:shadow"
                 aria-label="Next testimonial"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </button>
             </div>
           </div>

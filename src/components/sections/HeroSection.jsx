@@ -39,17 +39,17 @@ export default function HeroSection() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <p className="text-base sm:text-lg text-primary/75 font-normal leading-relaxed text-balance max-w-xl mb-10">
+              <p className="text-base sm:text-lg text-[#1A1A1A]/90 font-normal leading-relaxed text-balance max-w-xl mb-10">
                 {HERO_CONTENT.subheading}
               </p>
             </AnimatedSection>
 
-            {/* CTAs */}
-            <AnimatedSection delay={0.4} className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-              <Button asChild size="lg" className="w-full sm:w-auto">
+            {/* CTAs - Strictly Single Line */}
+            <AnimatedSection delay={0.4} className="flex flex-row flex-nowrap items-center gap-3 sm:gap-4 overflow-x-auto scrollbar-none whitespace-nowrap">
+              <Button asChild size="lg" className="shrink-0 whitespace-nowrap">
                 <a href="#projects" className="flex items-center gap-2">
                   <span>{HERO_CONTENT.primaryCta}</span>
-                  <ArrowUpRight className="w-4 h-4" />
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </Button>
 
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto"
+                className="shrink-0 whitespace-nowrap"
               >
                 <a href="#about">{HERO_CONTENT.secondaryCta}</a>
               </Button>
@@ -71,7 +71,7 @@ export default function HeroSection() {
                     <span className="text-2xl sm:text-3xl font-light tracking-tight text-primary">
                       {stat.value}
                     </span>
-                    <span className="text-[11px] uppercase tracking-wider text-primary/60 mt-1">
+                    <span className="text-[11px] uppercase tracking-wider text-[#1A1A1A]/70 mt-1">
                       {stat.label}
                     </span>
                   </div>

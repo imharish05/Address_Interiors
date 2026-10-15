@@ -19,38 +19,41 @@ export default function FeaturedProjectsSection() {
       className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10 sm:mb-12">
-          <AnimatedSection>
-            <SectionHeading
-              badge="Portfolio Showcase"
-              title="Curated Private Residences"
-              subtitle="An architectural anthology of bespoke residential works balancing raw materiality with serene comfort."
-            />
-          </AnimatedSection>
-
-          {/* Interactive Project Switcher Pill Tabs */}
-          <AnimatedSection delay={0.2} className="md:self-end">
-            <div className="flex flex-wrap gap-2 p-1.5 rounded-full bg-primary/5 border border-primary/15">
-              {FEATURED_PROJECTS.map((project) => {
-                const isActive = activeTab === project.id;
-                return (
-                  <button
-                    key={project.id}
-                    onClick={() => setActiveTab(project.id)}
-                    className={`px-4 sm:px-5 py-2 text-xs font-medium tracking-wide rounded-full transition-all duration-300 cursor-pointer ${
-                      isActive
-                        ? "bg-primary text-secondary shadow-sm"
-                        : "text-primary/70 hover:text-primary hover:bg-primary/5"
-                    }`}
-                  >
-                    {project.title}
-                  </button>
-                );
-              })}
+        {/* Section Header - Single Line Layout with Zero Cropping */}
+        <AnimatedSection className="w-full mb-8 sm:mb-10">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6">
+            <div className="shrink-0">
+              <span className="inline-block px-3.5 py-1 rounded-full text-xs uppercase tracking-luxury font-medium bg-primary/10 text-primary border border-primary/20 mb-1.5">
+                Portfolio Showcase
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-tight text-primary whitespace-nowrap">
+                Curated Private Residences
+              </h2>
             </div>
-          </AnimatedSection>
-        </div>
+
+            {/* Interactive Project Switcher Pill Tabs - Fully Contained, Never Cropped */}
+            <div className="overflow-x-auto pb-1 max-w-full scrollbar-none">
+              <div className="inline-flex flex-nowrap items-center gap-1 sm:gap-1.5 p-1 sm:p-1.5 rounded-full bg-primary/5 border border-primary/20 shadow-sm whitespace-nowrap">
+                {FEATURED_PROJECTS.map((project) => {
+                  const isActive = activeTab === project.id;
+                  return (
+                    <button
+                      key={project.id}
+                      onClick={() => setActiveTab(project.id)}
+                      className={`px-3.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium tracking-wide rounded-full transition-all duration-300 ease-out cursor-pointer whitespace-nowrap shrink-0 ${
+                        isActive
+                          ? "bg-primary text-secondary shadow-md font-semibold scale-[1.02]"
+                          : "text-[#1a1a1a]/80 hover:text-primary hover:bg-white hover:shadow-sm hover:border-primary/30 border border-transparent active:scale-95"
+                      }`}
+                    >
+                      {project.title}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
 
         {/* Active Featured Project Hero Feature */}
         <div className="relative rounded-3xl bg-primary/[0.02] border border-primary/15 p-6 sm:p-10 lg:p-12 mb-10 sm:mb-12 shadow-lg">
@@ -81,7 +84,7 @@ export default function FeaturedProjectsSection() {
             {/* Right: Project Editorial Narrative */}
             <div className="lg:col-span-5 flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-3 text-xs uppercase tracking-luxury text-primary/60 mb-3">
+                <div className="flex items-center gap-3 text-xs sm:text-sm uppercase tracking-luxury text-primary/70 mb-3">
                   <span className="flex items-center gap-1 font-medium">
                     <MapPin className="w-3.5 h-3.5" />
                     {currentProject.location}
@@ -92,15 +95,15 @@ export default function FeaturedProjectsSection() {
                   <span>{currentProject.year}</span>
                 </div>
 
-                <h3 className="text-3xl sm:text-4xl font-light text-primary tracking-tight leading-tight mb-4">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-tight mb-4">
                   {currentProject.title}
                 </h3>
 
-                <p className="text-base font-light italic text-primary/80 mb-6 leading-relaxed">
+                <p className="text-lg sm:text-xl font-light italic text-[#1A1A1A]/85 mb-6 leading-relaxed">
                   "{currentProject.headline}"
                 </p>
 
-                <p className="text-sm text-primary/75 font-normal leading-relaxed mb-8">
+                <p className="text-base text-[#1A1A1A]/90 font-normal leading-relaxed mb-8">
                   {currentProject.description}
                 </p>
               </div>
@@ -108,14 +111,14 @@ export default function FeaturedProjectsSection() {
               {/* Materiality Palette & Tags */}
               <div className="space-y-4 pt-6 border-t border-primary/10">
                 <div>
-                  <span className="text-[10px] uppercase tracking-luxury text-primary/50 block mb-2 font-medium">
+                  <span className="text-xs uppercase tracking-luxury text-primary/60 block mb-2 font-medium">
                     Signature Materials
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {currentProject.palette.map((item, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 rounded-full text-xs bg-primary/5 border border-primary/10 text-primary font-mono"
+                        className="px-3.5 py-1 rounded-full text-xs sm:text-sm bg-primary/5 border border-primary/15 text-primary font-mono"
                       >
                         {item}
                       </span>
@@ -127,7 +130,7 @@ export default function FeaturedProjectsSection() {
                   {currentProject.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="text-[11px] text-primary/60 font-light"
+                      className="text-xs sm:text-sm text-primary/70 font-light"
                     >
                       #{tag}
                     </span>
@@ -155,16 +158,16 @@ export default function FeaturedProjectsSection() {
                 />
               </div>
 
-              <div className="flex items-center justify-between text-xs text-primary/60 mb-1">
+              <div className="flex items-center justify-between text-xs sm:text-sm text-primary/70 mb-1.5 font-medium">
                 <span>{proj.location}</span>
                 <span>{proj.year}</span>
               </div>
 
               <div className="flex items-center justify-between">
-                <h4 className="text-lg font-light text-primary group-hover:underline underline-offset-4">
+                <h4 className="text-xl font-light text-primary group-hover:underline underline-offset-4">
                   {proj.title}
                 </h4>
-                <ArrowUpRight className="w-4 h-4 text-primary/40 group-hover:text-primary transition-colors" />
+                <ArrowUpRight className="w-4 h-4 text-primary/60 group-hover:text-primary transition-colors" />
               </div>
             </div>
           ))}

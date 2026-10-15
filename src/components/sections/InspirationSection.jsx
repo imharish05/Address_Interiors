@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
 import { INSPIRATION_GALLERY } from "@/data/siteContent";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
@@ -48,23 +49,32 @@ export default function InspirationSection() {
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                   />
 
-                  {/* Gradient Overlay */}
+                  {/* Soft Vignette Overlay */}
                   <div
-                    className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-40 group-hover:opacity-85 transition-opacity duration-300 pointer-events-none"
+                    className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300 pointer-events-none"
                     aria-hidden="true"
                   />
 
                   {/* Category Pill Tag */}
-                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] uppercase tracking-luxury font-medium bg-secondary/90 backdrop-blur-md text-primary border border-primary/10">
+                  <span
+                    className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium text-primary border border-primary/15 shadow-sm"
+                    style={{ backgroundColor: "var(--secondary)" }}
+                  >
                     {item.category}
                   </span>
 
-                  {/* Hover Caption Reveal */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 text-secondary">
-                    <h3 className="text-lg font-light tracking-tight mb-1 text-secondary">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-secondary/80 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Architectural Caption Card - Always 100% Solid & Readable */}
+                  <div
+                    className="absolute bottom-4 left-4 right-4 p-4 sm:p-5 rounded-2xl text-primary border border-primary/15 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:border-primary/30 group-hover:-translate-y-1"
+                    style={{ backgroundColor: "var(--secondary)" }}
+                  >
+                    <div className="flex items-center justify-between gap-2">
+                      <h3 className="text-base sm:text-lg font-medium text-primary tracking-tight">
+                        {item.title}
+                      </h3>
+                      <ArrowUpRight className="w-4 h-4 text-primary/60 group-hover:text-primary transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
+                    </div>
+                    <p className="text-xs sm:text-sm text-[#1A1A1A]/85 font-normal mt-1 leading-relaxed">
                       {item.description}
                     </p>
                   </div>

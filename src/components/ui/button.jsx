@@ -4,19 +4,19 @@ import { cn } from "@/lib/utils";
 const Button = React.forwardRef(
   ({ className, variant = "default", size = "default", asChild = false, children, ...props }, ref) => {
     const baseStyles =
-      "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 cursor-pointer select-none";
+      "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium tracking-wide transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 cursor-pointer select-none group";
 
     const variants = {
       default:
-        "bg-primary text-secondary hover:bg-primary/90 shadow-sm hover:shadow active:scale-[0.98]",
+        "bg-primary text-secondary border border-primary hover:bg-primary/90 hover:text-secondary hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-sm",
       secondary:
-        "bg-secondary text-primary border border-primary/20 hover:bg-primary/5 active:scale-[0.98]",
+        "bg-secondary text-primary border border-primary/25 hover:bg-primary hover:text-secondary hover:border-primary hover:shadow-md hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-sm",
       outline:
-        "border border-primary/30 text-primary bg-transparent hover:bg-primary hover:text-secondary active:scale-[0.98]",
+        "border border-primary text-primary bg-transparent hover:bg-primary hover:text-secondary hover:border-primary hover:shadow-md hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-sm",
       ghost:
-        "text-primary hover:bg-primary/10 active:scale-[0.98]",
+        "text-primary hover:bg-primary/10 hover:text-primary active:scale-[0.98]",
       link:
-        "text-primary underline-offset-8 hover:underline p-0 h-auto font-normal",
+        "text-primary underline-offset-8 hover:underline hover:text-primary/80 p-0 h-auto font-normal",
     };
 
     const sizes = {
@@ -26,10 +26,20 @@ const Button = React.forwardRef(
       icon: "h-11 w-11 p-0 rounded-full",
     };
 
+    const combinedClassName = cn(baseStyles, variants[variant], sizes[size], className);
+
+    if (asChild && React.isValidElement(children)) {
+      return React.cloneElement(children, {
+        ref,
+        className: cn(combinedClassName, children.props.className),
+        ...props,
+      });
+    }
+
     return (
       <button
         ref={ref}
-        className={cn(baseStyles, variants[variant], sizes[size], className)}
+        className={combinedClassName}
         {...props}
       >
         {children}

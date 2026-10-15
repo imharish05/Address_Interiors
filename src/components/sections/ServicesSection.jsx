@@ -9,7 +9,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden"
+      className="relative pt-6 sm:pt-8 lg:pt-10 pb-16 sm:pb-20 lg:pb-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header with Title and Narrative */}
@@ -26,7 +26,7 @@ export default function ServicesSection() {
             <Button asChild variant="outline">
               <a href="#contact" className="flex items-center gap-2">
                 <span>Inquire Custom Scope</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </Button>
           </AnimatedSection>
@@ -55,7 +55,7 @@ export default function ServicesSection() {
                   />
 
                   {/* Category Pill Tag */}
-                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] uppercase tracking-luxury font-medium bg-secondary/90 backdrop-blur-md text-primary border border-primary/10">
+                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs uppercase tracking-luxury font-medium bg-secondary/90 backdrop-blur-md text-primary border border-primary/10">
                     {service.category}
                   </span>
                 </div>
@@ -67,17 +67,17 @@ export default function ServicesSection() {
                       {service.title}
                     </h3>
 
-                    <p className="text-sm text-primary/75 font-normal leading-relaxed mb-6">
+                    <p className="text-base text-[#1A1A1A]/90 font-normal leading-relaxed mb-6">
                       {service.description}
                     </p>
                   </div>
 
                   {/* Service Deliverables Bullet List */}
                   <div className="pt-5 border-t border-primary/10">
-                    <ul className="grid grid-cols-2 gap-2 text-xs text-primary/70">
+                    <ul className="grid grid-cols-2 gap-2 text-sm text-[#1A1A1A]/80">
                       {service.details.map((item, idx) => (
-                        <li key={idx} className="flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                        <li key={idx} className="flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
                           <span>{item}</span>
                         </li>
                       ))}

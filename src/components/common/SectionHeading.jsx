@@ -27,7 +27,7 @@ export default function SectionHeading({
       {title && (
         <h2
           className={cn(
-            "text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-[1.15] text-foreground text-balance",
+            "text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-[1.15] text-primary text-balance",
             titleClassName
           )}
         >
@@ -36,7 +36,7 @@ export default function SectionHeading({
       )}
 
       {subtitle && (
-        <p className="mt-4 text-base sm:text-lg text-foreground/70 font-normal leading-relaxed text-balance max-w-2xl">
+        <p className="mt-4 text-base sm:text-lg text-[#1a1a1a]/85 font-normal leading-relaxed text-balance max-w-2xl">
           {subtitle}
         </p>
       )}

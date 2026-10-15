@@ -2,13 +2,12 @@ import React from "react";
 import { PHILOSOPHY_CONTENT } from "@/data/siteContent";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
-import SectionDivider from "@/components/common/SectionDivider";
 
 export default function PhilosophySection() {
   return (
     <section
       id="philosophy"
-      className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
+      className="relative pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 lg:pb-8 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
     >
       {/* Abstract architectural contour SVG in background */}
       <div
@@ -63,7 +62,7 @@ export default function PhilosophySection() {
                     {item.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-primary/75 font-normal leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#1A1A1A]/85 font-normal leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -81,9 +80,6 @@ export default function PhilosophySection() {
             </AnimatedSection>
           ))}
         </div>
-
-        {/* Section Abstract Separator */}
-        <SectionDivider variant="contour" className="mt-8" />
       </div>
     </section>
   );

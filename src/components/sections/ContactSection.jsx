@@ -321,7 +321,7 @@ export default function ContactSection() {
                   <Button type="submit" size="lg" className="w-full">
                     <span className="flex items-center gap-2">
                       <span>Submit Inquiry Draft</span>
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>
                   </Button>
                 </form>
