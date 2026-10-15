@@ -45,8 +45,10 @@ export default function Footer() {
               className="mt-8 pt-6 border-t border-secondary/15 space-y-1"
               style={{ color: "#ffffff", fontSize: "0.875rem" }}
             >
-              <p>{BRAND_INFO.established} • International Practice</p>
-              <p>{BRAND_INFO.location}</p>
+              <p style={{ color: "#ffffff !important" }}>
+                {BRAND_INFO.established} • International Practice
+              </p>
+              <p style={{ color: "#ffffff !important" }}>{BRAND_INFO.location}</p>
             </div>
           </div>
 
@@ -118,7 +120,9 @@ export default function Footer() {
           className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-light"
           style={{ color: "#ffffff", fontSize: "0.875rem" }}
         >
-          <p>© {new Date().getFullYear()} {BRAND_INFO.fullName}. All rights reserved.</p>
+          <p style={{ color: "#ffffff !important" }}>
+            © {new Date().getFullYear()} {BRAND_INFO.fullName}. All rights reserved.
+          </p>
           <div className="flex items-center gap-6">
             <span className="hover:text-secondary transition-colors cursor-default">
               Bespoke Interior Architecture
