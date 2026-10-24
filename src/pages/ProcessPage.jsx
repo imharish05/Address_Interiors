@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Check, X, ShieldCheck } from "lucide-react";
+import {
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+  CheckCircle2,
+  Clock,
+  ShieldCheck,
+  XCircle,
+  HelpCircle,
+  Layers,
+} from "lucide-react";
 import { PROCESS_STEPS } from "@/data/siteContent";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ImageReveal from "@/components/common/ImageReveal";
 import { Button } from "@/components/ui/button";
-
-/* ---------- SHARED SPACING + TYPE SYSTEM ---------- */
-const SECTION = "px-6 sm:px-8 lg:px-12 py-14 sm:py-20";
-const CONTAINER = "max-w-7xl mx-auto";
-const EYEBROW =
-  "inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4";
-const H2 =
-  "text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.15]";
-const BODY = "text-base text-[#1A1A1A]/80 leading-relaxed font-normal";
-const HEAD_GAP = "mb-10 sm:mb-14";
 
 const COMPARISON = [
   {
@@ -75,9 +74,7 @@ const FAQS = [
 
 export default function ProcessPage() {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
-  const [openFaq, setOpenFaq] = useState(0);
   const activeStep = PROCESS_STEPS[activeStepIndex];
-  const ctaImage = PROCESS_STEPS[PROCESS_STEPS.length - 1]?.image;
 
   const handlePrev = () => {
     setActiveStepIndex((prev) =>
@@ -93,348 +90,272 @@ export default function ProcessPage() {
 
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
-      {/* 1. HERO: headline + photo stage selector */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-14 sm:pb-20">
-        <div className={CONTAINER}>
-          <AnimatedSection delay={0.1} className={`text-center max-w-3xl mx-auto ${HEAD_GAP}`}>
-            <span className={EYEBROW}>Studio Methodology & Roadmap</span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-5">
+      {/* 1. DISTINCT TIMELINE ROADMAP STARTING HERO */}
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto border-b border-primary/10">
+        <AnimatedSection>
+          <div className="max-w-3xl mb-10">
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
+              Studio Methodology & Roadmap
+            </span>
+
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.12] mb-5">
               The Art of Architectural Realization
             </h1>
-            <p className={`${BODY} sm:text-lg`}>
-              A transparent, five-stage journey from first sketch to final handover.
+
+            <p className="text-base sm:text-lg text-[#1A1A1A]/85 font-normal leading-relaxed">
+              A transparent, five-stage architectural journey guaranteeing absolute aesthetic clarity, material integrity, and uncompromised peace of mind from first sketch to final handover.
+            </p>
+          </div>
+
+          {/* 5-Step Connected Roadmap Stepper in Hero */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-6 border-t border-primary/15">
+            {PROCESS_STEPS.map((step, idx) => {
+              const isActive = idx === activeStepIndex;
+              return (
+                <button
+                  key={step.step}
+                  onClick={() => setActiveStepIndex(idx)}
+                  className={`p-4 rounded-2xl text-left transition-all duration-300 cursor-pointer border ${
+                    isActive
+                      ? "bg-primary text-secondary border-primary shadow-lg scale-[1.02]"
+                      : "bg-primary/[0.025] hover:bg-primary/[0.06] border-primary/10 text-[#1A1A1A]"
+                  }`}
+                >
+                  <span
+                    className={`font-mono text-xs font-semibold block mb-1 ${
+                      isActive ? "text-secondary/80" : "text-primary"
+                    }`}
+                  >
+                    STAGE {step.step}
+                  </span>
+                  <h3
+                    className={`text-sm font-medium tracking-tight mb-1 ${
+                      isActive ? "text-secondary" : "text-[#1A1A1A]"
+                    }`}
+                  >
+                    {step.name}
+                  </h3>
+                  <span
+                    className={`text-xs block ${
+                      isActive ? "text-secondary/70" : "text-[#1A1A1A]/60"
+                    }`}
+                  >
+                    {step.duration}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 2. MASTER STAGE SHOWCASE */}
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 max-w-7xl mx-auto">
+        <AnimatedSection delay={0.15}>
+          <div className="relative rounded-[2.5rem] bg-primary/[0.02] border border-primary/15 p-6 sm:p-10 lg:p-14 shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+              {/* Left Column: Narrative & Deliverables */}
+              <div className="lg:col-span-6 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between pb-4 mb-6 border-b border-primary/10">
+                    <div className="flex items-center gap-3">
+                      <span className="font-mono text-2xl sm:text-3xl font-light text-primary/40">
+                        STAGE {activeStep.step}
+                      </span>
+                      <span className="text-xs font-semibold text-primary/75 px-3 py-1 rounded-full bg-primary/5 border border-primary/15">
+                        {activeStep.focus}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 text-xs font-medium text-primary/70">
+                      <Clock className="w-3.5 h-3.5 text-primary" />
+                      <span>{activeStep.duration}</span>
+                    </div>
+                  </div>
+
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight mb-2">
+                    {activeStep.name}
+                  </h2>
+                  <h3 className="text-sm font-medium text-primary/70 mb-5">
+                    {activeStep.title}
+                  </h3>
+
+                  <p className="text-base text-[#1A1A1A]/85 leading-relaxed font-normal mb-8">
+                    {activeStep.description}
+                  </p>
+
+                  {/* Patron Deliverables List */}
+                  <div className="mb-8">
+                    <span className="text-xs font-semibold text-primary/75 block mb-3">
+                      Patron Milestone Deliverables
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {activeStep.deliverables.map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-center gap-2 p-2.5 rounded-xl bg-secondary border border-primary/10 text-xs sm:text-sm text-[#1A1A1A] font-medium"
+                        >
+                          <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Navigation Controls */}
+                <div className="flex items-center justify-between pt-6 border-t border-primary/10">
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={handlePrev}
+                      className="p-3 rounded-full border border-primary/20 text-primary hover:bg-primary hover:text-secondary transition-all cursor-pointer"
+                      aria-label="Previous Stage"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={handleNext}
+                      className="p-3 rounded-full border border-primary/20 text-primary hover:bg-primary hover:text-secondary transition-all cursor-pointer"
+                      aria-label="Next Stage"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                    <span className="text-xs text-[#1A1A1A]/70 font-medium ml-2">
+                      Stage {activeStepIndex + 1} of {PROCESS_STEPS.length}
+                    </span>
+                  </div>
+
+                  <Button asChild size="sm">
+                    <Link to="/contact">Begin with Stage 01</Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Right Column: Stage Imagery */}
+              <div className="lg:col-span-6">
+                <ImageReveal
+                  src={activeStep.image}
+                  alt={`${activeStep.name} - ${activeStep.title}`}
+                  aspectRatio="aspect-[4/3]"
+                  arch="organic"
+                  className="shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 3. ADDRESS INTERIORS VS TYPICAL CONTRACTOR */}
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 bg-primary/[0.02] border-y border-primary/10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+            <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
+              The Address Advantage
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight mb-4">
+              Address Interiors vs. Typical Contractors
+            </h2>
+            <p className="text-base text-[#1A1A1A]/80 leading-relaxed font-normal">
+              Why discerning homeowners trust our structured design model over unorganized local contracting.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
-              {PROCESS_STEPS.map((step, idx) => {
-                const isActive = idx === activeStepIndex;
-                return (
-                  <button
-                    key={step.step}
-                    type="button"
-                    onClick={() => setActiveStepIndex(idx)}
-                    aria-pressed={isActive}
-                    className={`relative p-4 sm:p-5 rounded-2xl text-left transition-all duration-300 cursor-pointer border flex flex-col justify-between group active:scale-[0.98] ${
-                      isActive
-                        ? "bg-primary text-secondary border-primary shadow-xl scale-[1.02]"
-                        : "bg-white hover:bg-primary/[0.04] border-primary/15 text-[#1A1A1A] hover:border-primary/40 shadow-sm"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between w-full mb-3">
-                      <span
-                        className={`font-mono text-xs font-semibold px-2 py-0.5 rounded-full ${
-                          isActive
-                            ? "bg-white/20 text-white"
-                            : "bg-primary/10 text-primary"
-                        }`}
-                      >
-                        STAGE {step.step}
-                      </span>
-                      <span
-                        className={`text-[11px] font-mono ${
-                          isActive ? "text-white/70" : "text-[#1A1A1A]/50"
-                        }`}
-                      >
-                        {step.duration}
-                      </span>
-                    </div>
+          <div className="overflow-x-auto">
+            <div className="min-w-[680px] rounded-3xl bg-secondary border border-primary/15 shadow-xl overflow-hidden">
+              <div className="grid grid-cols-12 bg-primary/10 p-5 border-b border-primary/15 text-xs font-semibold text-primary uppercase tracking-wider">
+                <div className="col-span-4">Execution Dimension</div>
+                <div className="col-span-4 flex items-center gap-1.5 text-primary">
+                  <ShieldCheck className="w-4 h-4" />
+                  <span>The Address Interiors Standard</span>
+                </div>
+                <div className="col-span-4 text-[#1A1A1A]/60">Typical Local Contractor</div>
+              </div>
 
-                    <div>
-                      <h3
-                        className={`text-base sm:text-lg font-light tracking-tight mb-1 transition-colors ${
-                          isActive ? "text-white" : "text-primary"
-                        }`}
-                      >
-                        {step.name}
-                      </h3>
-                      <p
-                        className={`text-xs line-clamp-1 font-normal ${
-                          isActive ? "text-white/80" : "text-[#1A1A1A]/65"
-                        }`}
-                      >
-                        {step.title}
-                      </p>
+              <div className="divide-y divide-primary/10">
+                {COMPARISON.map((row, idx) => (
+                  <div key={idx} className="grid grid-cols-12 p-5 text-sm items-start gap-4 hover:bg-primary/[0.015] transition-colors">
+                    <div className="col-span-4 font-medium text-primary">
+                      {row.feature}
                     </div>
-
-                    {isActive && (
-                      <span
-                        aria-hidden="true"
-                        className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-primary rotate-45 hidden lg:block"
-                      />
-                    )}
-                  </button>
-                );
-              })}
+                    <div className="col-span-4 flex items-start gap-2 text-[#1A1A1A] font-normal leading-relaxed">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span>{row.address}</span>
+                    </div>
+                    <div className="col-span-4 flex items-start gap-2 text-[#1A1A1A]/65 font-normal leading-relaxed">
+                      <XCircle className="w-4 h-4 text-red-500/70 shrink-0 mt-0.5" />
+                      <span>{row.typical}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
-      {/* 2. STAGE DETAIL */}
-      <section className={`${SECTION} bg-primary/[0.03] border-y border-primary/10`}>
-        <div className={`${CONTAINER} grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center`}>
-          <AnimatedSection delay={0.1} className="lg:col-span-6">
-            <ImageReveal
-              src={activeStep.image}
-              alt={`${activeStep.name} - ${activeStep.title}`}
-              aspectRatio="aspect-[4/3]"
-              arch="organic"
-              className="shadow-2xl"
-            />
-          </AnimatedSection>
+      {/* 4. FREQUENTLY ASKED PROCESS QUESTIONS */}
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 max-w-5xl mx-auto">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-14">
+          <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
+            Client Inquiries
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-base text-[#1A1A1A]/80 leading-relaxed font-normal">
+            Clarity at every milestone is foundational to how we build trust.
+          </p>
+        </AnimatedSection>
 
-          <AnimatedSection delay={0.2} className="lg:col-span-6">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeStepIndex}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -6 }}
-                transition={{ duration: 0.25 }}
-              >
-                <span className={EYEBROW}>
-                  Stage {activeStep.step} · {activeStep.focus}
-                </span>
-                <h2 className={`${H2} mb-2`}>{activeStep.name}</h2>
-                <p className="text-base text-primary/70 mb-5">
-                  {activeStep.title} · {activeStep.duration}
-                </p>
-                <p className={`${BODY} mb-8`}>{activeStep.description}</p>
-
-                <p className="text-sm text-primary/70 mb-1">You receive</p>
-                <ul className="divide-y divide-primary/15 border-y border-primary/15">
-                  {activeStep.deliverables.map((item, idx) => (
-                    <li key={idx} className="py-3 text-base text-[#1A1A1A]">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Progress + controls */}
-            <div className="mt-8">
-              <div className="flex gap-1.5 mb-5" aria-hidden="true">
-                {PROCESS_STEPS.map((s, idx) => (
-                  <span
-                    key={s.step}
-                    className={`h-1 flex-1 rounded-full transition-colors duration-300 ${
-                      idx <= activeStepIndex ? "bg-primary" : "bg-primary/15"
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={handlePrev}
-                    className="p-3 rounded-full border border-primary/25 text-primary hover:bg-primary hover:text-secondary transition-all cursor-pointer"
-                    aria-label="Previous Stage"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    className="p-3 rounded-full border border-primary/25 text-primary hover:bg-primary hover:text-secondary transition-all cursor-pointer"
-                    aria-label="Next Stage"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                  <span className="text-sm text-[#1A1A1A]/70 ml-2">
-                    {activeStepIndex + 1} of {PROCESS_STEPS.length}
-                  </span>
+        <div className="space-y-6">
+          {FAQS.map((faq, idx) => (
+            <AnimatedSection key={idx} delay={0.08 * (idx + 1)}>
+              <div className="p-7 rounded-3xl bg-primary/[0.02] border border-primary/15 hover:border-primary/35 transition-all">
+                <div className="flex items-start gap-3.5 mb-2.5">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                    <HelpCircle className="w-4 h-4" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-light text-primary tracking-tight">
+                    {faq.question}
+                  </h3>
                 </div>
+                <p className="text-sm sm:text-base text-[#1A1A1A]/85 leading-relaxed font-normal pl-11">
+                  {faq.answer}
+                </p>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+      </section>
 
-                <Button asChild>
-                  <Link to="/contact">Begin with Stage 01</Link>
+      {/* 5. BOTTOM CTA BANNER */}
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
+            <div className="relative z-10 max-w-3xl">
+              <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-white/15 text-white border border-white/25 mb-4">
+                Begin Stage 01
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-tight mb-6">
+                Ready for a Stress-Free, On-Time Interior Transformation?
+              </h2>
+              <p className="text-base sm:text-lg text-white/90 leading-relaxed font-normal mb-8">
+                Book an initial spatial consultation to discuss your floor plan, review our realistic 3D renderings, and receive an itemized fixed budget overview.
+              </p>
+              <div className="flex flex-wrap items-center gap-4">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/95 hover:text-primary">
+                  <Link to="/contact" className="flex items-center gap-2">
+                    <span>Schedule Atelier Consultation</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
+                  <Link to="/projects">View Curated Residences</Link>
                 </Button>
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* 3. ADDRESS INTERIORS VS TYPICAL CONTRACTORS */}
-      <section className={SECTION}>
-        <div className={CONTAINER}>
-          <AnimatedSection delay={0.1} className={`text-center max-w-3xl mx-auto ${HEAD_GAP}`}>
-            <span className={EYEBROW}>The Address Advantage</span>
-            <h2 className={`${H2} mb-4`}>
-              Address Interiors vs. Typical Contractors
-            </h2>
-            <p className={BODY}>
-              Why discerning homeowners trust our structured, accountable design model.
-            </p>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.2}>
-            {/* Clean, Modern Comparison Card Panel */}
-            <div className="rounded-3xl border border-primary/15 bg-white shadow-sm overflow-hidden">
-              {/* Header Row */}
-              <div className="grid grid-cols-12 bg-primary/[0.04] border-b border-primary/15 px-6 sm:px-8 py-4 sm:py-5 items-center font-medium">
-                <div className="col-span-4 sm:col-span-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary/70">
-                  Parameter
-                </div>
-                <div className="col-span-4 sm:col-span-5 text-sm sm:text-base font-semibold text-primary flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                  <span>The Address Standard</span>
-                </div>
-                <div className="col-span-4 sm:col-span-4 text-xs sm:text-sm text-[#1A1A1A]/55 font-normal">
-                  Typical Contractor
-                </div>
-              </div>
-
-              {/* Rows */}
-              <div className="divide-y divide-primary/10">
-                {COMPARISON.map((row) => (
-                  <div
-                    key={row.feature}
-                    className="grid grid-cols-12 px-6 sm:px-8 py-5 sm:py-6 items-start transition-colors duration-200 hover:bg-primary/[0.015] gap-3 sm:gap-4"
-                  >
-                    {/* Feature Title */}
-                    <div className="col-span-12 sm:col-span-3 font-medium text-sm sm:text-base text-primary">
-                      {row.feature}
-                    </div>
-
-                    {/* The Address Standard Column */}
-                    <div className="col-span-12 sm:col-span-5 flex items-start gap-3 bg-primary/[0.03] sm:bg-transparent p-3.5 sm:p-0 rounded-2xl sm:rounded-none border border-primary/10 sm:border-0">
-                      <div className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="w-3.5 h-3.5 stroke-[2.5]" />
-                      </div>
-                      <div>
-                        <span className="sm:hidden text-xs font-semibold text-primary block mb-1">
-                          Address Standard:
-                        </span>
-                        <p className="text-sm text-[#1A1A1A]/90 leading-relaxed font-normal">
-                          {row.address}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Typical Contractor Column */}
-                    <div className="col-span-12 sm:col-span-4 flex items-start gap-3 p-3.5 sm:p-0 rounded-2xl sm:rounded-none bg-neutral-50 sm:bg-transparent border border-neutral-200/60 sm:border-0">
-                      <div className="w-5 h-5 rounded-full bg-neutral-100 text-[#1A1A1A]/40 flex items-center justify-center shrink-0 mt-0.5">
-                        <X className="w-3.5 h-3.5 stroke-[2]" />
-                      </div>
-                      <div>
-                        <span className="sm:hidden text-xs font-semibold text-[#1A1A1A]/50 block mb-1">
-                          Typical Contractor:
-                        </span>
-                        <p className="text-xs sm:text-sm text-[#1A1A1A]/60 leading-relaxed font-normal">
-                          {row.typical}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* 4. FAQ */}
-      <section className={`${SECTION} bg-primary/[0.03] border-y border-primary/10`}>
-        <div className={`${CONTAINER} grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start`}>
-          <AnimatedSection delay={0.1} className="lg:col-span-4 lg:sticky lg:top-32">
-            <span className={EYEBROW}>Client Inquiries</span>
-            <h2 className={`${H2} mb-4`}>Frequently Asked Questions</h2>
-            <p className={BODY}>
-              Clarity at every milestone is foundational to how we build trust.
-            </p>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.2} className="lg:col-span-8">
-            <div className="divide-y divide-primary/15 border-y border-primary/15">
-              {FAQS.map((faq, idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <div key={faq.question}>
-                    <button
-                      type="button"
-                      onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                      aria-expanded={isOpen}
-                      className="w-full flex items-center justify-between gap-6 py-6 text-left group cursor-pointer"
-                    >
-                      <span className="text-lg sm:text-xl font-light text-primary tracking-tight">
-                        {faq.question}
-                      </span>
-                      <span
-                        className={`shrink-0 w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
-                          isOpen
-                            ? "bg-primary text-secondary border-primary"
-                            : "border-primary/25 text-primary group-hover:border-primary"
-                        }`}
-                      >
-                        <span className="relative block w-3.5 h-3.5">
-                          <span className="absolute inset-x-0 top-1/2 h-px bg-current" />
-                          <span
-                            className={`absolute inset-y-0 left-1/2 w-px bg-current transition-transform duration-300 ${
-                              isOpen ? "rotate-90" : ""
-                            }`}
-                          />
-                        </span>
-                      </span>
-                    </button>
-
-                    <div
-                      className={`grid transition-all duration-500 ease-out ${
-                        isOpen
-                          ? "grid-rows-[1fr] opacity-100"
-                          : "grid-rows-[0fr] opacity-0"
-                      }`}
-                    >
-                      <div className="overflow-hidden">
-                        <p className={`${BODY} pb-6 max-w-2xl`}>{faq.answer}</p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* 5. CTA */}
-      <section className={SECTION}>
-        <div className={CONTAINER}>
-          <AnimatedSection delay={0.15}>
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-primary">
-              {ctaImage && (
-                <img
-                  src={ctaImage}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              )}
-              <div className="absolute inset-0 bg-primary/85" />
-
-              <div className="relative z-10 px-6 py-14 sm:p-16 lg:p-20 text-center flex flex-col items-center text-white">
-                <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-white/15 text-white border border-white/25 mb-4">
-                  Begin Stage 01
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-[1.15] max-w-3xl mb-5">
-                  Ready for a Stress-Free, On-Time Interior Transformation?
-                </h2>
-                <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl mb-8">
-                  Book an initial consultation to review your floor plan, see realistic 3D renderings, and receive an itemized fixed budget.
-                </p>
-                <div className="flex flex-wrap items-center justify-center gap-4">
-                  <Button asChild size="lg" className="bg-white text-primary hover:bg-white/95 hover:text-primary px-8">
-                    <Link to="/contact">Schedule Atelier Consultation</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
-                    <Link to="/projects">View Curated Residences</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
     </div>
