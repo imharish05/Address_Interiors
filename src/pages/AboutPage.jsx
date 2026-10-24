@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/common/AnimatedSection";
 import { Button } from "@/components/ui/button";
 
 /* ---------- SHARED SPACING + TYPE SYSTEM (same for every section) ---------- */
-const SECTION = "px-6 sm:px-8 lg:px-12 py-14 sm:py-20";
+const SECTION = "px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24";
 const CONTAINER = "max-w-9xl mx-auto";
 const EYEBROW =
   "inline-flex items-center px-4 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium bg-primary/10 text-primary border border-primary/20 mb-3.5";
@@ -105,7 +105,7 @@ export default function AboutPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. BANNER */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-4 sm:pt-8 pb-16 sm:pb-24">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className={CONTAINER}>
           {/* Centered Typography Header */}
           <AnimatedSection delay={0.1} className="text-center max-w-4xl mx-auto mb-8 sm:mb-12">
@@ -300,7 +300,7 @@ export default function AboutPage() {
       </section>
 
       {/* HOW WE WORK */}
-      <section className="px-6 sm:px-8 lg:px-12 py-14 sm:py-20 bg-primary/[0.025] border-t border-primary/15">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.025] border-t border-primary/15">
         <div className={CONTAINER}>
           <AnimatedSection delay={0.1} className={`max-w-4xl ${HEAD_GAP}`}>
             <span className={EYEBROW}>How We Work</span>
@@ -422,7 +422,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className={CONTAINER}>
           <AnimatedSection delay={0.15}>
             <div className="rounded-3xl bg-primary text-secondary px-6 py-14 sm:p-16 text-center shadow-2xl flex flex-col items-center">

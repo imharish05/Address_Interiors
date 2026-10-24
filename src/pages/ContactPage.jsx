@@ -91,7 +91,7 @@ export default function ContactPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. HERO HEADER */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-8 sm:pb-12 text-center max-w-4xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 text-center max-w-4xl mx-auto">
         <AnimatedSection delay={0.1}>
           <span className={EYEBROW}>Connect With Our Studio</span>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-4 sm:mb-5">
@@ -104,7 +104,7 @@ export default function ContactPage() {
       </section>
 
       {/* 2. CONTACT DETAILS & FORM */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-12 sm:pb-16">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left Column: Direct Studio Info (Heading in Red, Balance in Black) */}
@@ -382,7 +382,7 @@ export default function ContactPage() {
       </section>
 
       {/* 3. CLEAN FULL-WIDTH MAP SECTION (Without Overlay Text or Clutter) */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection delay={0.15}>
             <div className="relative w-full h-[400px] sm:h-[480px] lg:h-[540px] rounded-3xl overflow-hidden border border-primary/20 shadow-2xl bg-primary/5">

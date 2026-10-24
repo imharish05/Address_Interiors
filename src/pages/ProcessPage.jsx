@@ -91,7 +91,7 @@ export default function ProcessPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. DISTINCT TIMELINE ROADMAP STARTING HERO */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-8 sm:pt-12 pb-14 sm:pb-18 max-w-7xl mx-auto border-b border-primary/10">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto border-b border-primary/10">
         <AnimatedSection>
           <div className="max-w-3xl mb-10">
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
@@ -330,7 +330,7 @@ export default function ProcessPage() {
       </section>
 
       {/* 5. BOTTOM CTA BANNER */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <div className="relative z-10 max-w-3xl">

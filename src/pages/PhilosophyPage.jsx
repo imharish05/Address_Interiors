@@ -86,7 +86,7 @@ export default function PhilosophyPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. DISTINCT EDITORIAL ASYMMETRIC SPLIT HERO */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-8 sm:pt-14 pb-16 sm:pb-20 max-w-7xl mx-auto border-b border-primary/10">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto border-b border-primary/10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left: Editorial Manifesto */}
           <div className="lg:col-span-7">
@@ -158,7 +158,7 @@ export default function PhilosophyPage() {
       </section>
 
       {/* 2. THREE FOUNDATIONAL PILLARS (DEEP DIVE) */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 bg-primary/[0.02]">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.02]">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
             <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
@@ -243,7 +243,7 @@ export default function PhilosophyPage() {
       </section>
 
       {/* 3. SENSORY LIVING DIMENSIONS */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
             Sensory Architecture
@@ -281,7 +281,7 @@ export default function PhilosophyPage() {
       </section>
 
       {/* 4. CALL TO ACTION BANNER */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <div className="relative z-10 max-w-3xl">

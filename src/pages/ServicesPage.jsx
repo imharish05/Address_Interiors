@@ -77,7 +77,7 @@ export default function ServicesPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. DISTINCT CAPABILITIES DOCKET STARTING HERO */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-8 sm:pt-12 pb-14 sm:pb-18 max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 pt-10 sm:pt-14 pb-12 sm:pb-16 max-w-7xl mx-auto">
         <AnimatedSection>
           <div className="rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 p-8 sm:p-12 lg:p-16 relative overflow-hidden">
             {/* Top Badge & Header with Right Visual Card */}
@@ -191,7 +191,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 2. CATEGORY FILTER TABS */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-10 max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 pb-12 sm:pb-16 max-w-7xl mx-auto">
         <AnimatedSection delay={0.1}>
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
             {CATEGORIES.map((category) => {
@@ -215,7 +215,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. SERVICES GRID SHOWCASE */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24 max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, index) => (
             <AnimatedSection
@@ -286,7 +286,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 4. THE ADDRESS STANDARD GUARANTEE GRID */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 bg-primary/[0.02] border-y border-primary/10">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
             <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
@@ -326,7 +326,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 5. BOTTOM CTA BANNER */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <div className="relative z-10 max-w-3xl">

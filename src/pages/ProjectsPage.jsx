@@ -53,7 +53,7 @@ export default function ProjectsPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. DISTINCT VISUAL GALLERY MOSAIC STARTING HERO */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-8 sm:pt-12 pb-14 sm:pb-20 max-w-7xl mx-auto border-b border-primary/10">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto border-b border-primary/10">
         <AnimatedSection>
           {/* Top Title Block */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
@@ -105,7 +105,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* 2. FEATURED PROJECT SPOTLIGHT */}
-      <section id="spotlight" className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 max-w-7xl mx-auto scroll-mt-28">
+      <section id="spotlight" className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto scroll-mt-28">
         <AnimatedSection className="w-full mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div>
@@ -237,7 +237,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* 3. ALL RESIDENCES ARCHIVE GRID */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 bg-primary/[0.02] border-y border-primary/10">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
@@ -337,7 +337,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* 4. CLIENT TESTIMONIAL HIGHLIGHT */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 max-w-5xl mx-auto text-center">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-5xl mx-auto text-center">
         <AnimatedSection>
           <span className="font-serif text-6xl text-primary/30 block mb-2">“</span>
           <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight leading-relaxed mb-6">
@@ -350,7 +350,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* 5. BOTTOM CTA BANNER */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <div className="relative z-10 max-w-3xl">
