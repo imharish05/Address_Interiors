@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Check, X, ShieldCheck } from "lucide-react";
 import { PROCESS_STEPS } from "@/data/siteContent";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ImageReveal from "@/components/common/ImageReveal";
@@ -266,58 +266,71 @@ export default function ProcessPage() {
               Address Interiors vs. Typical Contractors
             </h2>
             <p className={BODY}>
-              Why discerning homeowners trust our structured design model.
+              Why discerning homeowners trust our structured, accountable design model.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
-            {/* Desktop: highlighted middle column */}
-            <div className="hidden md:grid grid-cols-12 text-sm lg:text-base">
-              <div className="col-span-3" />
-              <div className="col-span-5 bg-primary text-white rounded-t-3xl px-8 py-5 font-medium">
-                The Address Interiors Standard
-              </div>
-              <div className="col-span-4 px-8 py-5 text-primary/60">
-                Typical Local Contractor
+            {/* Clean, Modern Comparison Card Panel */}
+            <div className="rounded-3xl border border-primary/15 bg-white shadow-sm overflow-hidden">
+              {/* Header Row */}
+              <div className="grid grid-cols-12 bg-primary/[0.04] border-b border-primary/15 px-6 sm:px-8 py-4 sm:py-5 items-center font-medium">
+                <div className="col-span-4 sm:col-span-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary/70">
+                  Parameter
+                </div>
+                <div className="col-span-4 sm:col-span-5 text-sm sm:text-base font-semibold text-primary flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                  <span>The Address Standard</span>
+                </div>
+                <div className="col-span-4 sm:col-span-4 text-xs sm:text-sm text-[#1A1A1A]/55 font-normal">
+                  Typical Contractor
+                </div>
               </div>
 
-              {COMPARISON.map((row, idx) => {
-                const isLast = idx === COMPARISON.length - 1;
-                return (
-                  <React.Fragment key={row.feature}>
-                    <div className="col-span-3 py-6 pr-6 border-t border-primary/15 font-medium text-primary">
+              {/* Rows */}
+              <div className="divide-y divide-primary/10">
+                {COMPARISON.map((row) => (
+                  <div
+                    key={row.feature}
+                    className="grid grid-cols-12 px-6 sm:px-8 py-5 sm:py-6 items-start transition-colors duration-200 hover:bg-primary/[0.015] gap-3 sm:gap-4"
+                  >
+                    {/* Feature Title */}
+                    <div className="col-span-12 sm:col-span-3 font-medium text-sm sm:text-base text-primary">
                       {row.feature}
                     </div>
-                    <div
-                      className={`col-span-5 bg-primary text-white px-8 py-6 border-t border-white/15 leading-relaxed ${
-                        isLast ? "rounded-b-3xl" : ""
-                      }`}
-                    >
-                      {row.address}
-                    </div>
-                    <div className="col-span-4 px-8 py-6 border-t border-primary/15 text-[#1A1A1A]/60 leading-relaxed">
-                      {row.typical}
-                    </div>
-                  </React.Fragment>
-                );
-              })}
-            </div>
 
-            {/* Mobile: stacked */}
-            <div className="md:hidden space-y-8">
-              {COMPARISON.map((row) => (
-                <div key={row.feature}>
-                  <h3 className="text-lg font-medium text-primary mb-3">{row.feature}</h3>
-                  <div className="bg-primary text-white rounded-2xl p-5 mb-3">
-                    <p className="text-xs text-white/70 mb-1">Address Interiors</p>
-                    <p className="text-sm leading-relaxed">{row.address}</p>
+                    {/* The Address Standard Column */}
+                    <div className="col-span-12 sm:col-span-5 flex items-start gap-3 bg-primary/[0.03] sm:bg-transparent p-3.5 sm:p-0 rounded-2xl sm:rounded-none border border-primary/10 sm:border-0">
+                      <div className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                        <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                      </div>
+                      <div>
+                        <span className="sm:hidden text-xs font-semibold text-primary block mb-1">
+                          Address Standard:
+                        </span>
+                        <p className="text-sm text-[#1A1A1A]/90 leading-relaxed font-normal">
+                          {row.address}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Typical Contractor Column */}
+                    <div className="col-span-12 sm:col-span-4 flex items-start gap-3 p-3.5 sm:p-0 rounded-2xl sm:rounded-none bg-neutral-50 sm:bg-transparent border border-neutral-200/60 sm:border-0">
+                      <div className="w-5 h-5 rounded-full bg-neutral-100 text-[#1A1A1A]/40 flex items-center justify-center shrink-0 mt-0.5">
+                        <X className="w-3.5 h-3.5 stroke-[2]" />
+                      </div>
+                      <div>
+                        <span className="sm:hidden text-xs font-semibold text-[#1A1A1A]/50 block mb-1">
+                          Typical Contractor:
+                        </span>
+                        <p className="text-xs sm:text-sm text-[#1A1A1A]/60 leading-relaxed font-normal">
+                          {row.typical}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="pl-4 border-l-2 border-primary/20">
-                    <p className="text-xs text-primary/60 mb-1">Typical contractor</p>
-                    <p className="text-sm text-[#1A1A1A]/60 leading-relaxed">{row.typical}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </AnimatedSection>
         </div>
