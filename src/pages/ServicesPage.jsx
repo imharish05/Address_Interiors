@@ -66,6 +66,14 @@ const SCOPE_PILLARS = [
   },
 ];
 
+/* Hero highlights (same facts as before, shown as a clean list) */
+const HERO_FACTS = [
+  { value: "100%", label: "Bespoke Architecture" },
+  { value: "10 Yrs", label: "Structural Warranty" },
+  { value: "45 Days", label: "Handover Standard" },
+  { value: "Fixed", label: "BOQ Upfront" },
+];
+
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All Disciplines");
 
@@ -77,86 +85,64 @@ export default function ServicesPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. HERO & SERVICES SHOWCASE */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-16 sm:pb-20 lg:pb-24 max-w-7xl mx-auto space-y-6 sm:space-y-7">
+      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-16 sm:pb-20 lg:pb-24 max-w-7xl mx-auto">
         <AnimatedSection>
-          <div className="rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-            {/* Top Badge & Header with Right Visual Card */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-10">
-              {/* Left Column: Heading & Description */}
-              <div className="lg:col-span-7">
-                <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
-                  Architectural Scope & Precision Execution
-                </span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center pb-10 sm:pb-14 border-b border-primary/15">
+            {/* Left: Heading, description, action */}
+            <div className="lg:col-span-7">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-5">
+                Architectural Scope & Precision Execution
+              </span>
 
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.12] mb-5">
-                  Tailored Disciplines. <br />
-                  <span className="font-normal italic">Bespoke Precision.</span>
-                </h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-6">
+                Tailored Disciplines. <br />
+                <span className="font-normal italic">Bespoke Precision.</span>
+              </h1>
 
-                <p className="text-base sm:text-lg text-[#1A1A1A]/85 font-normal leading-relaxed">
-                  Sculptural interior architecture tailored with German precision joinery, fixed upfront BOQ pricing, and seamless end-to-end execution.
-                </p>
-              </div>
+              <p className="text-base sm:text-lg text-[#1A1A1A]/80 font-normal leading-relaxed max-w-xl mb-8">
+                Sculptural interior architecture tailored with German precision joinery, fixed upfront BOQ pricing, and seamless end-to-end execution.
+              </p>
 
-              {/* Right Column: Architectural Highlights Card */}
-              <div className="lg:col-span-5 relative">
-                <div className="relative rounded-3xl p-6 sm:p-7 bg-white/70 backdrop-blur-md border border-primary/15 shadow-sm space-y-4">
-                  {/* Clean Text Header */}
-                  <div className="flex items-center justify-between pb-3 border-b border-primary/10">
-                    <span className="text-[11px] uppercase tracking-luxury font-medium text-primary/80">
-                      Craftsmanship Standard
-                    </span>
-                    <span className="text-xs font-mono text-primary/60">DIN EN 14749</span>
-                  </div>
-
-                  {/* 2 Pure Typographic Metrics */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3.5 rounded-2xl bg-primary/[0.03] border border-primary/10">
-                      <span className="text-xl sm:text-2xl font-light tracking-tight text-primary block mb-1">100%</span>
-                      <p className="text-[11px] text-[#1A1A1A]/70 font-normal">Bespoke Architecture</p>
-                    </div>
-
-                    <div className="p-3.5 rounded-2xl bg-primary/[0.03] border border-primary/10">
-                      <span className="text-xl sm:text-2xl font-light tracking-tight text-primary block mb-1">10 Yrs</span>
-                      <p className="text-[11px] text-[#1A1A1A]/70 font-normal">Structural Warranty</p>
-                    </div>
-                  </div>
-
-                  {/* Feature Line without icon */}
-                  <div className="p-3.5 rounded-2xl bg-primary/[0.03] border border-primary/10">
-                    <p className="text-xs font-medium text-primary mb-0.5">Architectural Precision</p>
-                    <p className="text-[11px] text-[#1A1A1A]/70 font-normal leading-relaxed">Direct execution with zero sub-contractor markups.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Micro Commitments Bar */}
-            <div className="pt-6 border-t border-primary/10 flex flex-wrap items-center justify-between gap-4">
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[#1A1A1A]/80 font-medium">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Fixed BOQ Upfront
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 45-Day Handover Standard
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 10-Year Written Warranty
-                </span>
-              </div>
-
-              <Button asChild size="sm">
-                <Link to="/contact" className="flex items-center gap-1.5">
+              <Button asChild size="lg">
+                <Link to="/contact" className="flex items-center gap-2">
                   <span>Inquire Custom Scope</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </Button>
+            </div>
+
+            {/* Right: Clean fact list separated by a vertical line */}
+            <div className="lg:col-span-5 lg:border-l lg:border-primary/20 lg:pl-12">
+              <p className="text-xs uppercase tracking-luxury text-primary/70 font-medium mb-4">
+                Craftsmanship Standard · DIN EN 14749
+              </p>
+
+              <dl className="divide-y divide-primary/15 border-y border-primary/15">
+                {HERO_FACTS.map((fact) => (
+                  <div
+                    key={fact.label}
+                    className="flex items-baseline justify-between gap-6 py-4"
+                  >
+                    <dt className="text-sm sm:text-base text-[#1A1A1A]/75">
+                      {fact.label}
+                    </dt>
+                    <dd className="text-2xl sm:text-3xl font-light text-primary tracking-tight">
+                      {fact.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+
+              <p className="text-sm text-[#1A1A1A]/70 leading-relaxed mt-5">
+                <span className="font-medium text-primary">Architectural Precision.</span>{" "}
+                Direct execution with zero sub-contractor markups.
+              </p>
             </div>
           </div>
         </AnimatedSection>
 
         {/* Category Filter Tabs */}
-        <AnimatedSection delay={0.1} className="mb-6 sm:mb-8">
+        <AnimatedSection delay={0.1} className="pt-10 sm:pt-14 mb-8 sm:mb-10">
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
             {CATEGORIES.map((category) => {
               const isActive = selectedCategory === category;
@@ -248,11 +234,11 @@ export default function ServicesPage() {
       {/* 4. THE ADDRESS STANDARD GUARANTEE GRID */}
       <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
         <div className="max-w-7xl mx-auto">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-            <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
               The Address Standard
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.15] mb-4">
               What Every Commission Includes
             </h2>
             <p className="text-base text-[#1A1A1A]/80 leading-relaxed font-normal">
@@ -260,28 +246,42 @@ export default function ServicesPage() {
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {GUARANTEES.map((item, idx) => {
-              const IconComp = item.icon;
-              return (
-                <AnimatedSection key={item.title} delay={0.08 * (idx + 1)} className="flex">
-                  <div className="w-full p-8 rounded-3xl bg-secondary border border-primary/15 hover:border-primary/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                      <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
-                        <IconComp className="w-6 h-6" />
+          {/* One bordered panel, cells split by hairlines */}
+          <AnimatedSection delay={0.15}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-primary/15 border border-primary/15 rounded-3xl overflow-hidden shadow-sm">
+              {GUARANTEES.map((item, idx) => {
+                const IconComp = item.icon;
+                return (
+                  <div
+                    key={item.title}
+                    className="group relative bg-secondary p-8 sm:p-10 transition-colors duration-300 hover:bg-primary/[0.035]"
+                  >
+                    <div className="flex items-center justify-between mb-8">
+                      <div className="w-12 h-12 rounded-full border border-primary/25 text-primary flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-secondary group-hover:border-primary group-hover:scale-105">
+                        <IconComp className="w-5 h-5" />
                       </div>
-                      <h3 className="text-xl font-light text-primary tracking-tight mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-[#1A1A1A]/80 leading-relaxed font-normal">
-                        {item.description}
-                      </p>
+                      <span className="text-sm text-primary/40 transition-colors duration-300 group-hover:text-primary">
+                        {String(idx + 1).padStart(2, "0")}
+                      </span>
                     </div>
+
+                    <h3 className="text-xl font-light text-primary tracking-tight mb-2.5 transition-transform duration-300 group-hover:translate-x-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-[#1A1A1A]/75 leading-relaxed font-normal">
+                      {item.description}
+                    </p>
+
+                    {/* Line that draws across on hover */}
+                    <span
+                      aria-hidden="true"
+                      className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-500 ease-out group-hover:w-full"
+                    />
                   </div>
-                </AnimatedSection>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -289,6 +289,13 @@ export default function ServicesPage() {
       <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80"
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            />
+            <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />
             <div className="relative z-10 max-w-3xl">
               <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-white/15 text-white border border-white/25 mb-4">
                 Private Commission

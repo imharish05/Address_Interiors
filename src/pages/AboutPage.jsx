@@ -425,7 +425,15 @@ export default function AboutPage() {
       <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className={CONTAINER}>
           <AnimatedSection delay={0.15}>
-            <div className="rounded-3xl bg-primary text-secondary px-6 py-14 sm:p-16 text-center shadow-2xl flex flex-col items-center">
+            <div className="relative rounded-3xl bg-primary text-secondary px-6 py-14 sm:p-16 text-center shadow-2xl flex flex-col items-center overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80"
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+              />
+              <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />
+              <div className="relative z-10 flex flex-col items-center max-w-3xl mx-auto">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium bg-secondary/15 text-secondary border border-secondary/30 mb-3.5">
                 Let's Start Designing
               </span>
@@ -452,9 +460,10 @@ export default function AboutPage() {
                 </Button>
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
-    </div>
-  );
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+  </div>
+);
 }
