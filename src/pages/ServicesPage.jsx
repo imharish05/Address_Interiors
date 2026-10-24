@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, CheckCircle2, Shield, Clock, Layers, Hammer, Ruler, UserCheck } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Shield, Clock, Layers, Hammer, Ruler, UserCheck, Award, Sparkles, Compass } from "lucide-react";
 import { SERVICES_DATA } from "@/data/services";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { Button } from "@/components/ui/button";
@@ -80,20 +80,69 @@ export default function ServicesPage() {
       <section className="px-6 sm:px-8 lg:px-12 pt-8 sm:pt-12 pb-14 sm:pb-18 max-w-7xl mx-auto">
         <AnimatedSection>
           <div className="rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-            {/* Top Badge & Header */}
-            <div className="max-w-3xl mb-10">
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
-                Architectural Scope & Precision Execution
-              </span>
+            {/* Top Badge & Header with Right Visual Card */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-10">
+              {/* Left Column: Heading & Description */}
+              <div className="lg:col-span-7">
+                <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
+                  Architectural Scope & Precision Execution
+                </span>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.12] mb-5">
-                Tailored Disciplines. <br />
-                <span className="font-normal italic">Bespoke Precision.</span>
-              </h1>
+                <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-light text-primary tracking-tight leading-[1.12] mb-5">
+                  Tailored Disciplines. <br />
+                  <span className="font-normal italic">Bespoke Precision.</span>
+                </h1>
 
-              <p className="text-base sm:text-lg text-[#1A1A1A]/85 font-normal leading-relaxed">
-                From single-room sculptural renovations to comprehensive private villa architecture, every commission is executed with German precision, transparent pricing, and unwavering accountability.
-              </p>
+                <p className="text-base sm:text-lg text-[#1A1A1A]/85 font-normal leading-relaxed">
+                  From single-room sculptural renovations to comprehensive private villa architecture, every commission is executed with German precision, transparent pricing, and unwavering accountability.
+                </p>
+              </div>
+
+              {/* Right Column: Architectural Highlights Card (Fills empty gap with luxury UI) */}
+              <div className="lg:col-span-5 relative">
+                <div className="relative rounded-3xl p-6 sm:p-7 bg-white/70 backdrop-blur-md border border-primary/15 shadow-sm space-y-4">
+                  {/* Mini Header in Card */}
+                  <div className="flex items-center justify-between pb-3 border-b border-primary/10">
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="text-[11px] uppercase tracking-wider font-semibold text-primary/80">
+                        Craftsmanship Standard
+                      </span>
+                    </div>
+                    <span className="text-xs font-mono text-primary/70">DIN EN 14749</span>
+                  </div>
+
+                  {/* 3 Metrics / Highlights */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="p-3.5 rounded-2xl bg-primary/[0.04] border border-primary/10">
+                      <div className="flex items-center gap-2 text-primary mb-1">
+                        <Sparkles className="w-4 h-4 text-primary" />
+                        <span className="text-lg sm:text-xl font-semibold tracking-tight text-primary">100%</span>
+                      </div>
+                      <p className="text-[11px] text-[#1A1A1A]/70 font-medium">Bespoke Architecture</p>
+                    </div>
+
+                    <div className="p-3.5 rounded-2xl bg-primary/[0.04] border border-primary/10">
+                      <div className="flex items-center gap-2 text-primary mb-1">
+                        <Award className="w-4 h-4 text-primary" />
+                        <span className="text-lg sm:text-xl font-semibold tracking-tight text-primary">10 Yrs</span>
+                      </div>
+                      <p className="text-[11px] text-[#1A1A1A]/70 font-medium">Structural Warranty</p>
+                    </div>
+                  </div>
+
+                  {/* Feature Line */}
+                  <div className="p-3 rounded-2xl bg-primary/[0.03] border border-primary/10 flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-xl bg-primary text-secondary flex items-center justify-center shrink-0">
+                      <Compass className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-primary">Turnkey Engineering</p>
+                      <p className="text-[11px] text-[#1A1A1A]/70">Zero sub-contractor delays or hidden estimates.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* 3 Quick Capabilities Cards in Hero */}
