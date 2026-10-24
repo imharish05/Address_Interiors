@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowUpRight, Sparkles, MapPin, Maximize2 } from "lucide-react";
+import { ArrowUpRight, MapPin, Maximize2 } from "lucide-react";
 import { FEATURED_PROJECTS } from "@/data/projects";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";

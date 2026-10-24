@@ -2,10 +2,10 @@ import React from "react";
 import { EXPERIENCE_CONTENT } from "@/data/siteContent";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
-import { Sparkles, Sun, VolumeX, ShieldCheck } from "lucide-react";
+import { Sun, VolumeX, Layers, ShieldCheck } from "lucide-react";
 
 export default function ExperienceSection() {
-  const icons = [Sun, VolumeX, Sparkles, ShieldCheck];
+  const icons = [Sun, VolumeX, Layers, ShieldCheck];
 
   return (
     <section

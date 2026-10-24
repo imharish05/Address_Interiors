@@ -28,18 +28,17 @@ export const HERO_CONTENT = {
 };
 
 export const ABOUT_CONTENT = {
-  badge: "The Atelier Story",
-  heading: "Architecture of Calm & Unhurried Luxury",
+  badge: "About Address Interiors",
+  heading: "Transforming Spaces into Beautiful, Functional Living Homes",
   paragraphs: [
-    "At Address Interiors, we believe true luxury is never loud. It is not about ostentation or fleeting trends, but rather the quiet sensory pleasure of living in spaces that respond intimately to the rhythms of your daily life.",
-    "Founded on the principle that modern minimalism should feel warm and deeply comforting, our studio weaves together honest natural materials—honed limestone, fluted timber, brushed brass, and natural raw linens—into harmonious residential sanctuaries.",
-    "Every commission is an intimate architectural dialogue: shaping volumes, capturing natural daylight, and engineering bespoke millwork that endures across generations.",
+    "At Address Interiors, we specialize in complete bespoke interior design and execution. Whether it is a contemporary luxury apartment, a private villa, or a bespoke commercial space, we bring your vision to life with thoughtful space planning and fine craftsmanship.",
+    "Founded in 2012, our in-house team of interior designers, architects, and project managers ensures every project is delivered with top-quality materials, transparent pricing, and guaranteed on-time handover.",
   ],
-  quote: "“A room should never simply be observed; it must wrap around you with effortless ease.”",
-  author: "Creative Director — Address Interiors",
+  quote: "Good design is not just how it looks; it is about how effortlessly it works for your everyday life.",
+  author: "Principal Interior Designer — Address Interiors",
   image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
   secondaryImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-  ctaText: "Inquire About a Commission",
+  ctaText: "Book A Consultation",
 };
 
 export const PHILOSOPHY_CONTENT = {
@@ -171,10 +170,10 @@ export const PROCESS_STEPS = [
     name: "Deliver",
     title: "Curated White-Glove Staging & Handover",
     duration: "Final Reveal",
-    focus: "Turnkey Sanctuary",
+    focus: "Living Sanctuary",
     image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
     description:
-      "Complete styling, art installation, and scent profiling before delivering a fully realized, turn-key sanctuary ready for immediate living.",
+      "Complete styling, art installation, and scent profiling before delivering a fully realized, private sanctuary ready for immediate living.",
     deliverables: [
       "Art & Sculpture Curation",
       "Curated Botanical Staging",
@@ -264,7 +263,7 @@ export const INSPIRATION_GALLERY = [
 
 export const CONTACT_CONTENT = {
   badge: "Private Commissions",
-  heading: "Let's Create Something Beautiful Together.",
+  heading: "Let's Create Something Beautiful Together",
   subheading:
     "We accept a limited number of residential commissions each year to ensure uncompromising studio dedication.",
   demoNotice:
@@ -275,5 +274,143 @@ export const CONTACT_CONTENT = {
     "Bespoke Kitchen & Dining",
     "Master Bedroom Retreat",
     "Architectural Consultation",
+  ],
+};
+
+
+export const ABOUT_PAGE_CONTENT = {
+  badge: "About Address Interiors",
+  heroHeading: "Designing Spaces That Reflect Your Lifestyle & Personality",
+  heroSubheading:
+    "Since 2012, Address Interiors has delivered 500+ customized residential and commercial spaces — bringing together contemporary design, functional space planning, and durable craftsmanship.",
+  heroImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
+
+  whoWeAre: {
+    badge: "Who We Are",
+    title: "Full-Service Interior Design & Execution",
+    description:
+      "Founded in 2012, Address Interiors is a trusted interior design firm offering comprehensive design and execution services across Bengaluru, Mumbai, and New Delhi. We turn empty floor plans into warm, practical, and visually stunning spaces. From complete residential transformations and modular kitchens to custom wardrobes and office spaces, we handle design, manufacturing, civil work, and installation under one roof.",
+    highlights: [
+      "100% Customized 3D Designs before starting on-site work",
+      "Factory-finished modular joinery with German precision machinery",
+      "End-to-End Project Execution with zero multiple-contractor hassle",
+      "Transparent pricing with clear, itemized Bill of Quantities (BOQ)",
+      "10-Year Comprehensive Warranty with dedicated post-handover support",
+    ],
+    experienceYears: "14+",
+    completedProjects: "500+",
+  },
+
+  missionVision: {
+    mission: {
+      title: "Our Mission",
+      description:
+        "To make high-quality, customized interior design accessible, functional, and hassle-free, delivering durable living spaces backed by transparent pricing and on-time completion.",
+    },
+    vision: {
+      title: "Our Vision",
+      description:
+        "To be the most reliable and customer-first interior design firm, celebrated for innovative space planning, exceptional craftsmanship, and long-term client trust.",
+    },
+  },
+
+  whyChooseUs: [
+    {
+      number: "01",
+      title: "Customized 3D Designs",
+      description:
+        "Every home is unique. We craft personalized 3D visualizations, material trays, and moodboards matching your exact preferences and budget before execution.",
+      badge: "Tailored Living",
+    },
+    {
+      number: "02",
+      title: "10-Year Material Warranty",
+      description:
+        "We use certified boiling waterproof (BWR) plywood, natural veneers, and branded hardware (Hafele, Hettich, Blum) engineered for decades of durability.",
+      badge: "Quality Assured",
+    },
+    {
+      number: "03",
+      title: "Guaranteed 45-Day Handover",
+      description:
+        "Off-site factory manufacturing and structured project tracking ensure your home is ready for move-in strictly on the agreed date.",
+      badge: "On-Time Delivery",
+    },
+    {
+      number: "04",
+      title: "Transparent & Fixed Pricing",
+      description:
+        "No hidden charges or unexpected budget expansions. Our detailed itemized quotation remains fixed throughout the project timeline.",
+      badge: "Zero Hidden Costs",
+    },
+    {
+      number: "05",
+      title: "Complete Project Execution",
+      description:
+        "Civil changes, electricals, plumbing, false ceiling, painting, modular furniture, and soft styling — all managed by our single in-house team.",
+      badge: "Single Point Contact",
+    },
+    {
+      number: "06",
+      title: "Dedicated Project Manager",
+      description:
+        "A senior site engineer is assigned to your project to share regular photo updates, milestone reports, and perform quality checks.",
+      badge: "Personal Support",
+    },
+  ],
+
+  stats: [
+    { value: "14+", label: "Years of Industry Experience" },
+    { value: "500+", label: "Happy Homes Delivered" },
+    { value: "45+", label: "In-House Designers & Artisans" },
+    { value: "10-Yr", label: "Material Warranty Guaranteed" },
+  ],
+
+  process: [
+    {
+      step: "01",
+      title: "Free Consultation & Site Visit",
+      description:
+        "We understand your lifestyle requirements, take laser site measurements, and explore design ideas and budget ranges.",
+    },
+    {
+      step: "02",
+      title: "3D Design & Material Selection",
+      description:
+        "Our designers present 3D photorealistic views, modular layouts, color palettes, and material swatches for your sign-off.",
+    },
+    {
+      step: "03",
+      title: "Precision Factory Production",
+      description:
+        "Cabinets, wardrobes, and modular components are manufactured in our state-of-the-art facility with dust-free precision.",
+    },
+    {
+      step: "04",
+      title: "Installation & On-Time Handover",
+      description:
+        "Our expert assembly team completes on-site installation, conducts a 50-point quality audit, and hands over your dream keys.",
+    },
+  ],
+
+  leadership: [
+    {
+      name: "Aria Varma",
+      role: "Founder & Principal Interior Designer",
+      bio: "With over 16 years of expertise in residential interior planning, Aria leads our design studio with an eye for balance, ergonomics, and timeless aesthetics.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      name: "Karan Mehta",
+      role: "Head of Project Operations",
+      bio: "Manages on-site execution, vendor standards, and strict milestone tracking to guarantee seamless on-time project deliveries.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      name: "Meera Sen",
+      role: "Lead Interior Stylist",
+      bio: "Curates colors, textures, lighting, and soft furnishings that give each home its distinct warmth, comfort, and character.",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+    },
   ],
 };

@@ -32,7 +32,7 @@ export default function ProcessSection() {
         <AnimatedSection className="text-center mb-10 sm:mb-12">
           <SectionHeading
             badge="Studio Methodology"
-            title="The Art of Turnkey Realization"
+            title="The Art of Architectural Realization"
             subtitle="A disciplined five-stage trajectory guaranteeing absolute aesthetic clarity, material integrity, and uncompromised peace of mind."
             align="center"
           />

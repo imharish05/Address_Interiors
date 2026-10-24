@@ -1,35 +1,34 @@
 import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/common/ScrollToTop";
-
-import HeroSection from "./components/sections/HeroSection";
-import AboutSection from "./components/sections/AboutSection";
-import PhilosophySection from "./components/sections/PhilosophySection";
-import ServicesSection from "./components/sections/ServicesSection";
-import FeaturedProjectsSection from "./components/sections/FeaturedProjectsSection";
-import ExperienceSection from "./components/sections/ExperienceSection";
-import ProcessSection from "./components/sections/ProcessSection";
-import TestimonialsSection from "./components/sections/TestimonialsSection";
-import InspirationSection from "./components/sections/InspirationSection";
-import ContactSection from "./components/sections/ContactSection";
+import ScrollToTopOnRoute from "./components/common/ScrollToTopOnRoute";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import PhilosophyPage from "./pages/PhilosophyPage";
+import ServicesPage from "./pages/ServicesPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ProcessPage from "./pages/ProcessPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
     <div className="relative min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-secondary">
+      <ScrollToTopOnRoute />
       <Navbar />
 
       <main id="main-content">
-        <HeroSection />
-        <AboutSection />
-        <PhilosophySection />
-        <ServicesSection />
-        <FeaturedProjectsSection />
-        <ExperienceSection />
-        <ProcessSection />
-        <TestimonialsSection />
-        <InspirationSection />
-        <ContactSection />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/philosophy" element={<PhilosophyPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/process" element={<ProcessPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
 
       <Footer />

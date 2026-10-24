@@ -42,9 +42,9 @@ export const SERVICES_DATA = [
   {
     id: "complete-home-transformation",
     title: "Complete Home Transformation",
-    category: "Turnkey Renovation",
+    category: "Complete Renovation",
     description: "End-to-end architectural remodeling and interior realization from structural realignment to final curated styling.",
     image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
-    details: ["Structural Coordination", "Turnkey Procurement", "On-site Artisans", "White-glove Reveal"],
+    details: ["Structural Coordination", "Bespoke Procurement", "On-site Artisans", "White-glove Reveal"],
   },
 ];

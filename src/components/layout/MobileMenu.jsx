@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { X, ArrowRight } from "lucide-react";
 import { PRIMARY_NAV_LINKS } from "@/data/navigation";
 import { BRAND_INFO } from "@/data/siteContent";
 import { Button } from "@/components/ui/button";
 
 export default function MobileMenu({ isOpen, onClose, activeSection }) {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
@@ -19,6 +23,26 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
 
   if (!isOpen) return null;
 
+  const handleLinkClick = (e, href) => {
+    onClose();
+
+    if (href === location.pathname) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    if (href.startsWith("/#")) {
+      const targetId = href.replace("/#", "");
+      if (isHomePage) {
+        e.preventDefault();
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 z-50 bg-primary/40 backdrop-blur-md transition-all duration-300 md:hidden flex justify-end"
@@ -30,13 +54,13 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-6 border-b border-primary/10">
-          <div className="flex items-center">
+          <Link to="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center">
             <img
               src="/logo.png"
               alt={BRAND_INFO.fullName}
               className="h-9 w-auto object-contain rounded-md"
             />
-          </div>
+          </Link>
 
           <button
             onClick={onClose}
@@ -48,23 +72,33 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
         </div>
 
         {/* Links */}
-        <nav className="flex flex-col gap-5 my-8">
+        <nav className="flex flex-col gap-4 my-6">
           {PRIMARY_NAV_LINKS.map((link) => {
-            const isActive = activeSection === link.href.replace("#", "");
+            let isActive = false;
+
+            if (link.href === "/") {
+              isActive = isHomePage;
+            } else if (link.href.startsWith("/#")) {
+              const targetId = link.href.replace("/#", "");
+              isActive = isHomePage && activeSection === targetId;
+            } else {
+              isActive = location.pathname === link.href;
+            }
+
             return (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                onClick={onClose}
-                className={`text-2xl font-light tracking-wide transition-all duration-200 flex items-center justify-between py-1 ${
+                to={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
+                className={`text-xl font-light tracking-wide transition-all duration-200 flex items-center justify-between py-2 px-2 rounded-xl ${
                   isActive
-                    ? "text-primary font-medium pl-3 border-l-2 border-primary"
-                    : "text-primary/70 hover:text-primary hover:pl-2"
+                    ? "text-primary font-medium bg-primary/10 pl-3 border-l-4 border-primary"
+                    : "text-primary/75 hover:text-primary hover:bg-primary/5 hover:pl-3"
                 }`}
               >
                 <span>{link.name}</span>
                 <ArrowRight className="w-4 h-4 opacity-40" />
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -74,9 +108,9 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
           <Button
             asChild
             className="w-full"
-            onClick={onClose}
+            onClick={(e) => handleLinkClick(e, "/contact")}
           >
-            <a href="#contact">Private Consultation</a>
+            <Link to="/contact">Private Consultation</Link>
           </Button>
 
           <div className="text-xs text-primary/60 space-y-1 pt-2">

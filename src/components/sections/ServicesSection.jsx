@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { SERVICES_DATA } from "@/data/services";
 import SectionHeading from "@/components/common/SectionHeading";
@@ -24,10 +25,10 @@ export default function ServicesSection() {
 
           <AnimatedSection delay={0.2} className="md:self-end">
             <Button asChild variant="outline">
-              <a href="#contact" className="flex items-center gap-2">
+              <Link to="/contact" className="flex items-center gap-2">
                 <span>Inquire Custom Scope</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+              </Link>
             </Button>
           </AnimatedSection>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { ABOUT_CONTENT } from "@/data/siteContent";
 import SectionHeading from "@/components/common/SectionHeading";
@@ -78,12 +79,19 @@ export default function AboutSection() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.6}>
-              <Button asChild size="lg">
-                <a href="#contact" className="flex items-center gap-2">
-                  <span>{ABOUT_CONTENT.ctaText}</span>
-                  <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
-              </Button>
+              <div className="flex flex-wrap items-center gap-4">
+                <Button asChild size="lg">
+                  <Link to="/about" className="flex items-center gap-2">
+                    <span>Learn More About Us</span>
+                    <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/contact" className="flex items-center gap-2">
+                    <span>{ABOUT_CONTENT.ctaText}</span>
+                  </Link>
+                </Button>
+              </div>
             </AnimatedSection>
           </div>
         </div>
