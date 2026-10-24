@@ -76,8 +76,8 @@ export default function ServicesPage() {
 
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
-      {/* 1. DISTINCT CAPABILITIES DOCKET STARTING HERO */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-4 sm:pb-6 max-w-7xl mx-auto">
+      {/* 1. HERO & SERVICES SHOWCASE */}
+      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-16 sm:pb-20 lg:pb-24 max-w-7xl mx-auto space-y-8 sm:space-y-10">
         <AnimatedSection>
           <div className="rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 p-8 sm:p-12 lg:p-16 relative overflow-hidden">
             {/* Top Badge & Header with Right Visual Card */}
@@ -98,7 +98,7 @@ export default function ServicesPage() {
                 </p>
               </div>
 
-              {/* Right Column: Architectural Highlights Card (Fills empty gap with luxury UI) */}
+              {/* Right Column: Architectural Highlights Card */}
               <div className="lg:col-span-5 relative">
                 <div className="relative rounded-3xl p-6 sm:p-7 bg-white/70 backdrop-blur-md border border-primary/15 shadow-sm space-y-4">
                   {/* Clean Text Header */}
@@ -154,12 +154,9 @@ export default function ServicesPage() {
             </div>
           </div>
         </AnimatedSection>
-      </section>
 
-      {/* 2. CATEGORY FILTER TABS & SERVICES GRID SHOWCASE */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-2 pb-16 sm:pb-20 lg:pb-24 max-w-7xl mx-auto">
         {/* Category Filter Tabs */}
-        <AnimatedSection delay={0.1} className="mb-8 sm:mb-10">
+        <AnimatedSection delay={0.1}>
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
             {CATEGORIES.map((category) => {
               const isActive = selectedCategory === category;
