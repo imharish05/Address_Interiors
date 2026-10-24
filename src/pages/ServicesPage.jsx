@@ -94,7 +94,7 @@ export default function ServicesPage() {
                 </h1>
 
                 <p className="text-base sm:text-lg text-[#1A1A1A]/85 font-normal leading-relaxed">
-                  From single-room sculptural renovations to comprehensive private villa architecture, every commission is executed with German precision, transparent pricing, and unwavering accountability.
+                  Sculptural interior architecture tailored with German precision joinery, fixed upfront BOQ pricing, and dedicated turnkey execution.
                 </p>
               </div>
 
@@ -145,28 +145,8 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            {/* 3 Quick Capabilities Cards in Hero */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-8 border-t border-primary/15">
-              {SCOPE_PILLARS.map((col) => (
-                <div
-                  key={col.number}
-                  className="p-5 rounded-2xl bg-secondary border border-primary/10 shadow-sm"
-                >
-                  <span className="font-mono text-xs text-primary font-semibold block mb-1">
-                    {col.number}
-                  </span>
-                  <h3 className="text-base font-medium text-primary mb-1">
-                    {col.label}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#1A1A1A]/75 font-normal leading-relaxed">
-                    {col.detail}
-                  </p>
-                </div>
-              ))}
-            </div>
-
             {/* Micro Commitments Bar */}
-            <div className="mt-8 flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-primary/10">
+            <div className="pt-6 border-t border-primary/10 flex flex-wrap items-center justify-between gap-4">
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[#1A1A1A]/80 font-medium">
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Fixed BOQ Upfront
