@@ -19,34 +19,34 @@ const HEAD_GAP = "mb-10 sm:mb-14";
 
 const COMPARISON = [
   {
-    feature: "Design Visualization",
-    address: "Photorealistic 3D virtual walkthroughs & tactile material trays for every room.",
-    typical: "Basic 2D sketches; client only visualizes the space after it is already built.",
+    feature: "Design",
+    address: "Photorealistic 3D before work begins",
+    typical: "2D sketches only",
   },
   {
-    feature: "Pricing Transparency",
-    address: "Itemized upfront Fixed BOQ. Guaranteed zero mid-project price escalations.",
-    typical: "Loose estimates with frequent cost revisions, unforeseen extras, and hidden margins.",
+    feature: "Pricing",
+    address: "Fixed BOQ, no escalations",
+    typical: "Loose estimates, frequent revisions",
   },
   {
-    feature: "Joinery & Woodwork",
-    address: "Modular units precision CNC-machined in a German off-site facility. Zero dust at home.",
-    typical: "Manual carpentry on client floorboards causing months of noise, sawdust, and uneven joints.",
+    feature: "Joinery",
+    address: "CNC-made off-site, zero dust",
+    typical: "On-site carpentry, noise and sawdust",
   },
   {
-    feature: "Timeline Commitment",
-    address: "Committed 45-day key handover backed in writing with financial milestone tracking.",
-    typical: "Frequent timeline slippages and unaccountable contractor delays spanning months.",
+    feature: "Timeline",
+    address: "45-day handover, in writing",
+    typical: "Delays spanning months",
   },
   {
-    feature: "Quality & Hardware",
-    address: "Certified BWR marine-grade plywood and branded German hardware with 10-year warranty.",
-    typical: "Commercial grade MDF/particle board with generic fittings prone to premature sagging.",
+    feature: "Materials",
+    address: "BWR marine plywood, German hardware",
+    typical: "MDF and generic fittings",
   },
   {
-    feature: "Client Accountability",
-    address: "A single dedicated Project Director managing civil, electrical, plumbing, and styling.",
-    typical: "Client must self-coordinate between carpenters, electricians, painters, and suppliers.",
+    feature: "Accountability",
+    address: "One dedicated Project Director",
+    typical: "You coordinate every trade",
   },
 ];
 
@@ -116,10 +116,10 @@ export default function ProcessPage() {
                     type="button"
                     onClick={() => setActiveStepIndex(idx)}
                     aria-pressed={isActive}
-                    className={`group relative shrink-0 snap-start w-40 sm:w-52 lg:w-auto aspect-[3/4] rounded-2xl overflow-hidden text-left cursor-pointer transition-all duration-300 flex flex-col justify-end ${
+                    className={`group relative shrink-0 snap-start w-40 sm:w-52 lg:w-auto aspect-[3/4] rounded-2xl overflow-hidden text-left cursor-pointer transition-all duration-300 ${
                       isActive
                         ? "ring-2 ring-primary ring-offset-4 ring-offset-secondary"
-                        : "opacity-85 hover:opacity-100"
+                        : "opacity-75 hover:opacity-100"
                     }`}
                   >
                     <img
@@ -128,10 +128,10 @@ export default function ProcessPage() {
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent pointer-events-none" />
-                    <div className="relative z-10 p-4">
-                      <p className="text-xs font-semibold !text-white/85 uppercase tracking-wide mb-1 drop-shadow-sm">Stage {step.step}</p>
-                      <p className="text-sm sm:text-base font-semibold leading-snug !text-white drop-shadow">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+                    <div className="absolute bottom-0 inset-x-0 p-4 text-white">
+                      <p className="text-xs text-white/75 mb-0.5">Stage {step.step}</p>
+                      <p className="text-sm sm:text-base font-medium leading-snug">
                         {step.name}
                       </p>
                     </div>
@@ -237,123 +237,133 @@ export default function ProcessPage() {
               Address Interiors vs. Typical Contractors
             </h2>
             <p className={BODY}>
-              Why discerning homeowners trust our structured design model.
+              Why homeowners trust our structured design model.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2}>
-            {/* Desktop: highlighted middle column */}
-            <div className="hidden md:grid grid-cols-12 text-sm lg:text-base">
-              <div className="col-span-3" />
-              <div className="col-span-5 bg-primary text-white rounded-t-3xl px-8 py-5 font-medium">
-                The Address Interiors Standard
-              </div>
-              <div className="col-span-4 px-8 py-5 text-primary/60">
-                Typical Local Contractor
-              </div>
-
-              {COMPARISON.map((row, idx) => {
-                const isLast = idx === COMPARISON.length - 1;
-                return (
-                  <React.Fragment key={row.feature}>
-                    <div className="col-span-3 py-6 pr-6 border-t border-primary/15 font-medium text-primary">
-                      {row.feature}
-                    </div>
-                    <div
-                      className={`col-span-5 bg-primary text-white px-8 py-6 border-t border-white/15 leading-relaxed ${
-                        isLast ? "rounded-b-3xl" : ""
-                      }`}
-                    >
-                      {row.address}
-                    </div>
-                    <div className="col-span-4 px-8 py-6 border-t border-primary/15 text-[#1A1A1A]/60 leading-relaxed">
-                      {row.typical}
-                    </div>
-                  </React.Fragment>
-                );
-              })}
+          <AnimatedSection delay={0.2} className="max-w-5xl mx-auto">
+            {/* Column heads (desktop) */}
+            <div className="hidden md:grid grid-cols-12 gap-x-8 pb-4 border-b border-primary/30 text-sm">
+              <span className="col-span-4" />
+              <span className="col-span-4 text-primary font-medium">Address Interiors</span>
+              <span className="col-span-4 text-primary/60">Typical Contractor</span>
             </div>
 
-            {/* Mobile: stacked */}
-            <div className="md:hidden space-y-8">
-              {COMPARISON.map((row) => (
-                <div key={row.feature}>
-                  <h3 className="text-lg font-medium text-primary mb-3">{row.feature}</h3>
-                  <div className="bg-primary text-white rounded-2xl p-5 mb-3">
-                    <p className="text-xs text-white/70 mb-1">Address Interiors</p>
-                    <p className="text-sm leading-relaxed">{row.address}</p>
-                  </div>
-                  <div className="pl-4 border-l-2 border-primary/20">
-                    <p className="text-xs text-primary/60 mb-1">Typical contractor</p>
-                    <p className="text-sm text-[#1A1A1A]/60 leading-relaxed">{row.typical}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            {COMPARISON.map((row) => (
+              <div
+                key={row.feature}
+                className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-2 py-5 sm:py-6 border-b border-primary/15"
+              >
+                <h3 className="md:col-span-4 text-lg font-light text-primary tracking-tight">
+                  {row.feature}
+                </h3>
+                <p className="md:col-span-4 text-base text-[#1A1A1A] md:border-l-2 md:border-primary md:pl-4">
+                  <span className="md:hidden block text-xs text-primary mb-0.5">
+                    Address Interiors
+                  </span>
+                  {row.address}
+                </p>
+                <p className="md:col-span-4 text-base text-[#1A1A1A]/55">
+                  <span className="md:hidden block text-xs text-primary/50 mb-0.5">
+                    Typical contractor
+                  </span>
+                  {row.typical}
+                </p>
+              </div>
+            ))}
           </AnimatedSection>
         </div>
       </section>
 
-      {/* 4. FAQ */}
-      <section className={`${SECTION} bg-primary/[0.03] border-y border-primary/10`}>
-        <div className={`${CONTAINER} grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start`}>
-          <AnimatedSection delay={0.1} className="lg:col-span-4 lg:sticky lg:top-32">
-            <span className={EYEBROW}>Client Inquiries</span>
-            <h2 className={`${H2} mb-4`}>Frequently Asked Questions</h2>
-            <p className={BODY}>
-              Clarity at every milestone is foundational to how we build trust.
+      {/* 4. FAQ - Swiss Industrial & Minimalist Architectural Telemetry */}
+      <section className={`${SECTION} bg-[#FAF9F6] border-y border-primary/15 relative overflow-hidden`}>
+        <div className={CONTAINER}>
+          {/* Section Header with Swiss Architectural Telemetry */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 sm:pb-12 border-b border-primary/20 mb-8 sm:mb-12">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="font-mono text-xs uppercase tracking-widest text-primary/70 font-semibold">
+                  DOCKET // 04
+                </span>
+                <span className="text-primary/30">—</span>
+                <span className="font-mono text-xs uppercase tracking-widest text-primary/70 font-semibold">
+                  CLIENT PROTOCOLS
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.12]">
+                Frequently Asked <span className="font-normal italic">Inquiries.</span>
+              </h2>
+            </div>
+            <p className="text-sm sm:text-base text-[#1A1A1A]/75 font-normal max-w-md leading-relaxed">
+              Transparency at every architectural milestone. Key standards, material vetting, and accountability protocols answered.
             </p>
-          </AnimatedSection>
+          </div>
 
-          <AnimatedSection delay={0.2} className="lg:col-span-8">
-            <div className="divide-y divide-primary/15 border-y border-primary/15">
-              {FAQS.map((faq, idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <div key={faq.question}>
-                    <button
-                      type="button"
-                      onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                      aria-expanded={isOpen}
-                      className="w-full flex items-center justify-between gap-6 py-6 text-left group cursor-pointer"
-                    >
-                      <span className="text-lg sm:text-xl font-light text-primary tracking-tight">
-                        {faq.question}
+          {/* Clean Industrial Minimalist Accordion */}
+          <div className="max-w-4xl mx-auto divide-y divide-primary/15 border-y border-primary/15">
+            {FAQS.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              const indexFormatted = String(idx + 1).padStart(2, "0");
+
+              return (
+                <div
+                  key={faq.question}
+                  className={`transition-colors duration-300 ${
+                    isOpen ? "bg-primary/[0.025]" : "hover:bg-primary/[0.01]"
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaq(isOpen ? -1 : idx)}
+                    aria-expanded={isOpen}
+                    className="w-full flex items-start sm:items-center justify-between gap-4 sm:gap-8 py-6 sm:py-7 text-left group cursor-pointer px-2 sm:px-4"
+                  >
+                    <div className="flex items-start sm:items-center gap-4 sm:gap-6 flex-1">
+                      {/* Monospaced Technical Telemetry Index */}
+                      <span className="font-mono text-xs sm:text-sm font-semibold tracking-wider text-primary/50 group-hover:text-primary transition-colors shrink-0 pt-0.5 sm:pt-0">
+                        [{indexFormatted}]
                       </span>
+
+                      {/* Question Headline */}
                       <span
-                        className={`shrink-0 w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                        className={`text-base sm:text-xl font-light tracking-tight transition-colors duration-200 ${
                           isOpen
-                            ? "bg-primary text-secondary border-primary"
-                            : "border-primary/25 text-primary group-hover:border-primary"
+                            ? "text-primary font-normal"
+                            : "text-[#1A1A1A] group-hover:text-primary"
                         }`}
                       >
-                        <span className="relative block w-3.5 h-3.5">
-                          <span className="absolute inset-x-0 top-1/2 h-px bg-current" />
-                          <span
-                            className={`absolute inset-y-0 left-1/2 w-px bg-current transition-transform duration-300 ${
-                              isOpen ? "rotate-90" : ""
-                            }`}
-                          />
-                        </span>
+                        {faq.question}
                       </span>
-                    </button>
+                    </div>
 
+                    {/* Brutalist Mechanical Minimalist Indicator */}
                     <div
-                      className={`grid transition-all duration-500 ease-out ${
+                      className={`shrink-0 w-8 h-8 rounded-lg border flex items-center justify-center font-mono text-xs transition-all duration-300 ${
                         isOpen
-                          ? "grid-rows-[1fr] opacity-100"
-                          : "grid-rows-[0fr] opacity-0"
+                          ? "bg-primary text-secondary border-primary shadow-sm rotate-45"
+                          : "border-primary/25 text-primary group-hover:border-primary group-hover:bg-primary/5"
                       }`}
                     >
-                      <div className="overflow-hidden">
-                        <p className={`${BODY} pb-6 max-w-2xl`}>{faq.answer}</p>
+                      +
+                    </div>
+                  </button>
+
+                  {/* Smooth Collapse Content */}
+                  <div
+                    className={`grid transition-all duration-400 ease-out ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="pl-10 sm:pl-16 pr-4 sm:pr-12 pb-7 text-sm sm:text-base text-[#1A1A1A]/80 font-normal leading-relaxed border-l-2 border-primary/20 ml-2 sm:ml-4 mb-2">
+                        <p>{faq.answer}</p>
                       </div>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </AnimatedSection>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
