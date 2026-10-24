@@ -88,7 +88,7 @@ export default function ServicesPage() {
                   Architectural Scope & Precision Execution
                 </span>
 
-                <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-light text-primary tracking-tight leading-[1.12] mb-5">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.12] mb-5">
                   Tailored Disciplines. <br />
                   <span className="font-normal italic">Bespoke Precision.</span>
                 </h1>
@@ -101,45 +101,31 @@ export default function ServicesPage() {
               {/* Right Column: Architectural Highlights Card (Fills empty gap with luxury UI) */}
               <div className="lg:col-span-5 relative">
                 <div className="relative rounded-3xl p-6 sm:p-7 bg-white/70 backdrop-blur-md border border-primary/15 shadow-sm space-y-4">
-                  {/* Mini Header in Card */}
+                  {/* Clean Text Header */}
                   <div className="flex items-center justify-between pb-3 border-b border-primary/10">
-                    <div className="flex items-center gap-2">
-                      <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                      <span className="text-[11px] uppercase tracking-wider font-semibold text-primary/80">
-                        Craftsmanship Standard
-                      </span>
-                    </div>
-                    <span className="text-xs font-mono text-primary/70">DIN EN 14749</span>
+                    <span className="text-[11px] uppercase tracking-luxury font-medium text-primary/80">
+                      Craftsmanship Standard
+                    </span>
+                    <span className="text-xs font-mono text-primary/60">DIN EN 14749</span>
                   </div>
 
-                  {/* 3 Metrics / Highlights */}
+                  {/* 2 Pure Typographic Metrics */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3.5 rounded-2xl bg-primary/[0.04] border border-primary/10">
-                      <div className="flex items-center gap-2 text-primary mb-1">
-                        <Sparkles className="w-4 h-4 text-primary" />
-                        <span className="text-lg sm:text-xl font-semibold tracking-tight text-primary">100%</span>
-                      </div>
-                      <p className="text-[11px] text-[#1A1A1A]/70 font-medium">Bespoke Architecture</p>
+                    <div className="p-3.5 rounded-2xl bg-primary/[0.03] border border-primary/10">
+                      <span className="text-xl sm:text-2xl font-light tracking-tight text-primary block mb-1">100%</span>
+                      <p className="text-[11px] text-[#1A1A1A]/70 font-normal">Bespoke Architecture</p>
                     </div>
 
-                    <div className="p-3.5 rounded-2xl bg-primary/[0.04] border border-primary/10">
-                      <div className="flex items-center gap-2 text-primary mb-1">
-                        <Award className="w-4 h-4 text-primary" />
-                        <span className="text-lg sm:text-xl font-semibold tracking-tight text-primary">10 Yrs</span>
-                      </div>
-                      <p className="text-[11px] text-[#1A1A1A]/70 font-medium">Structural Warranty</p>
+                    <div className="p-3.5 rounded-2xl bg-primary/[0.03] border border-primary/10">
+                      <span className="text-xl sm:text-2xl font-light tracking-tight text-primary block mb-1">10 Yrs</span>
+                      <p className="text-[11px] text-[#1A1A1A]/70 font-normal">Structural Warranty</p>
                     </div>
                   </div>
 
-                  {/* Feature Line */}
-                  <div className="p-3 rounded-2xl bg-primary/[0.03] border border-primary/10 flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-primary text-secondary flex items-center justify-center shrink-0">
-                      <Compass className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-primary">Turnkey Engineering</p>
-                      <p className="text-[11px] text-[#1A1A1A]/70">Zero sub-contractor delays or hidden estimates.</p>
-                    </div>
+                  {/* Feature Line without icon */}
+                  <div className="p-3.5 rounded-2xl bg-primary/[0.03] border border-primary/10">
+                    <p className="text-xs font-medium text-primary mb-0.5">Turnkey Engineering</p>
+                    <p className="text-[11px] text-[#1A1A1A]/70 font-normal leading-relaxed">Direct execution with zero sub-contractor markups.</p>
                   </div>
                 </div>
               </div>
