@@ -94,7 +94,7 @@ export default function ServicesPage() {
                 </h1>
 
                 <p className="text-base sm:text-lg text-[#1A1A1A]/85 font-normal leading-relaxed">
-                  Sculptural interior architecture tailored with German precision joinery, fixed upfront BOQ pricing, and dedicated turnkey execution.
+                  Sculptural interior architecture tailored with German precision joinery, fixed upfront BOQ pricing, and seamless end-to-end execution.
                 </p>
               </div>
 
@@ -124,7 +124,7 @@ export default function ServicesPage() {
 
                   {/* Feature Line without icon */}
                   <div className="p-3.5 rounded-2xl bg-primary/[0.03] border border-primary/10">
-                    <p className="text-xs font-medium text-primary mb-0.5">Turnkey Engineering</p>
+                    <p className="text-xs font-medium text-primary mb-0.5">Architectural Precision</p>
                     <p className="text-[11px] text-[#1A1A1A]/70 font-normal leading-relaxed">Direct execution with zero sub-contractor markups.</p>
                   </div>
                 </div>
