@@ -156,9 +156,10 @@ export default function ServicesPage() {
         </AnimatedSection>
       </section>
 
-      {/* 2. CATEGORY FILTER TABS */}
-      <section className="px-6 sm:px-8 lg:px-12 pb-12 sm:pb-16 max-w-7xl mx-auto">
-        <AnimatedSection delay={0.1}>
+      {/* 2. CATEGORY FILTER TABS & SERVICES GRID SHOWCASE */}
+      <section className="px-6 sm:px-8 lg:px-12 pt-2 sm:pt-4 pb-16 sm:py-20 lg:py-24 max-w-7xl mx-auto">
+        {/* Category Filter Tabs */}
+        <AnimatedSection delay={0.1} className="mb-8 sm:mb-10">
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
             {CATEGORIES.map((category) => {
               const isActive = selectedCategory === category;
@@ -178,10 +179,6 @@ export default function ServicesPage() {
             })}
           </div>
         </AnimatedSection>
-      </section>
-
-      {/* 3. SERVICES GRID SHOWCASE */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, index) => (
             <AnimatedSection
