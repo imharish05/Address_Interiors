@@ -128,12 +128,14 @@ export default function ProcessPage() {
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-                    <div className="absolute bottom-0 inset-x-0 p-4 text-white">
-                      <p className="text-xs text-white/75 mb-0.5">Stage {step.step}</p>
-                      <p className="text-sm sm:text-base font-medium leading-snug">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-transparent pointer-events-none" />
+                    <div className="absolute bottom-0 inset-x-0 p-4 z-10 select-none">
+                      <span className="block text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#FFFFFF', textShadow: '0 1px 3px rgba(0,0,0,0.85)' }}>
+                        Stage {step.step}
+                      </span>
+                      <span className="block text-sm sm:text-base font-semibold leading-snug" style={{ color: '#FFFFFF', textShadow: '0 2px 4px rgba(0,0,0,0.95)' }}>
                         {step.name}
-                      </p>
+                      </span>
                     </div>
                   </button>
                 );

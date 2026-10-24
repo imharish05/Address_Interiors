@@ -72,6 +72,9 @@
 
   p {
     color: #1A1A1A;
+  }
+  .text-white, .text-white * {
+    color: #FFFFFF !important;
     font-family: 'Satoshi', sans-serif;
   }
 
