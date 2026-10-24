@@ -107,7 +107,7 @@ export default function ProcessPage() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
-            <div className="flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory pb-3 scrollbar-none lg:grid lg:grid-cols-5 lg:overflow-visible lg:pb-0">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
               {PROCESS_STEPS.map((step, idx) => {
                 const isActive = idx === activeStepIndex;
                 return (
@@ -116,25 +116,54 @@ export default function ProcessPage() {
                     type="button"
                     onClick={() => setActiveStepIndex(idx)}
                     aria-pressed={isActive}
-                    className={`group relative shrink-0 snap-start w-40 sm:w-52 lg:w-auto aspect-[3/4] rounded-2xl overflow-hidden text-left cursor-pointer transition-all duration-300 flex flex-col justify-end ${
+                    className={`relative p-4 sm:p-5 rounded-2xl text-left transition-all duration-300 cursor-pointer border flex flex-col justify-between group active:scale-[0.98] ${
                       isActive
-                        ? "ring-2 ring-primary ring-offset-4 ring-offset-secondary"
-                        : "opacity-85 hover:opacity-100"
+                        ? "bg-primary text-secondary border-primary shadow-xl scale-[1.02]"
+                        : "bg-white hover:bg-primary/[0.04] border-primary/15 text-[#1A1A1A] hover:border-primary/40 shadow-sm"
                     }`}
                   >
-                    <img
-                      src={step.image}
-                      alt={step.name}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent pointer-events-none" />
-                    <div className="relative z-10 p-4">
-                      <p className="text-xs font-semibold !text-white/85 uppercase tracking-wide mb-1 drop-shadow-sm">Stage {step.step}</p>
-                      <p className="text-sm sm:text-base font-semibold leading-snug !text-white drop-shadow">
+                    <div className="flex items-center justify-between w-full mb-3">
+                      <span
+                        className={`font-mono text-xs font-semibold px-2 py-0.5 rounded-full ${
+                          isActive
+                            ? "bg-white/20 text-white"
+                            : "bg-primary/10 text-primary"
+                        }`}
+                      >
+                        STAGE {step.step}
+                      </span>
+                      <span
+                        className={`text-[11px] font-mono ${
+                          isActive ? "text-white/70" : "text-[#1A1A1A]/50"
+                        }`}
+                      >
+                        {step.duration}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h3
+                        className={`text-base sm:text-lg font-light tracking-tight mb-1 transition-colors ${
+                          isActive ? "text-white" : "text-primary"
+                        }`}
+                      >
                         {step.name}
+                      </h3>
+                      <p
+                        className={`text-xs line-clamp-1 font-normal ${
+                          isActive ? "text-white/80" : "text-[#1A1A1A]/65"
+                        }`}
+                      >
+                        {step.title}
                       </p>
                     </div>
+
+                    {isActive && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-primary rotate-45 hidden lg:block"
+                      />
+                    )}
                   </button>
                 );
               })}
