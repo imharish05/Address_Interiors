@@ -75,6 +75,11 @@
     font-family: 'Satoshi', sans-serif;
   }
 
+  ::selection {
+    background-color: #BE5037;
+    color: #FFFFFF;
+  }
+
   span, a, button, input, textarea, select, label {
     font-family: 'Satoshi', sans-serif;
   }

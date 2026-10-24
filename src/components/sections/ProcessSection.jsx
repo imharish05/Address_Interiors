@@ -122,7 +122,7 @@ export default function ProcessSection() {
               </div>
 
               {/* Prev / Next Stage Controls */}
-              <div className="pt-6 border-t border-primary/10 flex items-center justify-between">
+              <div className="pt-6 border-t border-primary/10 flex flex-wrap items-center justify-between gap-4 select-none">
                 <div className="flex items-center gap-2 text-xs font-mono text-primary/50">
                   <span>0{activeStepIndex + 1}</span>
                   <span>/</span>
@@ -132,7 +132,7 @@ export default function ProcessSection() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={handlePrev}
-                    className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary/30 text-xs text-primary bg-transparent hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group shadow-sm"
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary/30 text-xs text-primary bg-white/70 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group shadow-sm select-none"
                     aria-label="Previous process stage"
                   >
                     <ChevronLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform duration-200" />
@@ -141,7 +141,7 @@ export default function ProcessSection() {
 
                   <button
                     onClick={handleNext}
-                    className="flex items-center gap-1.5 px-5 py-2 rounded-full bg-primary text-secondary border border-primary text-xs hover:bg-secondary hover:text-primary hover:border-primary transition-all duration-300 ease-out cursor-pointer shadow-sm hover:shadow active:scale-95 group"
+                    className="flex items-center gap-1.5 px-5 py-2 rounded-full bg-primary text-white border border-primary text-xs select-none hover:bg-primary/90 hover:text-white hover:border-primary transition-all duration-300 ease-out cursor-pointer shadow-sm active:scale-95 group select-none"
                     aria-label="Next process stage"
                   >
                     <span>Next Stage</span>
