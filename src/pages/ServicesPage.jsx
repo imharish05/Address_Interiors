@@ -77,7 +77,7 @@ export default function ServicesPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. DISTINCT CAPABILITIES DOCKET STARTING HERO */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-10 sm:pt-14 pb-12 sm:pb-16 max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-4 sm:pb-6 max-w-7xl mx-auto">
         <AnimatedSection>
           <div className="rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 p-8 sm:p-12 lg:p-16 relative overflow-hidden">
             {/* Top Badge & Header with Right Visual Card */}
@@ -157,7 +157,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 2. CATEGORY FILTER TABS & SERVICES GRID SHOWCASE */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-2 sm:pt-4 pb-16 sm:py-20 lg:py-24 max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 pt-2 pb-16 sm:pb-20 lg:pb-24 max-w-7xl mx-auto">
         {/* Category Filter Tabs */}
         <AnimatedSection delay={0.1} className="mb-8 sm:mb-10">
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
