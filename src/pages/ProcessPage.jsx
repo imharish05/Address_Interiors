@@ -116,10 +116,10 @@ export default function ProcessPage() {
                     type="button"
                     onClick={() => setActiveStepIndex(idx)}
                     aria-pressed={isActive}
-                    className={`group relative shrink-0 snap-start w-40 sm:w-52 lg:w-auto aspect-[3/4] rounded-2xl overflow-hidden text-left cursor-pointer transition-all duration-300 ${
+                    className={`group relative shrink-0 snap-start w-40 sm:w-52 lg:w-auto aspect-[3/4] rounded-2xl overflow-hidden text-left cursor-pointer transition-all duration-300 flex flex-col justify-end ${
                       isActive
                         ? "ring-2 ring-primary ring-offset-4 ring-offset-secondary"
-                        : "opacity-75 hover:opacity-100"
+                        : "opacity-85 hover:opacity-100"
                     }`}
                   >
                     <img
@@ -128,10 +128,10 @@ export default function ProcessPage() {
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-                    <div className="absolute bottom-0 inset-x-0 p-4 text-white">
-                      <p className="text-xs text-white/75 mb-0.5">Stage {step.step}</p>
-                      <p className="text-sm sm:text-base font-medium leading-snug">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent pointer-events-none" />
+                    <div className="relative z-10 p-4">
+                      <p className="text-xs font-semibold !text-white/85 uppercase tracking-wide mb-1 drop-shadow-sm">Stage {step.step}</p>
+                      <p className="text-sm sm:text-base font-semibold leading-snug !text-white drop-shadow">
                         {step.name}
                       </p>
                     </div>
