@@ -275,95 +275,79 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* 4. FAQ - Swiss Industrial & Minimalist Architectural Telemetry */}
-      <section className={`${SECTION} bg-[#FAF9F6] border-y border-primary/15 relative overflow-hidden`}>
-        <div className={CONTAINER}>
-          {/* Section Header with Swiss Architectural Telemetry */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 sm:pb-12 border-b border-primary/20 mb-8 sm:mb-12">
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="font-mono text-xs uppercase tracking-widest text-primary/70 font-semibold">
-                  DOCKET // 04
-                </span>
-                <span className="text-primary/30">—</span>
-                <span className="font-mono text-xs uppercase tracking-widest text-primary/70 font-semibold">
-                  CLIENT PROTOCOLS
-                </span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.12]">
-                Frequently Asked <span className="font-normal italic">Inquiries.</span>
-              </h2>
-            </div>
-            <p className="text-sm sm:text-base text-[#1A1A1A]/75 font-normal max-w-md leading-relaxed">
-              Transparency at every architectural milestone. Key standards, material vetting, and accountability protocols answered.
+      {/* 4. FAQ - Clean Luxury Minimalist Accordion */}
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
+              Client Inquiries
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.15] mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-base text-[#1A1A1A]/80 leading-relaxed font-normal">
+              Clarity at every milestone is foundational to how we build trust.
             </p>
-          </div>
+          </AnimatedSection>
 
-          {/* Clean Industrial Minimalist Accordion */}
-          <div className="max-w-4xl mx-auto divide-y divide-primary/15 border-y border-primary/15">
-            {FAQS.map((faq, idx) => {
-              const isOpen = openFaq === idx;
-              const indexFormatted = String(idx + 1).padStart(2, "0");
-
-              return (
-                <div
-                  key={faq.question}
-                  className={`transition-colors duration-300 ${
-                    isOpen ? "bg-primary/[0.025]" : "hover:bg-primary/[0.01]"
-                  }`}
-                >
-                  <button
-                    type="button"
-                    onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                    aria-expanded={isOpen}
-                    className="w-full flex items-start sm:items-center justify-between gap-4 sm:gap-8 py-6 sm:py-7 text-left group cursor-pointer px-2 sm:px-4"
+          <AnimatedSection delay={0.2}>
+            <div className="space-y-4">
+              {FAQS.map((faq, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div
+                    key={faq.question}
+                    className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                      isOpen
+                        ? "bg-white border-primary/35 shadow-md shadow-primary/[0.04]"
+                        : "bg-white/80 hover:bg-white border-primary/15 hover:border-primary/30"
+                    }`}
                   >
-                    <div className="flex items-start sm:items-center gap-4 sm:gap-6 flex-1">
-                      {/* Monospaced Technical Telemetry Index */}
-                      <span className="font-mono text-xs sm:text-sm font-semibold tracking-wider text-primary/50 group-hover:text-primary transition-colors shrink-0 pt-0.5 sm:pt-0">
-                        [{indexFormatted}]
-                      </span>
-
-                      {/* Question Headline */}
+                    <button
+                      type="button"
+                      onClick={() => setOpenFaq(isOpen ? -1 : idx)}
+                      aria-expanded={isOpen}
+                      className="w-full flex items-center justify-between gap-6 p-6 sm:p-7 text-left cursor-pointer group"
+                    >
                       <span
-                        className={`text-base sm:text-xl font-light tracking-tight transition-colors duration-200 ${
-                          isOpen
-                            ? "text-primary font-normal"
-                            : "text-[#1A1A1A] group-hover:text-primary"
+                        className={`text-base sm:text-lg font-light tracking-tight transition-colors duration-200 ${
+                          isOpen ? "text-primary font-normal" : "text-[#1A1A1A] group-hover:text-primary"
                         }`}
                       >
                         {faq.question}
                       </span>
-                    </div>
 
-                    {/* Brutalist Mechanical Minimalist Indicator */}
+                      <div
+                        className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
+                          isOpen
+                            ? "bg-primary text-white border-primary"
+                            : "border-primary/25 text-primary group-hover:border-primary group-hover:bg-primary/5"
+                        }`}
+                      >
+                        <ChevronRight
+                          className={`w-4 h-4 transition-transform duration-300 ${
+                            isOpen ? "rotate-90" : ""
+                          }`}
+                        />
+                      </div>
+                    </button>
+
                     <div
-                      className={`shrink-0 w-8 h-8 rounded-lg border flex items-center justify-center font-mono text-xs transition-all duration-300 ${
-                        isOpen
-                          ? "bg-primary text-secondary border-primary shadow-sm rotate-45"
-                          : "border-primary/25 text-primary group-hover:border-primary group-hover:bg-primary/5"
+                      className={`grid transition-all duration-300 ease-out ${
+                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                       }`}
                     >
-                      +
-                    </div>
-                  </button>
-
-                  {/* Smooth Collapse Content */}
-                  <div
-                    className={`grid transition-all duration-400 ease-out ${
-                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <div className="pl-10 sm:pl-16 pr-4 sm:pr-12 pb-7 text-sm sm:text-base text-[#1A1A1A]/80 font-normal leading-relaxed border-l-2 border-primary/20 ml-2 sm:ml-4 mb-2">
-                        <p>{faq.answer}</p>
+                      <div className="overflow-hidden">
+                        <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-1 text-sm sm:text-base text-[#1A1A1A]/75 font-normal leading-relaxed border-t border-primary/10">
+                          <p>{faq.answer}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
