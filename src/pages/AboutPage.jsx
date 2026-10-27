@@ -124,7 +124,7 @@ export default function AboutPage() {
           <AnimatedSection delay={0.2} className="max-w-6xl mx-auto">
             <div className="relative aspect-[16/11] sm:aspect-[16/9] lg:aspect-[2.1/1] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-primary/15">
               <img
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85"
+                src="/images/projects/about-hero.png"
                 alt="Address Interiors living space"
                 className="w-full h-full object-cover"
               />
@@ -180,7 +180,7 @@ export default function AboutPage() {
           <AnimatedSection direction="right" delay={0.1} className="lg:col-span-5">
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
+                src="/images/projects/about-story.png"
                 alt="Address Interiors modular joinery"
                 className="w-full h-full object-cover"
               />
@@ -278,7 +278,7 @@ export default function AboutPage() {
                 key={item.title}
                 className="group border-t border-primary/20 hover:border-primary pt-6 transition-colors duration-300"
               >
-                <p className="text-sm text-primary/50 mb-3">
+                <p className="text-sm text-[#1A1A1A]/70 font-mono font-medium mb-3">
                   {String(idx + 1).padStart(2, "0")}
                 </p>
                 <h3 className="text-xl font-light text-primary tracking-tight mb-2">
@@ -425,16 +425,16 @@ export default function AboutPage() {
       <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className={CONTAINER}>
           <AnimatedSection delay={0.15}>
-            <div className="relative rounded-3xl bg-primary text-secondary px-6 py-14 sm:p-16 text-center shadow-2xl flex flex-col items-center overflow-hidden">
+            <div className="relative rounded-3xl bg-primary text-white px-6 py-14 sm:p-16 text-center shadow-2xl flex flex-col items-center overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80"
+                src="/images/projects/about-cta.png"
                 alt=""
                 aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
               <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />
               <div className="relative z-10 flex flex-col items-center max-w-3xl mx-auto">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium bg-secondary/15 text-secondary border border-secondary/30 mb-3.5">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium bg-white/15 text-white border border-white/30 mb-3.5">
                 Let's Start Designing
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-[1.15] max-w-2xl mb-4">
@@ -447,14 +447,14 @@ export default function AboutPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white !text-primary border border-white hover:bg-white/90 hover:!text-primary shadow-md font-medium px-8 transition-all duration-200"
+                  className="bg-white text-primary border border-transparent hover:bg-white/90 hover:text-primary shadow-md font-medium px-8 transition-all duration-200"
                 >
-                  <Link to="/#contact">Schedule Free Consultation</Link>
+                  <Link to="/#contact" className="text-primary font-medium">Schedule Free Consultation</Link>
                 </Button>
                 <Button
                   asChild
                   size="lg"
-                  className="border border-white/70 bg-transparent !text-white hover:bg-white hover:!text-primary hover:border-white shadow-sm font-medium px-8 transition-all duration-200"
+                  className="border border-white/70 bg-transparent text-white hover:bg-white hover:text-primary hover:border-white shadow-sm font-medium px-8 transition-all duration-200"
                 >
                   <Link to="/">Back to Home</Link>
                 </Button>

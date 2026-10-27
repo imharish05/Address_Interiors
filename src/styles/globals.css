@@ -73,9 +73,86 @@
   p {
     color: #1A1A1A;
   }
-  .text-white, .text-white * {
-    color: #FFFFFF !important;
+
+  /* Default text-white behavior without overriding child buttons */
+  .text-white {
+    color: #FFFFFF;
     font-family: 'Satoshi', sans-serif;
+  }
+
+  .text-white h1,
+  .text-white h2,
+  .text-white h3,
+  .text-white h4,
+  .text-white h5,
+  .text-white h6,
+  .text-white p {
+    color: #FFFFFF;
+  }
+
+  /*
+   * SCOPED RULE:
+   * White/secondary buttons inside dark/text-white/text-secondary/bg-primary containers
+   * MUST always have terracotta text (#BE5037) both in normal state AND when hovered!
+   */
+  .text-white a.bg-white,
+  .text-white a.bg-white *,
+  .text-white button.bg-white,
+  .text-white button.bg-white *,
+  .text-secondary a.bg-white,
+  .text-secondary a.bg-white *,
+  .text-secondary button.bg-white,
+  .text-secondary button.bg-white *,
+  .bg-primary a.bg-white,
+  .bg-primary a.bg-white *,
+  .bg-primary button.bg-white,
+  .bg-primary button.bg-white *,
+  .bg-primary a.bg-secondary,
+  .bg-primary a.bg-secondary *,
+  .bg-primary button.bg-secondary,
+  .bg-primary button.bg-secondary *,
+  a.bg-white.text-primary,
+  a.bg-white.text-primary *,
+  button.bg-white.text-primary,
+  button.bg-white.text-primary * {
+    color: #BE5037 !important;
+    stroke: #BE5037 !important;
+  }
+
+  /* Outlined white buttons on dark backgrounds remain crisp white in normal state */
+  button.border-white:not(.bg-white):not(.bg-secondary):not(:hover),
+  button.border-white:not(.bg-white):not(.bg-secondary):not(:hover) *,
+  a.border-white:not(.bg-white):not(.bg-secondary):not(:hover),
+  a.border-white:not(.bg-white):not(.bg-secondary):not(:hover) * {
+    color: #FFFFFF !important;
+  }
+
+  /* When outlined white button is hovered to solid white, its text turns terracotta */
+  .bg-primary a.border-white:hover,
+  .bg-primary a.border-white:hover *,
+  .bg-primary button.border-white:hover,
+  .bg-primary button.border-white:hover *,
+  .text-white a.border-white:hover,
+  .text-white a.border-white:hover *,
+  .text-white button.border-white:hover,
+  .text-white button.border-white:hover * {
+    color: #BE5037 !important;
+    stroke: #BE5037 !important;
+  }
+
+  /*
+   * Outline button hover contrast:
+   * When an outline button (border-primary) transitions to solid terracotta (hover:bg-primary),
+   * its text and SVG icon turn crisp white.
+   */
+  button.border-primary[class*="hover:bg-primary"]:hover,
+  button.border-primary[class*="hover:bg-primary"]:hover *,
+  a.border-primary[class*="hover:bg-primary"]:hover,
+  a.border-primary[class*="hover:bg-primary"]:hover *,
+  .group:hover .group-hover\:bg-primary,
+  .group:hover .group-hover\:bg-primary * {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
   }
 
   ::selection {

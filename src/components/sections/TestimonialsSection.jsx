@@ -55,31 +55,31 @@ export default function TestimonialsSection() {
               <p className="text-lg font-normal text-primary tracking-wide">
                 {current.author}
               </p>
-              <p className="text-xs text-primary/60 tracking-wider uppercase mt-1">
-                {current.residence} • <span className="font-mono text-primary/70">{current.project}</span>
+              <p className="text-xs text-[#1A1A1A]/75 tracking-wider uppercase mt-1 font-medium">
+                {current.residence} • <span className="font-mono text-[#1A1A1A]/85">{current.project}</span>
               </p>
             </div>
 
             {/* Navigation Buttons */}
             <div className="flex items-center gap-3">
-              <span className="text-xs font-mono text-primary/50 mr-2">
+              <span className="text-xs font-mono text-[#1A1A1A]/70 mr-2 font-medium">
                 0{currentIndex + 1} / 0{TESTIMONIALS_DATA.length}
               </span>
 
               <button
                 onClick={prev}
-                className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary shadow-sm hover:shadow"
+                className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary shadow-sm hover:shadow"
                 aria-label="Previous testimonial"
               >
-                <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform duration-200" />
+                <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 group-hover:text-white transition-all duration-200" />
               </button>
 
               <button
                 onClick={next}
-                className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary shadow-sm hover:shadow"
+                className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary shadow-sm hover:shadow"
                 aria-label="Next testimonial"
               >
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform duration-200" />
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:text-white transition-all duration-200" />
               </button>
             </div>
           </div>

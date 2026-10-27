@@ -10,7 +10,7 @@ const PILLARS_EXPANDED = [
     title: "Timeless Architectural Elegance",
     subtitle: "Enduring Proportions",
     icon: Compass,
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/philosophy-pillar-1.png",
     description:
       "We reject transient fast-furniture trends in favor of architectural purity, balanced sightlines, and sculptural geometries that age with exceptional grace. Every room is designed around natural illumination, proportions, and negative space.",
     principles: [
@@ -26,7 +26,7 @@ const PILLARS_EXPANDED = [
     title: "Everyday Sensory Comfort",
     subtitle: "Tactile Warmth & Living Ease",
     icon: Heart,
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/philosophy-pillar-2.png",
     description:
       "Luxury without genuine physical comfort is merely an unlived showroom. We prioritize ergonomic support, acoustic tranquility, and textiles that invite immediate touch, transforming daily routines into quiet rituals of restorative calm.",
     principles: [
@@ -42,7 +42,7 @@ const PILLARS_EXPANDED = [
     title: "Artisanal Integrity & Precision Joinery",
     subtitle: "Master Craftsmanship",
     icon: ShieldCheck,
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/philosophy-pillar-3.png",
     description:
       "From German CNC-machined cabinetry fabricated off-site to hand-rubbed timber stains and concealed hardware, our in-house architects and master joiners deliver zero-compromise precision with a 10-year structural warranty.",
     principles: [
@@ -129,7 +129,7 @@ export default function PhilosophyPage() {
             <AnimatedSection delay={0.2}>
               <div className="relative rounded-[2rem] overflow-hidden border border-primary/20 shadow-2xl bg-primary/5">
                 <img
-                  src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+                  src="/images/projects/philosophy-hero.jpg"
                   alt="Address Interiors architectural living space"
                   className="w-full aspect-[4/5] object-cover"
                 />
@@ -285,7 +285,7 @@ export default function PhilosophyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80"
+              src="/images/projects/philosophy-cta.jpg"
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
@@ -302,10 +302,10 @@ export default function PhilosophyPage() {
                 Schedule a private consultation at our Richmond Road atelier or request a dedicated site visit with our principal architects.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/95 hover:text-primary">
-                  <Link to="/contact" className="flex items-center gap-2">
-                    <span>Schedule Atelier Consultation</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                <Button asChild size="lg" className="bg-white !text-primary hover:bg-white/95 hover:!text-primary shadow-lg font-medium">
+                  <Link to="/contact" className="flex items-center gap-2 !text-primary">
+                    <span className="!text-primary font-medium">Schedule Atelier Consultation</span>
+                    <ArrowUpRight className="w-4 h-4 !text-primary" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">

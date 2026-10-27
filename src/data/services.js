@@ -4,7 +4,7 @@ export const SERVICES_DATA = [
     title: "Residential Interiors",
     category: "Full Sanctuary",
     description: "Holistic residential spaces orchestrated with natural materials, architectural precision, and intuitive spatial flow.",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/service-1.png",
     details: ["Spatial Planning", "Material Sourcing", "Lighting Architecture", "Acoustic Harmony"],
   },
   {
@@ -12,7 +12,7 @@ export const SERVICES_DATA = [
     title: "Luxury Living Spaces",
     category: "Social & Rest",
     description: "Curated salons and lounges balancing grand volume with intimate warmth, tailored for meaningful connection.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/service-2.png",
     details: ["Curved Seating Groups", "Bespoke Fireplaces", "Art Integration", "Layered Textures"],
   },
   {
@@ -20,7 +20,7 @@ export const SERVICES_DATA = [
     title: "Culinary & Kitchen Suites",
     category: "Gastronomic Design",
     description: "Minimalist culinary spaces engineered with seamless joinery, honed stone slabs, and concealed appliance engineering.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/service-3.png",
     details: ["Concealed Storage", "Honed Quartz & Marble", "Ergonomic Islands", "Ambient Task Glow"],
   },
   {
@@ -28,7 +28,7 @@ export const SERVICES_DATA = [
     title: "Restful Bedroom Sanctuaries",
     category: "Private Quarters",
     description: "Tranquil retreats wrapped in tactile bouclé, acoustic wall paneling, and delicate circadian lighting.",
-    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/service-4.jpg",
     details: ["Integrated Headboards", "Custom Dressing Suites", "Blackout Architecture", "Linen Wall Finishes"],
   },
   {
@@ -36,7 +36,7 @@ export const SERVICES_DATA = [
     title: "Bespoke Millwork & Furniture",
     category: "Artisan Craft",
     description: "Commissioned sculptural pieces, fluted oak credenzas, and hand-stitched leather upholstery made to measure.",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/service-5.png",
     details: ["Solid Hardwoods", "Hand-patinated Brass", "Tactile Upholstery", "One-of-a-kind Editions"],
   },
   {
@@ -44,7 +44,7 @@ export const SERVICES_DATA = [
     title: "Complete Home Transformation",
     category: "Complete Renovation",
     description: "End-to-end architectural remodeling and interior realization from structural realignment to final curated styling.",
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/service-6.png",
     details: ["Structural Coordination", "Bespoke Procurement", "On-site Artisans", "White-glove Reveal"],
   },
 ];

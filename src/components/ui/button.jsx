@@ -10,9 +10,9 @@ const Button = React.forwardRef(
       default:
         "bg-primary text-secondary border border-primary hover:bg-primary/90 hover:text-secondary hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-sm",
       secondary:
-        "bg-secondary text-primary border border-primary/25 hover:bg-primary hover:text-secondary hover:border-primary hover:shadow-md hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-sm",
+        "bg-secondary text-primary border border-primary/25 hover:bg-primary hover:text-white hover:border-primary hover:shadow-md hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-sm",
       outline:
-        "border border-primary text-primary bg-transparent hover:bg-primary hover:text-secondary hover:border-primary hover:shadow-md hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-sm",
+        "border border-primary text-primary bg-transparent hover:bg-primary hover:text-white hover:border-primary hover:shadow-md hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-sm",
       ghost:
         "text-primary hover:bg-primary/10 hover:text-primary active:scale-[0.98]",
       link:

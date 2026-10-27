@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Philosophy", href: "/philosophy" },
+  // { name: "Philosophy", href: "/philosophy" },
   { name: "Services", href: "/services" },
   { name: "Projects", href: "/projects" },
   { name: "Experience", href: "/#experience" },
@@ -14,7 +14,7 @@ export const NAV_LINKS = [
 export const PRIMARY_NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Philosophy", href: "/philosophy" },
+  // { name: "Philosophy", href: "/philosophy" },
   { name: "Services", href: "/services" },
   { name: "Projects", href: "/projects" },
   { name: "Process", href: "/process" },

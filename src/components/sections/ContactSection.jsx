@@ -102,7 +102,7 @@ export default function ContactSection() {
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs uppercase tracking-wider text-primary/60 font-medium block">
+                    <span className="text-xs uppercase tracking-wider text-[#1A1A1A]/70 font-semibold block">
                       Direct Inquiries
                     </span>
                     <a
@@ -119,7 +119,7 @@ export default function ContactSection() {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs uppercase tracking-wider text-primary/60 font-medium block">
+                    <span className="text-xs uppercase tracking-wider text-[#1A1A1A]/70 font-semibold block">
                       Studio Line
                     </span>
                     <span className="text-sm font-medium text-primary">
@@ -133,7 +133,7 @@ export default function ContactSection() {
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs uppercase tracking-wider text-primary/60 font-medium block">
+                    <span className="text-xs uppercase tracking-wider text-[#1A1A1A]/70 font-semibold block">
                       Principal Offices
                     </span>
                     <span className="text-sm font-medium text-primary">
@@ -148,7 +148,7 @@ export default function ContactSection() {
             <AnimatedSection delay={0.3} className="hidden lg:block mt-6">
               <div className="rounded-3xl overflow-hidden aspect-[16/10] bg-primary/10 border border-primary/15 shadow-md">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80"
+                  src="/images/projects/contact-visual.png"
                   alt="Address Interiors Consultation Suite"
                   loading="lazy"
                   className="w-full h-full object-cover"
@@ -175,7 +175,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-xs uppercase tracking-luxury text-primary/70 mb-2 font-medium"
+                      className="block text-xs uppercase tracking-luxury text-[#1A1A1A]/80 mb-2 font-semibold"
                     >
                       Full Name *
                     </label>
@@ -201,7 +201,7 @@ export default function ContactSection() {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-xs uppercase tracking-luxury text-primary/70 mb-2 font-medium"
+                        className="block text-xs uppercase tracking-luxury text-[#1A1A1A]/80 mb-2 font-semibold"
                       >
                         Email Address *
                       </label>
@@ -226,7 +226,7 @@ export default function ContactSection() {
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-xs uppercase tracking-luxury text-primary/70 mb-2 font-medium"
+                        className="block text-xs uppercase tracking-luxury text-[#1A1A1A]/80 mb-2 font-semibold"
                       >
                         Phone Number (India)
                       </label>
@@ -264,7 +264,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="projectType"
-                      className="block text-xs uppercase tracking-luxury text-primary/70 mb-2 font-medium"
+                      className="block text-xs uppercase tracking-luxury text-[#1A1A1A]/80 mb-2 font-semibold"
                     >
                       Project Discipline
                     </label>
@@ -287,7 +287,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-xs uppercase tracking-luxury text-primary/70 mb-2 font-medium"
+                      className="block text-xs uppercase tracking-luxury text-[#1A1A1A]/80 mb-2 font-semibold"
                     >
                       Spatial Vision & Scope *
                     </label>

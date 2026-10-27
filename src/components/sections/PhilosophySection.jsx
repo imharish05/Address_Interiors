@@ -53,7 +53,7 @@ export default function PhilosophySection() {
                     <span className="font-mono text-3xl sm:text-4xl font-light text-primary/40 group-hover:text-primary transition-colors duration-300">
                       {item.number}
                     </span>
-                    <span className="text-[11px] uppercase tracking-luxury text-primary/60 font-medium">
+                    <span className="text-[11px] uppercase tracking-luxury text-[#1A1A1A]/70 font-semibold">
                       {item.subtitle}
                     </span>
                   </div>
@@ -69,10 +69,10 @@ export default function PhilosophySection() {
 
                 {/* Bottom Material Palette Badge */}
                 <div className="mt-8 pt-6 border-t border-primary/10">
-                  <span className="block text-[10px] uppercase tracking-luxury text-primary/50 mb-1.5">
+                  <span className="block text-[10px] uppercase tracking-luxury text-primary font-semibold mb-1.5">
                     Tactile Palette
                   </span>
-                  <span className="text-xs font-mono text-primary/80">
+                  <span className="text-xs font-mono text-[#1A1A1A]/85 font-medium">
                     {item.materials}
                   </span>
                 </div>

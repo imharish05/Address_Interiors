@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const SECTION_IDS = [
   "hero",
   "about",
-  "philosophy",
+  // "philosophy",
   "services",
   "projects",
   "experience",
@@ -115,10 +115,10 @@ export default function Navbar() {
             <Link
               to="/contact"
               onClick={(e) => handleNavClick(e, "/contact")}
-              className="hidden lg:inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-primary px-5 py-2.5 rounded-full bg-white hover:bg-white/90 transition-all duration-300 ease-out active:scale-95 group shadow-sm hover:shadow-md font-medium"
+              className="hidden lg:inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] !text-primary px-5 py-2.5 rounded-full bg-white hover:bg-white/90 transition-all duration-300 ease-out active:scale-95 group shadow-sm hover:shadow-md font-medium"
             >
-              <span>Inquire</span>
-              <ArrowUpRight className="w-3.5 h-3.5 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <span className="!text-primary font-medium">Inquire</span>
+              <ArrowUpRight className="w-3.5 h-3.5 !text-primary transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
 
             {/* Mobile Hamburger Button */}

@@ -96,7 +96,7 @@ export default function ProcessPage() {
       {/* 1. HERO: headline + photo stage selector */}
       <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-14 sm:pb-20">
         <div className={CONTAINER}>
-          <AnimatedSection delay={0.1} className={`text-center max-w-3xl mx-auto ${HEAD_GAP}`}>
+          <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto">
             <span className={EYEBROW}>Studio Methodology & Roadmap</span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-5">
               The Art of Architectural Realization
@@ -104,43 +104,6 @@ export default function ProcessPage() {
             <p className={`${BODY} sm:text-lg`}>
               A transparent, five-stage journey from first sketch to final handover.
             </p>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.2}>
-            <div className="flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory pb-3 scrollbar-none lg:grid lg:grid-cols-5 lg:overflow-visible lg:pb-0">
-              {PROCESS_STEPS.map((step, idx) => {
-                const isActive = idx === activeStepIndex;
-                return (
-                  <button
-                    key={step.step}
-                    type="button"
-                    onClick={() => setActiveStepIndex(idx)}
-                    aria-pressed={isActive}
-                    className={`group relative shrink-0 snap-start w-40 sm:w-52 lg:w-auto aspect-[3/4] rounded-2xl overflow-hidden text-left cursor-pointer transition-all duration-300 ${
-                      isActive
-                        ? "ring-2 ring-primary ring-offset-4 ring-offset-secondary"
-                        : "opacity-75 hover:opacity-100"
-                    }`}
-                  >
-                    <img
-                      src={step.image}
-                      alt={step.name}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-transparent pointer-events-none" />
-                    <div className="absolute bottom-0 inset-x-0 p-4 z-10 select-none">
-                      <span className="block text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#FFFFFF', textShadow: '0 1px 3px rgba(0,0,0,0.85)' }}>
-                        Stage {step.step}
-                      </span>
-                      <span className="block text-sm sm:text-base font-semibold leading-snug" style={{ color: '#FFFFFF', textShadow: '0 2px 4px rgba(0,0,0,0.95)' }}>
-                        {step.name}
-                      </span>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -171,12 +134,12 @@ export default function ProcessPage() {
                   Stage {activeStep.step} · {activeStep.focus}
                 </span>
                 <h2 className={`${H2} mb-2`}>{activeStep.name}</h2>
-                <p className="text-base text-primary/70 mb-5">
+                <p className="text-base text-[#1A1A1A]/80 font-medium mb-5">
                   {activeStep.title} · {activeStep.duration}
                 </p>
                 <p className={`${BODY} mb-8`}>{activeStep.description}</p>
 
-                <p className="text-sm text-primary/70 mb-1">You receive</p>
+                <p className="text-sm text-[#1A1A1A]/70 font-medium mb-1">You receive</p>
                 <ul className="divide-y divide-primary/15 border-y border-primary/15">
                   {activeStep.deliverables.map((item, idx) => (
                     <li key={idx} className="py-3 text-base text-[#1A1A1A]">
@@ -204,17 +167,17 @@ export default function ProcessPage() {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={handlePrev}
-                    className="p-3 rounded-full border border-primary/25 text-primary hover:bg-primary hover:text-secondary transition-all cursor-pointer"
+                    className="p-3 rounded-full border border-primary/25 text-primary hover:bg-primary hover:text-white transition-all cursor-pointer group"
                     aria-label="Previous Stage"
                   >
-                    <ChevronLeft className="w-5 h-5" />
+                    <ChevronLeft className="w-5 h-5 group-hover:text-white transition-colors" />
                   </button>
                   <button
                     onClick={handleNext}
-                    className="p-3 rounded-full border border-primary/25 text-primary hover:bg-primary hover:text-secondary transition-all cursor-pointer"
+                    className="p-3 rounded-full border border-primary/25 text-primary hover:bg-primary hover:text-white transition-all cursor-pointer group"
                     aria-label="Next Stage"
                   >
-                    <ChevronRight className="w-5 h-5" />
+                    <ChevronRight className="w-5 h-5 group-hover:text-white transition-colors" />
                   </button>
                   <span className="text-sm text-[#1A1A1A]/70 ml-2">
                     {activeStepIndex + 1} of {PROCESS_STEPS.length}
@@ -248,7 +211,7 @@ export default function ProcessPage() {
             <div className="hidden md:grid grid-cols-12 gap-x-8 pb-4 border-b border-primary/30 text-sm">
               <span className="col-span-4" />
               <span className="col-span-4 text-primary font-medium">Address Interiors</span>
-              <span className="col-span-4 text-primary/60">Typical Contractor</span>
+              <span className="col-span-4 text-[#1A1A1A]/70 font-medium">Typical Contractor</span>
             </div>
 
             {COMPARISON.map((row) => (
@@ -266,7 +229,7 @@ export default function ProcessPage() {
                   {row.address}
                 </p>
                 <p className="md:col-span-4 text-base text-[#1A1A1A]/55">
-                  <span className="md:hidden block text-xs text-primary/50 mb-0.5">
+                  <span className="md:hidden block text-xs text-[#1A1A1A]/70 mb-0.5 font-medium">
                     Typical contractor
                   </span>
                   {row.typical}
@@ -379,8 +342,8 @@ export default function ProcessPage() {
                   Book an initial consultation to review your floor plan, see realistic 3D renderings, and receive an itemized fixed budget.
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-4">
-                  <Button asChild size="lg" className="bg-white text-primary hover:bg-white/95 hover:text-primary px-8">
-                    <Link to="/contact">Schedule Atelier Consultation</Link>
+                  <Button asChild size="lg" className="bg-white !text-primary hover:bg-white/95 hover:!text-primary px-8 shadow-lg font-medium">
+                    <Link to="/contact" className="!text-primary font-medium">Schedule Atelier Consultation</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
                     <Link to="/projects">View Curated Residences</Link>

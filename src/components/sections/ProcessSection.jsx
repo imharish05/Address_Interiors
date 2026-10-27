@@ -47,17 +47,29 @@ export default function ProcessSection() {
                 <button
                   key={step.step}
                   onClick={() => setActiveStepIndex(idx)}
-                  className={`flex items-center gap-2.5 px-4 sm:px-6 py-3 rounded-xl text-xs font-medium tracking-wide transition-all duration-300 ease-out cursor-pointer whitespace-nowrap flex-1 justify-center active:scale-95 ${
+                  className={`flex items-center gap-2.5 px-4 sm:px-6 py-3 rounded-xl text-xs font-medium tracking-wide transition-all duration-300 ease-out cursor-pointer whitespace-nowrap flex-1 justify-center active:scale-95 group ${
                     isActive
-                      ? "bg-primary text-secondary border border-primary hover:bg-secondary hover:text-primary shadow-md font-semibold scale-[1.01]"
-                      : "text-primary/80 bg-transparent hover:bg-primary hover:text-secondary"
+                      ? "bg-primary text-white border border-primary hover:bg-primary/90 hover:text-white shadow-md font-semibold scale-[1.01]"
+                      : "text-primary/80 bg-transparent hover:bg-primary hover:text-white"
                   }`}
                   aria-label={`View Stage ${step.step}: ${step.name}`}
                 >
-                  <span className={`font-mono text-xs ${isActive ? "text-secondary" : "text-primary/50"}`}>
+                  <span
+                    className={`font-mono text-xs transition-colors duration-200 ${
+                      isActive
+                        ? "text-white/90"
+                        : "text-primary/60 group-hover:text-white/90"
+                    }`}
+                  >
                     {step.step}
                   </span>
-                  <span className="uppercase tracking-luxury text-[11px] sm:text-xs">
+                  <span
+                    className={`uppercase tracking-luxury text-[11px] sm:text-xs transition-colors duration-200 ${
+                      isActive
+                        ? "text-white"
+                        : "text-primary group-hover:text-white"
+                    }`}
+                  >
                     {step.name}
                   </span>
                 </button>

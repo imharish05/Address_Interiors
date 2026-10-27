@@ -84,9 +84,9 @@ export default function FeaturedProjectsSection() {
             {/* Right: Project Editorial Narrative */}
             <div className="lg:col-span-5 flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-3 text-xs sm:text-sm uppercase tracking-luxury text-primary/70 mb-3">
+                <div className="flex items-center gap-3 text-xs sm:text-sm uppercase tracking-luxury text-[#1A1A1A]/75 mb-3">
                   <span className="flex items-center gap-1 font-medium">
-                    <MapPin className="w-3.5 h-3.5" />
+                    <MapPin className="w-3.5 h-3.5 text-primary" />
                     {currentProject.location}
                   </span>
                   <span>•</span>
@@ -111,14 +111,14 @@ export default function FeaturedProjectsSection() {
               {/* Materiality Palette & Tags */}
               <div className="space-y-4 pt-6 border-t border-primary/10">
                 <div>
-                  <span className="text-xs uppercase tracking-luxury text-primary/60 block mb-2 font-medium">
+                  <span className="text-xs uppercase tracking-luxury text-primary block mb-2 font-semibold">
                     Signature Materials
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {currentProject.palette.map((item, idx) => (
                       <span
                         key={idx}
-                        className="px-3.5 py-1 rounded-full text-xs sm:text-sm bg-primary/5 border border-primary/15 text-primary font-mono"
+                        className="px-3.5 py-1 rounded-full text-xs sm:text-sm bg-[#1A1A1A]/5 border border-[#1A1A1A]/10 text-[#1A1A1A] font-mono font-medium"
                       >
                         {item}
                       </span>
@@ -130,7 +130,7 @@ export default function FeaturedProjectsSection() {
                   {currentProject.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="text-xs sm:text-sm text-primary/70 font-light"
+                      className="text-xs sm:text-sm text-[#1A1A1A]/80 font-medium"
                     >
                       #{tag}
                     </span>
@@ -158,7 +158,7 @@ export default function FeaturedProjectsSection() {
                 />
               </div>
 
-              <div className="flex items-center justify-between text-xs sm:text-sm text-primary/70 mb-1.5 font-medium">
+              <div className="flex items-center justify-between text-xs sm:text-sm text-[#1A1A1A]/75 mb-1.5 font-medium">
                 <span>{proj.location}</span>
                 <span>{proj.year}</span>
               </div>
@@ -167,7 +167,7 @@ export default function FeaturedProjectsSection() {
                 <h4 className="text-xl font-light text-primary group-hover:underline underline-offset-4">
                   {proj.title}
                 </h4>
-                <ArrowUpRight className="w-4 h-4 text-primary/60 group-hover:text-primary transition-colors" />
+                <ArrowUpRight className="w-4 h-4 text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
               </div>
             </div>
           ))}

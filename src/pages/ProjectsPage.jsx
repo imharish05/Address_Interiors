@@ -7,48 +7,48 @@ import ImageReveal from "@/components/common/ImageReveal";
 import { Button } from "@/components/ui/button";
 
 const PROJECT_CATEGORIES = [
-  "All Residences",
-  "Full Villa",
-  "Penthouse",
-  "Coastal Estate",
-  "Heritage Revival",
+  "All",
+  "Residential",
+  "Commercial",
 ];
 
 const PREVIEW_CARDS = [
   {
-    id: "casa-serena",
-    title: "The Serena Residence",
-    location: "Kensington Enclave",
-    area: "4,850 sq.ft",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+    id: "sushma-villa",
+    title: "Sushma Villa",
+    location: "South City Enclave",
+    area: "5,200 sq.ft",
+    image: "/images/projects/sushma-villa-1.png",
   },
   {
-    id: "atelier-solstice",
-    title: "Solstice Penthouse",
-    location: "Highland Terrace",
-    area: "3,600 sq.ft",
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
+    id: "rahman-residence",
+    title: "Rahman Residence",
+    location: "Heritage Boulevard",
+    area: "4,600 sq.ft",
+    image: "/images/projects/rahman-residence-1.png",
   },
   {
-    id: "villa-calma",
-    title: "Villa Calma",
-    location: "Coastal Ridge",
-    area: "5,400 sq.ft",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+    id: "cafe-commercial",
+    title: "Artisan Cafe & Bistro",
+    location: "Urban Promenade",
+    area: "3,200 sq.ft",
+    image: "/images/projects/cafe-commercial-1.png",
   },
 ];
 
 export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState(FEATURED_PROJECTS[0].id);
-  const [selectedCategory, setSelectedCategory] = useState("All Residences");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const currentProject =
     FEATURED_PROJECTS.find((p) => p.id === activeTab) || FEATURED_PROJECTS[0];
 
   const filteredProjects =
-    selectedCategory === "All Residences"
+    selectedCategory === "All"
       ? FEATURED_PROJECTS
-      : FEATURED_PROJECTS.filter((p) => p.tags.includes(selectedCategory));
+      : FEATURED_PROJECTS.filter(
+          (p) => p.category === selectedCategory || p.tags.includes(selectedCategory)
+        );
 
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
@@ -62,12 +62,12 @@ export default function ProjectsPage() {
                 Curated Portfolio Archive
               </span>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.12]">
-                Curated Private Residences
+                Curated Portfolio Archive
               </h1>
             </div>
 
             <p className="text-sm sm:text-base text-[#1A1A1A]/80 font-normal max-w-md">
-              Over 180 bespoke residential environments delivered across South India, each tailored to the unique rituals and lifestyle of its patrons.
+              Over 500 bespoke residential and commercial spaces delivered across South India, each tailored to the unique rituals, functional flow, and identity of its patrons.
             </p>
           </div>
 
@@ -247,7 +247,7 @@ export default function ProjectsPage() {
               Explore Our Portfolio
             </h2>
             <p className="text-base text-[#1A1A1A]/80 leading-relaxed font-normal">
-              Every residence is an original creation — designed around the lifestyle, rituals, and sensory preferences of its patrons.
+              Every space is an original creation — designed around the lifestyle, rituals, and architectural aspirations of its patrons.
             </p>
           </AnimatedSection>
 
@@ -295,7 +295,7 @@ export default function ProjectsPage() {
 
                   <div className="p-8 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center justify-between text-xs text-primary/70 font-medium mb-2">
+                      <div className="flex items-center justify-between text-xs text-[#1A1A1A]/75 font-medium mb-2">
                         <span>{project.tags.join(" • ")}</span>
                         <span>Completed {project.year}</span>
                       </div>
@@ -354,7 +354,7 @@ export default function ProjectsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+              src="/images/projects/projects-cta.jpg"
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
@@ -371,10 +371,10 @@ export default function ProjectsPage() {
                 Schedule an atelier walkthrough with our principal architects to review live material samples, previous build budgets, and floor plan feasibility.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/95 hover:text-primary">
-                  <Link to="/contact" className="flex items-center gap-2">
-                    <span>Schedule Atelier Consultation</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                <Button asChild size="lg" className="bg-white !text-primary hover:bg-white/95 hover:!text-primary shadow-lg font-medium">
+                  <Link to="/contact" className="flex items-center gap-2 !text-primary">
+                    <span className="!text-primary font-medium">Schedule Atelier Consultation</span>
+                    <ArrowUpRight className="w-4 h-4 !text-primary" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">

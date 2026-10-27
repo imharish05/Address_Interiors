@@ -19,7 +19,7 @@ export const HERO_CONTENT = {
     "We orchestrate refined residential environments where timeless minimalism converges with tactile comfort, organic curves, and heirloom-level craftsmanship.",
   primaryCta: "Explore Our Work",
   secondaryCta: "Discover Our Story",
-  heroImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85",
+  heroImage: "/images/projects/sushma-villa-1.png",
   stats: [
     { label: "Years of Studio Practice", value: "14+" },
     { label: "Private Residences Curated", value: "180+" },
@@ -36,8 +36,8 @@ export const ABOUT_CONTENT = {
   ],
   quote: "Good design is not just how it looks; it is about how effortlessly it works for your everyday life.",
   author: "Principal Interior Designer — Address Interiors",
-  image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
-  secondaryImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+  image: "/images/projects/rahman-residence-1.png",
+  secondaryImage: "/images/projects/prem-residence-1.png",
   ctaText: "Book A Consultation",
 };
 
@@ -97,7 +97,7 @@ export const EXPERIENCE_CONTENT = {
       description: "Seamless HVAC returns, invisible storage planes, and hidden smart automation that serve living without visual clutter.",
     },
   ],
-  bannerImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85",
+  bannerImage: "/images/projects/sushma-villa-2.png",
 };
 
 export const PROCESS_STEPS = [
@@ -107,7 +107,7 @@ export const PROCESS_STEPS = [
     title: "Lifestyle Immersion & Spatial Vision",
     duration: "Weeks 1–3",
     focus: "Rituals & Audit",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/process-step-1.png",
     description:
       "We begin by understanding your personal rituals, spatial aspirations, and aesthetic affinities through in-depth conversations and on-site architectural audits.",
     deliverables: [
@@ -123,7 +123,7 @@ export const PROCESS_STEPS = [
     title: "Spatial Flow & Material Storyboards",
     duration: "Weeks 4–7",
     focus: "Tactile Identity",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/process-step-2.png",
     description:
       "Translating ideas into tactile mood trays, floor plans, circulation models, and preliminary architectural elevations infused with light studies.",
     deliverables: [
@@ -139,7 +139,7 @@ export const PROCESS_STEPS = [
     title: "Precision Detailing & Technical Specifications",
     duration: "Weeks 8–14",
     focus: "Technical Artistry",
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/process-step-3.png",
     description:
       "Developing 1:20 joinery drawings, custom furniture schematics, lighting layouts, and curated procurement schedules down to the finest hardware.",
     deliverables: [
@@ -155,7 +155,7 @@ export const PROCESS_STEPS = [
     title: "Artisanal Fabrication & Construction Oversight",
     duration: "Month 4 Onward",
     focus: "Master Craft",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/process-step-4.png",
     description:
       "Our dedicated project directors coordinate vetted trades, master stonecutters, and cabinetmakers to ensure uncompromising build quality.",
     deliverables: [
@@ -171,7 +171,7 @@ export const PROCESS_STEPS = [
     title: "Curated White-Glove Staging & Handover",
     duration: "Final Reveal",
     focus: "Living Sanctuary",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/process-step-5.jpg",
     description:
       "Complete styling, art installation, and scent profiling before delivering a fully realized, private sanctuary ready for immediate living.",
     deliverables: [
@@ -216,7 +216,7 @@ export const INSPIRATION_GALLERY = [
     title: "Sculptural Living Salon",
     category: "Living Lounge",
     aspect: "tall",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/inspiration-1.png",
     description: "Curved velvet seating bathed in natural diffused skylight.",
   },
   {
@@ -224,7 +224,7 @@ export const INSPIRATION_GALLERY = [
     title: "Minimalist Culinary Haven",
     category: "Kitchen & Dining",
     aspect: "wide",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/inspiration-2.png",
     description: "Honed stone island paired with concealed walnut cabinetry.",
   },
   {
@@ -232,7 +232,7 @@ export const INSPIRATION_GALLERY = [
     title: "Tactile Bedroom Sanctuary",
     category: "Master Bedroom",
     aspect: "square",
-    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/projects/inspiration-3.png",
     description: "Integrated acoustic headboard and bouclé lounge chair.",
   },
   {
@@ -240,7 +240,7 @@ export const INSPIRATION_GALLERY = [
     title: "Monolithic Bath Suite",
     category: "Wellness & Bath",
     aspect: "square",
-    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/projects/inspiration-4.png",
     description: "Carved travertine basin and recessed warm glow lighting.",
   },
   {
@@ -248,7 +248,7 @@ export const INSPIRATION_GALLERY = [
     title: "Architectural Library & Study",
     category: "Private Study",
     aspect: "wide",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/inspiration-5.png",
     description: "Floor-to-ceiling smoked oak shelving and reading alcove.",
   },
   {
@@ -256,7 +256,7 @@ export const INSPIRATION_GALLERY = [
     title: "Morning Sun Dining Corner",
     category: "Dining Suite",
     aspect: "tall",
-    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/projects/inspiration-6.png",
     description: "Hand-finished travertine table framed by sheer linen drapes.",
   },
 ];
@@ -283,7 +283,7 @@ export const ABOUT_PAGE_CONTENT = {
   heroHeading: "Designing Spaces That Reflect Your Lifestyle & Personality",
   heroSubheading:
     "Since 2012, Address Interiors has delivered 500+ customized residential and commercial spaces — bringing together contemporary design, functional space planning, and durable craftsmanship.",
-  heroImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
+  heroImage: "/images/projects/about-hero.png",
 
   whoWeAre: {
     badge: "Who We Are",
@@ -398,19 +398,19 @@ export const ABOUT_PAGE_CONTENT = {
       name: "Aria Varma",
       role: "Founder & Principal Interior Designer",
       bio: "With over 16 years of expertise in residential interior planning, Aria leads our design studio with an eye for balance, ergonomics, and timeless aesthetics.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+      image: "/images/projects/sushma-villa-1.png",
     },
     {
       name: "Karan Mehta",
       role: "Head of Project Operations",
       bio: "Manages on-site execution, vendor standards, and strict milestone tracking to guarantee seamless on-time project deliveries.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+      image: "/images/projects/kgisl-commercial-1.png",
     },
     {
       name: "Meera Sen",
       role: "Lead Interior Stylist",
       bio: "Curates colors, textures, lighting, and soft furnishings that give each home its distinct warmth, comfort, and character.",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+      image: "/images/projects/cafe-commercial-1.png",
     },
   ],
 };

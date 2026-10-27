@@ -112,14 +112,14 @@ export default function HeroSection() {
                 {/* Floating Architectural Badge */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 rounded-2xl bg-secondary/90 backdrop-blur-md border border-primary/15 shadow-lg flex items-center justify-between">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.2em] font-medium text-primary/60">
+                    <p className="text-xs uppercase tracking-[0.2em] font-semibold text-primary">
                       Signature Commission
                     </p>
-                    <p className="text-sm font-medium text-primary mt-0.5">
-                      The Serena Residence • Kensington
+                    <p className="text-sm font-medium text-[#1A1A1A] mt-0.5">
+                      Sushma Villa • South City
                     </p>
                   </div>
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary font-mono">
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-[#1A1A1A]/5 text-[#1A1A1A] font-mono font-medium">
                     2025
                   </span>
                 </div>
@@ -130,14 +130,14 @@ export default function HeroSection() {
       </div>
 
       {/* Subtle Scroll Indicator */}
-      <div className="w-full max-w-7xl mx-auto flex items-center justify-between pt-6 border-t border-primary/10 text-xs text-primary/50">
-        <span className="tracking-[0.2em] uppercase font-light">
+      <div className="w-full max-w-7xl mx-auto flex items-center justify-between pt-6 border-t border-[#1A1A1A]/10 text-xs text-[#1A1A1A]/80">
+        <span className="tracking-[0.2em] uppercase font-medium">
           {BRAND_INFO.fullName} • Architectural Monograph
         </span>
 
         <a
           href="#about"
-          className="inline-flex items-center gap-2 hover:text-primary transition-colors cursor-pointer py-1"
+          className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors cursor-pointer py-1"
           aria-label="Scroll to about section"
         >
           <span className="uppercase tracking-[0.18em]">Discover</span>

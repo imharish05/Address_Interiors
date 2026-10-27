@@ -257,8 +257,8 @@ export default function ServicesPage() {
                     className="group relative bg-secondary p-8 sm:p-10 transition-colors duration-300 hover:bg-primary/[0.035]"
                   >
                     <div className="flex items-center justify-between mb-8">
-                      <div className="w-12 h-12 rounded-full border border-primary/25 text-primary flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-secondary group-hover:border-primary group-hover:scale-105">
-                        <IconComp className="w-5 h-5" />
+                      <div className="w-12 h-12 rounded-full border border-primary/25 text-primary flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:text-secondary group-hover:border-primary group-hover:scale-105">
+                        <IconComp className="w-5 h-5 transition-colors duration-300" />
                       </div>
                       <span className="text-sm text-primary/40 transition-colors duration-300 group-hover:text-primary">
                         {String(idx + 1).padStart(2, "0")}
@@ -290,7 +290,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80"
+              src="/images/projects/services-cta.png"
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
@@ -307,10 +307,10 @@ export default function ServicesPage() {
                 Share your architectural floor plans or schedule an atelier visit to review physical material trays and 3D walkthrough examples.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/95 hover:text-primary">
-                  <Link to="/contact" className="flex items-center gap-2">
-                    <span>Book Atelier Consultation</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                <Button asChild size="lg" className="bg-white !text-primary hover:bg-white/95 hover:!text-primary shadow-lg font-medium">
+                  <Link to="/contact" className="flex items-center gap-2 !text-primary">
+                    <span className="!text-primary font-medium">Book Atelier Consultation</span>
+                    <ArrowUpRight className="w-4 h-4 !text-primary" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
