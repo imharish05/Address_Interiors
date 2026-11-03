@@ -16,14 +16,14 @@ export const HERO_CONTENT = {
   tagline: "Bespoke Interior Architecture",
   heading: "Spaces That Feel Like Home.",
   subheading:
-    "We orchestrate refined residential environments where timeless minimalism converges with tactile comfort, organic curves, and heirloom-level craftsmanship.",
+    "We offer complete interior design, renovation, and modular solutions for your home or office, along with a wide range of furniture and décor to suit your needs.",
   primaryCta: "Explore Our Work",
   secondaryCta: "Discover Our Story",
   heroImage: "/images/projects/sushma-villa-1.png",
   stats: [
-    { label: "Years of Studio Practice", value: "14+" },
+    { label: "Years of Expertise", value: "5+" },
     { label: "Private Residences Curated", value: "180+" },
-    { label: "Bespoke Artisanal Partners", value: "45" },
+    { label: "Curated Craftsmanship Partners", value: "45" },
   ],
 };
 
@@ -31,8 +31,8 @@ export const ABOUT_CONTENT = {
   badge: "About Address Interiors",
   heading: "Transforming Spaces into Beautiful, Functional Living Homes",
   paragraphs: [
-    "At Address Interiors, we specialize in complete bespoke interior design and execution. Whether it is a contemporary luxury apartment, a private villa, or a bespoke commercial space, we bring your vision to life with thoughtful space planning and fine craftsmanship.",
-    "Founded in 2012, our in-house team of interior designers, architects, and project managers ensures every project is delivered with top-quality materials, transparent pricing, and guaranteed on-time handover.",
+    "At Address Interiors, we create beautiful and functional spaces for homes and offices. From modern apartments and luxury villas to commercial spaces, we bring your ideas to life with thoughtful designs and quality craftsmanship.",
+    "Our team of designers and project experts focuses on quality materials, transparent pricing, and timely project completion to deliver spaces that match your vision.",
   ],
   quote: "Good design is not just how it looks; it is about how effortlessly it works for your everyday life.",
   author: "Principal Interior Designer — Address Interiors",
@@ -52,7 +52,7 @@ export const PHILOSOPHY_CONTENT = {
       title: "Timeless Elegance",
       subtitle: "Enduring Proportions",
       description:
-        "We reject transient fast-furniture cycles in favor of architectural purity, balanced sightlines, and sculptural geometries that age with exceptional grace.",
+        "We focus on simple, elegant designs that never go out of style. Every detail is carefully planned to create beautiful spaces that last for years.",
       materials: "Travertine • Venetian Plaster • Patinated Bronze",
     },
     {
@@ -60,7 +60,7 @@ export const PHILOSOPHY_CONTENT = {
       title: "Everyday Comfort",
       subtitle: "Tactile Warmth",
       description:
-        "Luxury without genuine physical comfort is merely a showroom. We prioritize ergonomic support, acoustic tranquility, and textiles that invite immediate touch.",
+        "Luxury is not just about looks; it should also feel comfortable. We focus on comfortable furniture, peaceful spaces, and soft fabrics that make you feel at home.",
       materials: "Unbleached Linen • Textured Bouclé • Cashmere",
     },
     {
@@ -75,28 +75,34 @@ export const PHILOSOPHY_CONTENT = {
 };
 
 export const EXPERIENCE_CONTENT = {
-  badge: "Sensory Living",
-  heading: "Where Every Detail Feels Right.",
+  badge: "Better Living",
+  heading: "Where Every Detail Matters.",
   subheading:
-    "Beyond aesthetic perfection, an Address Interiors residence transforms the way you experience your daily sanctuary.",
+    "We believe a well-designed space should look beautiful, feel comfortable, and make everyday life easier.",
+
   features: [
     {
-      title: "Circadian Lighting Balance",
-      description: "Atmospheric illumination that mirrors natural day cycles, shifting from invigorating daylight to intimate evening amber tones.",
+      title: "Comfortable Lighting",
+      description:
+        "We use the right lighting to create bright and refreshing spaces during the day and a warm, relaxing atmosphere in the evening.",
     },
     {
-      title: "Acoustic Serenity",
-      description: "Engineered acoustic baffling, custom drapery densities, and natural fiber wall coverings that absorb urban resonance.",
+      title: "Peaceful Spaces",
+      description:
+        "We use suitable materials, curtains, and soft furnishings to reduce outside noise and create a quieter environment.",
     },
     {
-      title: "Tactile Organic Curves",
-      description: "Softened radius casework and arched passageways that eliminate sharp visual interruptions, encouraging fluid movement.",
+      title: "Natural Shapes & Designs",
+      description:
+        "We use soft curves, rounded furniture, and smooth designs to create spaces that look natural and feel easy to move around in.",
     },
     {
-      title: "Concealed Sophistication",
-      description: "Seamless HVAC returns, invisible storage planes, and hidden smart automation that serve living without visual clutter.",
+      title: "Smart Storage & Design",
+      description:
+        "We include hidden storage, smart features, and neatly planned spaces to keep everything organised and clutter-free.",
     },
   ],
+
   bannerImage: "/images/projects/sushma-villa-2.png",
 };
 
@@ -282,7 +288,7 @@ export const ABOUT_PAGE_CONTENT = {
   badge: "About Address Interiors",
   heroHeading: "Designing Spaces That Reflect Your Lifestyle & Personality",
   heroSubheading:
-    "Since 2012, Address Interiors has delivered 500+ customized residential and commercial spaces — bringing together contemporary design, functional space planning, and durable craftsmanship.",
+    "Since 2021, Address Interiors has delivered 500+ customized residential and commercial spaces — bringing together contemporary design, functional space planning, and durable craftsmanship.",
   heroImage: "/images/projects/about-hero.png",
 
   whoWeAre: {

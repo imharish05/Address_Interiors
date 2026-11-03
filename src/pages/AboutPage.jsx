@@ -116,7 +116,7 @@ export default function AboutPage() {
               {content.heroHeading}
             </h1>
             <p className="text-sm sm:text-base lg:text-lg text-[#1A1A1A]/80 leading-relaxed max-w-2xl mx-auto">
-              Since 2012, crafting bespoke residential and commercial spaces with German-precision joinery, functional space planning, and durable craftsmanship.
+              Since 2021, crafting bespoke residential and commercial spaces with German-precision joinery, functional space planning, and durable craftsmanship.
             </p>
           </AnimatedSection>
 
@@ -136,7 +136,7 @@ export default function AboutPage() {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-primary/15">
                     <div className="pt-2 md:pt-0 px-2">
                       <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight whitespace-nowrap mb-0.5">
-                        14+ Years
+                        5+ Years
                       </p>
                       <p className="text-[10px] sm:text-xs uppercase tracking-luxury text-[#1A1A1A]/70 font-medium whitespace-nowrap">
                         Experience
@@ -191,7 +191,7 @@ export default function AboutPage() {
             <span className={EYEBROW}>{content.whoWeAre.badge}</span>
             <h2 className={`${H2} mb-6`}>Design and execution, under one roof</h2>
             <p className={`${BODY} max-w-2xl mb-10`}>
-              Since 2012, we have combined bespoke spatial design, German-precision
+              Since 2021, we have combined bespoke spatial design, German-precision
               joinery, and complete project execution, so your home is delivered on a
               fixed timeline and a fixed budget.
             </p>

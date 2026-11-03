@@ -85,7 +85,7 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "cafe-commercial",
-    title: "Artisan Cafe & Bistro",
+    title: "AT 26",
     category: "Commercial",
     location: "Urban Promenade",
     year: "2025",
@@ -99,7 +99,7 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "kgisl-commercial",
-    title: "KGISL Corporate Hub",
+    title: "KGISL",
     category: "Commercial",
     location: "Tech Horizon Campus",
     year: "2024",
@@ -113,7 +113,7 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "sai-commercial",
-    title: "Sai Creative Media & Cafe",
+    title: "Sai Techno Solutions",
     category: "Commercial",
     location: "Creative Quarter",
     year: "2025",
@@ -127,7 +127,7 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "pony-commercial",
-    title: "Pony Sports Arena & Lounge",
+    title: "Bilbo Pony Salon & Pony Turf",
     category: "Commercial",
     location: "City Sports Complex",
     year: "2024",

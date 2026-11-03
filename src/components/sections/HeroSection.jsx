@@ -116,7 +116,7 @@ export default function HeroSection() {
                       Signature Commission
                     </p>
                     <p className="text-sm font-medium text-[#1A1A1A] mt-0.5">
-                      Sushma Villa • South City
+                      Sushma Villa
                     </p>
                   </div>
                   <span className="text-xs px-2.5 py-1 rounded-full bg-[#1A1A1A]/5 text-[#1A1A1A] font-mono font-medium">
