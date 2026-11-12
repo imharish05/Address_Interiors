@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="fixed top-0 left-0 right-0 z-40 py-3 sm:py-3.5 shadow-md border-b border-white/15 text-white"
+        className="fixed top-0 left-0 right-0 z-40 py-3.5 sm:py-4 shadow-md border-b border-white/15 text-white"
         style={{ backgroundColor: "#BE5037" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between gap-4">
@@ -56,13 +56,13 @@ export default function Navbar() {
           <Link
             to="/"
             onClick={(e) => handleNavClick(e, "/")}
-            className="flex items-center min-h-[44px] group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg p-0.5 shrink-0"
+            className="flex items-center min-h-[48px] group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-xl p-1 shrink-0"
             aria-label={`${BRAND_INFO.fullName} - Return to home`}
           >
             <img
               src="/logo.png"
               alt={BRAND_INFO.fullName}
-              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              className="h-11 sm:h-14 w-auto max-w-[190px] sm:max-w-[230px] object-contain transition-transform duration-300 group-hover:scale-[1.02]"
             />
           </Link>
 
