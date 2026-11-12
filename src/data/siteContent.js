@@ -279,7 +279,7 @@ export const CONTACT_CONTENT = {
     "Luxury Living Suite",
     "Bespoke Kitchen & Dining",
     "Master Bedroom Retreat",
-    "Architectural Consultation",
+    "Full Home interior"
   ],
 };
 
