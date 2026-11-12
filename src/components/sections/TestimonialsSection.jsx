@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden border-t border-primary/10"
+      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden border-t border-primary/10"
     >
       <div className="max-w-5xl mx-auto">
         {/* Header */}
@@ -38,14 +38,14 @@ export default function TestimonialsSection() {
         </AnimatedSection>
 
         {/* Carousel Container */}
-        <div className="relative p-8 sm:p-14 lg:p-16 rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 shadow-sm">
+        <div className="relative p-6 sm:p-12 lg:p-16 rounded-3xl sm:rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 shadow-sm">
           {/* Subtle Quote Icon */}
-          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-8">
+          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 sm:mb-8">
             <Quote className="w-6 h-6 stroke-[1.5]" />
           </div>
 
           {/* Testimonial Quote */}
-          <blockquote className="text-xl sm:text-2xl lg:text-3xl font-light text-[#1A1A1A] tracking-tight leading-snug mb-10 min-h-[140px] sm:min-h-[100px] flex items-center">
+          <blockquote className="text-lg sm:text-2xl lg:text-3xl font-light text-[#1A1A1A] tracking-tight leading-snug mb-8 sm:mb-10 min-h-[100px] flex items-center">
             “{current.quote}”
           </blockquote>
 
@@ -67,19 +67,21 @@ export default function TestimonialsSection() {
               </span>
 
               <button
+                type="button"
                 onClick={prev}
-                className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary shadow-sm hover:shadow"
+                className="btn-sweep btn-sweep-primary w-12 h-12 rounded-full border-[1.5px] border-primary flex items-center justify-center text-primary bg-white hover:text-white hover:border-primary hover:-translate-y-0.5 transition-[color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2 shadow-sm hover:shadow-md"
                 aria-label="Previous testimonial"
               >
-                <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 group-hover:text-white transition-all duration-200" />
+                <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform duration-200" />
               </button>
 
               <button
+                type="button"
                 onClick={next}
-                className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary shadow-sm hover:shadow"
+                className="btn-sweep btn-sweep-primary w-12 h-12 rounded-full border-[1.5px] border-primary flex items-center justify-center text-primary bg-white hover:text-white hover:border-primary hover:-translate-y-0.5 transition-[color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer active:scale-95 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2 shadow-sm hover:shadow-md"
                 aria-label="Next testimonial"
               >
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:text-white transition-all duration-200" />
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </button>
             </div>
           </div>

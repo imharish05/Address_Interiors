@@ -86,7 +86,7 @@ export default function PhilosophyPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. DISTINCT EDITORIAL ASYMMETRIC SPLIT HERO */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto border-b border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 max-w-7xl mx-auto border-b border-primary/10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left: Editorial Manifesto */}
           <div className="lg:col-span-7">
@@ -96,11 +96,11 @@ export default function PhilosophyPage() {
               </span>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.12] mb-6">
-                Spaces Designed for Living. <br />
+                Spaces Designed for Living. <br className="hidden sm:inline" />
                 <span className="font-normal italic">Crafted for Feeling.</span>
               </h1>
 
-              <div className="border-l-2 border-primary/40 pl-5 mb-6 py-1">
+              <div className="border-l-2 border-primary/40 pl-4 sm:pl-5 mb-6 py-1">
                 <p className="text-base sm:text-lg text-[#1A1A1A]/90 italic font-normal leading-relaxed">
                   "A home should feel like an exhale — an intimate, grounded refuge where every curve, texture, and beam of light serves your peace of mind."
                 </p>
@@ -110,14 +110,14 @@ export default function PhilosophyPage() {
                 At Address Interiors, we believe genuine luxury is never about ornate spectacle or fleeting trends. It is the unhurried sensation of tactile warmth, acoustic quietude, and effortless spatial flow.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4">
-                <Button asChild size="lg">
-                  <Link to="/contact" className="flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
+                <Button asChild size="lg" className="w-full sm:w-auto">
+                  <Link to="/contact" className="flex items-center justify-center gap-2">
                     <span>Commission An Atelier Consultation</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                    <ArrowUpRight className="w-4 h-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </Button>
-                <div className="text-xs text-[#1A1A1A]/70 font-medium pl-2">
+                <div className="text-xs text-[#1A1A1A]/70 font-medium sm:pl-2 text-center sm:text-left">
                   Est. 2012 • Richmond Road Atelier
                 </div>
               </div>
@@ -136,19 +136,25 @@ export default function PhilosophyPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
                 {/* Overlapping Tactile Palette Card */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-secondary/95 backdrop-blur-md border border-primary/20 shadow-xl">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3.5 sm:p-4 rounded-2xl bg-secondary/95 backdrop-blur-md border border-primary/20 shadow-xl">
                   <span className="text-[11px] uppercase tracking-wider text-primary font-semibold block mb-2">
                     Atelier Materiality Palette
                   </span>
-                  <div className="flex items-center gap-2 text-xs text-[#1A1A1A] font-medium">
-                    <span className="inline-block w-3 h-3 rounded-full bg-[#E5D7C5] border border-black/10 shrink-0" />
-                    <span>Honed Travertine</span>
-                    <span className="text-[#1A1A1A]/30">•</span>
-                    <span className="inline-block w-3 h-3 rounded-full bg-[#523F31] border border-black/10 shrink-0" />
-                    <span>Smoked Oak</span>
-                    <span className="text-[#1A1A1A]/30">•</span>
-                    <span className="inline-block w-3 h-3 rounded-full bg-[#EAE8E3] border border-black/10 shrink-0" />
-                    <span>Raw Linen</span>
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs text-[#1A1A1A] font-medium">
+                    <span className="inline-flex items-center gap-1.5">
+                      <span className="inline-block w-3 h-3 rounded-full bg-[#E5D7C5] border border-black/10 shrink-0" />
+                      <span>Honed Travertine</span>
+                    </span>
+                    <span className="text-[#1A1A1A]/30" aria-hidden="true">•</span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <span className="inline-block w-3 h-3 rounded-full bg-[#523F31] border border-black/10 shrink-0" />
+                      <span>Smoked Oak</span>
+                    </span>
+                    <span className="text-[#1A1A1A]/30" aria-hidden="true">•</span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <span className="inline-block w-3 h-3 rounded-full bg-[#EAE8E3] border border-black/10 shrink-0" />
+                      <span>Raw Linen</span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -158,7 +164,7 @@ export default function PhilosophyPage() {
       </section>
 
       {/* 2. THREE FOUNDATIONAL PILLARS (DEEP DIVE) */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.02]">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.02]">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
             <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
@@ -243,8 +249,8 @@ export default function PhilosophyPage() {
       </section>
 
       {/* 3. SENSORY LIVING DIMENSIONS */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto">
-        <AnimatedSection className="text-center max-w-3xl mx-auto mb-14">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
           <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
             Sensory Architecture
           </span>
@@ -256,12 +262,12 @@ export default function PhilosophyPage() {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {SENSORY_DIMENSIONS.map((dim, idx) => {
             const IconComp = dim.icon;
             return (
               <AnimatedSection key={dim.title} delay={0.1 * (idx + 1)}>
-                <div className="p-8 rounded-3xl bg-primary/[0.02] border border-primary/15 hover:border-primary/40 hover:bg-primary/[0.04] transition-all duration-300 h-full flex flex-col justify-between group">
+                <div className="p-6 sm:p-8 rounded-3xl bg-primary/[0.02] border border-primary/15 hover:border-primary/40 hover:bg-primary/[0.04] transition-all duration-300 h-full flex flex-col justify-between group">
                   <div>
                     <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                       <IconComp className="w-6 h-6" />
@@ -281,9 +287,9 @@ export default function PhilosophyPage() {
       </section>
 
       {/* 4. CALL TO ACTION BANNER */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
+          <div className="relative rounded-3xl sm:rounded-[2.5rem] bg-primary p-6 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img
               src="/images/projects/philosophy-cta.jpg"
               alt=""
@@ -295,20 +301,20 @@ export default function PhilosophyPage() {
               <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-white/15 text-white border border-white/25 mb-4">
                 Atelier Commission
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-tight mb-6">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-tight mb-6">
                 Ready to Experience Intentional Architecture in Your Residence?
               </h2>
               <p className="text-base sm:text-lg text-white/90 leading-relaxed font-normal mb-8">
                 Schedule a private consultation at our Richmond Road atelier or request a dedicated site visit with our principal architects.
               </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <Button asChild size="lg" className="bg-white !text-primary hover:bg-white/95 hover:!text-primary shadow-lg font-medium">
-                  <Link to="/contact" className="flex items-center gap-2 !text-primary">
-                    <span className="!text-primary font-medium">Schedule Atelier Consultation</span>
-                    <ArrowUpRight className="w-4 h-4 !text-primary" />
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
+                <Button asChild variant="light" size="lg" className="w-full sm:w-auto">
+                  <Link to="/contact" className="flex items-center justify-center gap-2">
+                    <span>Schedule Atelier Consultation</span>
+                    <ArrowUpRight className="w-4 h-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
+                <Button asChild variant="lightOutline" size="lg" className="w-full sm:w-auto">
                   <Link to="/services">Explore Our Services</Link>
                 </Button>
               </div>

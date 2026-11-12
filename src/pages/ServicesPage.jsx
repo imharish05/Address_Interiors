@@ -1,6 +1,19 @@
-import React, { useState } from "react";
+
+import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, CheckCircle2, Shield, Clock, Layers, Hammer, Ruler, UserCheck, Award, Sparkles, Compass } from "lucide-react";
+import {
+  ArrowUpRight,
+  CheckCircle2,
+  Shield,
+  Clock,
+  Layers,
+  Hammer,
+  Ruler,
+  UserCheck,
+  Award,
+  Sparkles,
+  Compass,
+} from "lucide-react";
 import { SERVICES_DATA } from "@/data/services";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { Button } from "@/components/ui/button";
@@ -8,113 +21,112 @@ import { Button } from "@/components/ui/button";
 const GUARANTEES = [
   {
     icon: Shield,
-    title: "Itemized Fixed BOQ",
-    description: "Every nut, bolt, and square foot is documented upfront. Zero mid-project surprises or cost escalations.",
+    title: "Clear & Fixed Pricing",
+    description:
+      "Know the full cost before work begins. No hidden charges or unexpected price increases.",
   },
   {
     icon: Hammer,
-    title: "German Precision Joinery",
-    description: "Modular cabinetry is precision CNC-machined in our off-site facility with millimeter fit and zero on-site sawdust.",
+    title: "Perfect Furniture Fitting",
+    description:
+      "Our furniture is made in our factory to fit your home perfectly, with less dust and mess.",
   },
   {
     icon: Clock,
-    title: "45-Day Handover",
-    description: "Parallel civil and off-site manufacturing keeps your committed key handover on date, backed in writing.",
+    title: "Home Ready in 45 Days",
+    description:
+      "We plan the work carefully to complete your home within 45 days, as promised.",
   },
   {
     icon: Layers,
     title: "10-Year Written Warranty",
-    description: "Certified BWR marine-grade plywood and authentic German hardware (Blum & Hettich) built to endure generations.",
+    description:
+      "We use quality plywood and trusted hardware, backed by a written 10-year warranty.",
   },
   {
     icon: Ruler,
-    title: "100% Custom 3D Design",
-    description: "Photorealistic 3D virtual walkthroughs and tactile material trays approved before a single nail is hammered.",
+    title: "Custom 3D Design",
+    description:
+      "See how your home will look in 3D and approve the designs and materials before work begins.",
   },
   {
     icon: UserCheck,
-    title: "Dedicated Project Director",
-    description: "A single accountable architect coordinates all civil, MEP, and styling trades throughout the commission.",
+    title: "Dedicated Project Manager",
+    description:
+      "One person will manage your project, coordinate the work, and keep you updated until completion.",
   },
-];
-
-const CATEGORIES = [
-  "All Disciplines",
-  "Full Sanctuary",
-  "Social & Rest",
-  "Gastronomic Design",
-  "Private Quarters",
-  "Artisan Craft",
-  "Complete Renovation",
 ];
 
 const SCOPE_PILLARS = [
   {
     number: "01",
-    label: "Whole-Home Sanctuaries",
-    detail: "Civil realignments, spatial planning, flooring, ceiling & seamless handover.",
+    label: "Complete Home Interiors",
+    detail:
+      "From room planning, flooring, and ceilings to furniture and final handover.",
   },
   {
     number: "02",
-    label: "German Precision Joinery",
-    detail: "Modular kitchens, custom credenzas & walk-in dressing suites crafted off-site.",
+    label: "Custom Furniture & Kitchens",
+    detail:
+      "Beautiful kitchens, custom furniture, wardrobes, and dressing rooms made to fit your home.",
   },
   {
     number: "03",
-    label: "Fixed BOQ & Warranty",
-    detail: "Locked pricing with no hidden escalations and written 10-year structural warranty.",
+    label: "Clear Pricing & Warranty",
+    detail:
+      "Know the full cost before work begins, with no hidden charges and a written 10-year warranty.",
   },
 ];
 
-/* Hero highlights (same facts as before, shown as a clean list) */
+/* Hero highlights */
 const HERO_FACTS = [
-  { value: "100%", label: "Bespoke Architecture" },
-  { value: "10 Yrs", label: "Structural Warranty" },
-  { value: "45 Days", label: "Handover Standard" },
-  { value: "Fixed", label: "BOQ Upfront" },
+  { value: "100%", label: "Designed for You" },
+  { value: "10 Yrs", label: "Written Warranty" },
+  { value: "45 Days", label: "Home Handover" },
+  { value: "Fixed", label: "Price Before Work" },
 ];
 
 export default function ServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All Disciplines");
-
-  const filteredServices =
-    selectedCategory === "All Disciplines"
-      ? SERVICES_DATA
-      : SERVICES_DATA.filter((s) => s.category === selectedCategory);
-
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. HERO & SERVICES SHOWCASE */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-16 sm:pb-20 lg:pb-24 max-w-7xl mx-auto">
+      <section className="px-5 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-14 sm:pb-20 lg:pb-24 max-w-7xl mx-auto">
         <AnimatedSection>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center pb-10 sm:pb-14 border-b border-primary/15">
             {/* Left: Heading, description, action */}
             <div className="lg:col-span-7">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-5">
-                Architectural Scope & Precision Execution
+                Our Interior Design Services
               </span>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-6">
-                Tailored Disciplines. <br />
-                <span className="font-normal italic">Bespoke Precision.</span>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-6">
+                Beautiful Spaces. <br className="hidden sm:inline" />
+                <span className="font-normal italic">
+                  Made Just for You.
+                </span>
               </h1>
 
               <p className="text-base sm:text-lg text-[#1A1A1A]/80 font-normal leading-relaxed max-w-xl mb-8">
-                Sculptural interior architecture tailored with German precision joinery, fixed upfront BOQ pricing, and seamless end-to-end execution.
+                We design and create beautiful homes and workspaces with
+                custom furniture, quality materials, clear pricing, and
+                complete support from start to finish.
               </p>
 
-              <Button asChild size="lg">
-                <Link to="/contact" className="flex items-center gap-2">
-                  <span>Inquire Custom Scope</span>
-                  <ArrowUpRight className="w-4 h-4" />
+              <Button asChild size="lg" className="w-full sm:w-auto">
+                <Link
+                  to="/contact"
+                  className="flex items-center justify-center gap-2"
+                >
+                  <span>Discuss Your Project</span>
+                  <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </Button>
             </div>
 
-            {/* Right: Clean fact list separated by a vertical line */}
+            {/* Right: Highlights */}
             <div className="lg:col-span-5 lg:border-l lg:border-primary/20 lg:pl-12">
               <p className="text-xs uppercase tracking-luxury text-primary/70 font-medium mb-4">
-                Craftsmanship Standard · DIN EN 14749
+                Our Promise to You
               </p>
 
               <dl className="divide-y divide-primary/15 border-y border-primary/15">
@@ -134,36 +146,17 @@ export default function ServicesPage() {
               </dl>
 
               <p className="text-sm text-[#1A1A1A]/70 leading-relaxed mt-5">
-                <span className="font-medium text-primary">Architectural Precision.</span>{" "}
-                Direct execution with zero sub-contractor markups.
+                <span className="font-medium text-primary">
+                  Quality You Can Trust.
+                </span>{" "}
+                One team takes care of your project from beginning to end.
               </p>
             </div>
           </div>
         </AnimatedSection>
 
-        {/* Category Filter Tabs */}
-        <AnimatedSection delay={0.1} className="pt-10 sm:pt-14 mb-8 sm:mb-10">
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-            {CATEGORIES.map((category) => {
-              const isActive = selectedCategory === category;
-              return (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer whitespace-nowrap ${
-                    isActive
-                      ? "bg-primary text-secondary shadow-md font-semibold scale-[1.02]"
-                      : "text-[#1A1A1A]/75 hover:text-primary hover:bg-primary/5 border border-primary/15"
-                  }`}
-                >
-                  {category}
-                </button>
-              );
-            })}
-          </div>
-        </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+        <div className="pt-10 sm:pt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {SERVICES_DATA.map((service, index) => (
             <AnimatedSection
               key={service.id}
               delay={0.08 * (index % 3)}
@@ -176,7 +169,7 @@ export default function ServicesPage() {
                     src={service.image}
                     alt={service.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-300"
@@ -189,7 +182,7 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Content Block */}
-                <div className="p-7 flex-1 flex flex-col justify-between">
+                <div className="p-5 sm:p-7 flex-1 flex flex-col justify-between">
                   <div>
                     <h2 className="text-xl sm:text-2xl font-light text-primary tracking-tight mb-3">
                       {service.title}
@@ -204,9 +197,9 @@ export default function ServicesPage() {
                     {/* Deliverables Bullet List */}
                     <div className="pt-5 border-t border-primary/10 mb-6">
                       <span className="text-xs font-semibold text-primary/70 block mb-2.5">
-                        Key Architectural Deliverables
+                        What We Offer
                       </span>
-                      <ul className="grid grid-cols-2 gap-2 text-xs sm:text-sm text-[#1A1A1A]/80">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-[#1A1A1A]/80">
                         {service.details.map((item, idx) => (
                           <li key={idx} className="flex items-center gap-2">
                             <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
@@ -218,8 +211,11 @@ export default function ServicesPage() {
 
                     {/* Inquire Button */}
                     <Button asChild variant="outline" className="w-full group/btn">
-                      <Link to="/contact" className="flex items-center justify-center gap-2">
-                        <span>Commission This Discipline</span>
+                      <Link
+                        to="/contact"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <span>Explore This Service</span>
                         <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                       </Link>
                     </Button>
@@ -231,36 +227,37 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 4. THE ADDRESS STANDARD GUARANTEE GRID */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
+      {/* 4. OUR GUARANTEES */}
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
-              The Address Standard
+              Our Promise
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.15] mb-4">
-              What Every Commission Includes
+              What You Get With Every Project
             </h2>
             <p className="text-base text-[#1A1A1A]/80 leading-relaxed font-normal">
-              No hidden subcontracts, no cost revisions, and zero excuses. We back every project with written guarantees.
+              Clear prices, quality materials, timely work, and reliable
+              support. We make sure you know what to expect at every step.
             </p>
           </AnimatedSection>
 
-          {/* One bordered panel, cells split by hairlines */}
+          {/* Guarantee Grid */}
           <AnimatedSection delay={0.15}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-primary/15 border border-primary/15 rounded-3xl overflow-hidden shadow-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-primary/15 border border-primary/15 rounded-3xl overflow-hidden shadow-sm">
               {GUARANTEES.map((item, idx) => {
                 const IconComp = item.icon;
                 return (
                   <div
                     key={item.title}
-                    className="group relative bg-secondary p-8 sm:p-10 transition-colors duration-300 hover:bg-primary/[0.035]"
+                    className="group relative bg-secondary p-6 sm:p-8 lg:p-10 transition-colors duration-300 hover:bg-primary/[0.035]"
                   >
                     <div className="flex items-center justify-between mb-8">
-                      <div className="w-12 h-12 rounded-full border border-primary/25 text-primary flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:text-secondary group-hover:border-primary group-hover:scale-105">
+                      <div className="w-12 h-12 rounded-full border-[1.5px] border-primary/40 bg-white text-primary flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:border-primary group-hover:scale-105">
                         <IconComp className="w-5 h-5 transition-colors duration-300" />
                       </div>
-                      <span className="text-sm text-primary/40 transition-colors duration-300 group-hover:text-primary">
+                      <span className="text-sm font-mono font-medium text-[#1A1A1A]/70 transition-colors duration-300 group-hover:text-primary">
                         {String(idx + 1).padStart(2, "0")}
                       </span>
                     </div>
@@ -286,9 +283,9 @@ export default function ServicesPage() {
       </section>
 
       {/* 5. BOTTOM CTA BANNER */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[2.5rem] bg-primary p-8 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
+          <div className="relative rounded-3xl sm:rounded-[2.5rem] bg-primary p-6 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img
               src="/images/projects/services-cta.png"
               alt=""
@@ -298,23 +295,33 @@ export default function ServicesPage() {
             <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />
             <div className="relative z-10 max-w-3xl">
               <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-white/15 text-white border border-white/25 mb-4">
-                Private Commission
+                Let's Get Started
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-tight mb-6">
-                Have a Unique Floor Plan or Architectural Scope?
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-tight mb-6">
+                Planning to Build or Improve Your Home?
               </h2>
               <p className="text-base sm:text-lg text-white/90 leading-relaxed font-normal mb-8">
-                Share your architectural floor plans or schedule an atelier visit to review physical material trays and 3D walkthrough examples.
+                Share your home plan or visit us to see our materials,
+                furniture designs, and 3D home previews. Let's plan your
+                space together.
               </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <Button asChild size="lg" className="bg-white !text-primary hover:bg-white/95 hover:!text-primary shadow-lg font-medium">
-                  <Link to="/contact" className="flex items-center gap-2 !text-primary">
-                    <span className="!text-primary font-medium">Book Atelier Consultation</span>
-                    <ArrowUpRight className="w-4 h-4 !text-primary" />
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
+                <Button asChild variant="light" size="lg" className="w-full sm:w-auto">
+                  <Link
+                    to="/contact"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <span>Book a Free Consultation</span>
+                    <ArrowUpRight className="w-4 h-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
-                  <Link to="/projects">View Curated Projects</Link>
+                <Button
+                  asChild
+                  variant="lightOutline"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                >
+                  <Link to="/projects">View Our Projects</Link>
                 </Button>
               </div>
             </div>

@@ -7,7 +7,7 @@ export default function PhilosophySection() {
   return (
     <section
       id="philosophy"
-      className="relative pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 lg:pb-8 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
+      className="relative pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 lg:pb-8 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
     >
       {/* Abstract architectural contour SVG in background */}
       <div
@@ -46,7 +46,7 @@ export default function PhilosophySection() {
               delay={0.15 * (index + 1)}
               className="flex"
             >
-              <div className="w-full relative flex flex-col justify-between p-8 sm:p-10 rounded-3xl bg-primary/[0.03] border border-primary/15 hover:border-primary/40 hover:bg-primary/[0.05] transition-all duration-500 group">
+              <div className="w-full relative flex flex-col justify-between p-6 sm:p-8 lg:p-10 rounded-3xl bg-primary/[0.03] border border-primary/15 hover:border-primary/40 hover:bg-primary/[0.05] transition-all duration-500 group">
                 {/* Top Section with Number and Subtitle */}
                 <div>
                   <div className="flex items-baseline justify-between mb-8 pb-4 border-b border-primary/10">

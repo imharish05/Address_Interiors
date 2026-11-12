@@ -9,7 +9,7 @@ export default function InspirationSection() {
   return (
     <section
       id="inspiration"
-      className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden border-t border-primary/10"
+      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden border-t border-primary/10"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -22,12 +22,12 @@ export default function InspirationSection() {
           />
         </AnimatedSection>
 
-        {/* Asymmetrical Masonry-Inspired Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Asymmetrical Masonry Gallery */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 sm:gap-8">
           {INSPIRATION_GALLERY.map((item, index) => {
             const aspectClasses = {
-              tall: "aspect-[3/4]",
-              wide: "aspect-[16/11]",
+              tall: "aspect-[4/5] sm:aspect-[3/4]",
+              wide: "aspect-[4/3] md:aspect-[16/11]",
               square: "aspect-square",
             };
 
@@ -35,7 +35,7 @@ export default function InspirationSection() {
               <AnimatedSection
                 key={item.id}
                 delay={0.08 * index}
-                className="flex"
+                className="break-inside-avoid mb-6 sm:mb-8"
               >
                 <div
                   className={`group relative w-full overflow-hidden rounded-3xl bg-primary/10 border border-primary/15 ${
@@ -46,7 +46,7 @@ export default function InspirationSection() {
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                   />
 
                   {/* Soft Vignette Overlay */}
@@ -57,7 +57,7 @@ export default function InspirationSection() {
 
                   {/* Category Pill Tag */}
                   <span
-                    className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium text-primary border border-primary/15 shadow-sm"
+                    className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4 px-3.5 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium text-primary border border-primary/15 shadow-sm"
                     style={{ backgroundColor: "var(--secondary)" }}
                   >
                     {item.category}
@@ -65,7 +65,7 @@ export default function InspirationSection() {
 
                   {/* Architectural Caption Card - Always 100% Solid & Readable */}
                   <div
-                    className="absolute bottom-4 left-4 right-4 p-4 sm:p-5 rounded-2xl text-primary border border-primary/15 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:border-primary/30 group-hover:-translate-y-1"
+                    className="absolute bottom-3.5 left-3.5 right-3.5 sm:bottom-4 sm:left-4 sm:right-4 p-3.5 sm:p-5 rounded-2xl text-primary border border-primary/15 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:border-primary/30 group-hover:-translate-y-1"
                     style={{ backgroundColor: "var(--secondary)" }}
                   >
                     <div className="flex items-center justify-between gap-2">

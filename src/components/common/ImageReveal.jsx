@@ -47,7 +47,7 @@ export default function ImageReveal({
         onLoad={() => setIsLoaded(true)}
         className={cn(
           "w-full h-full object-cover transition-all duration-700 ease-out will-change-transform group-hover:scale-105",
-          isLoaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-sm scale-102",
+          isLoaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-sm scale-[1.02]",
           imageClassName
         )}
       />

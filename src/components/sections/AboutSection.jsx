@@ -11,7 +11,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden"
+      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden"
     >
       {/* Decorative subtle ambient wave in background */}
       <div
@@ -20,9 +20,9 @@ export default function AboutSection() {
       />
 
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-center">
           {/* Left Column: Asymmetrical Curved Imagery & Floating Accent */}
-          <div className="lg:col-span-6 relative">
+          <div className="lg:col-span-6 relative pb-6 sm:pb-10 lg:pb-0">
             <AnimatedSection direction="right" delay={0.1}>
               {/* Main Lifestyle Architectural Photo */}
               <div className="relative z-10">
@@ -35,7 +35,7 @@ export default function AboutSection() {
                 />
 
                 {/* Secondary Inset Detail Image */}
-                <div className="absolute -bottom-8 -right-6 sm:-bottom-12 sm:-right-8 w-1/2 sm:w-5/12 aspect-square z-20 rounded-3xl overflow-hidden border-4 border-secondary shadow-2xl bg-secondary">
+                <div className="absolute -bottom-6 right-2 sm:-bottom-10 sm:-right-4 lg:-bottom-12 lg:-right-8 w-5/12 aspect-square z-20 rounded-2xl sm:rounded-3xl overflow-hidden border-4 border-secondary shadow-2xl bg-secondary">
                   <img
                     src={ABOUT_CONTENT.secondaryImage}
                     alt="Bespoke honed stone and oak joinery detail"
@@ -48,7 +48,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column: Editorial Brand Story & Philosophy */}
-          <div className="lg:col-span-6 flex flex-col items-start pt-6 lg:pt-0">
+          <div className="lg:col-span-6 flex flex-col items-start pt-2 lg:pt-0">
             <AnimatedSection delay={0.2}>
               <SectionHeading
                 badge={ABOUT_CONTENT.badge}
@@ -79,15 +79,15 @@ export default function AboutSection() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.6}>
-              <div className="flex flex-wrap items-center gap-4">
-                <Button asChild size="lg">
-                  <Link to="/about" className="flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+                <Button asChild size="lg" className="w-full sm:w-auto">
+                  <Link to="/about" className="flex items-center justify-center gap-2">
                     <span>Learn More About Us</span>
                     <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link to="/contact" className="flex items-center gap-2">
+                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+                  <Link to="/contact" className="flex items-center justify-center gap-2">
                     <span>{ABOUT_CONTENT.ctaText}</span>
                   </Link>
                 </Button>

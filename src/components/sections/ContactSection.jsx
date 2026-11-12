@@ -79,12 +79,12 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
+      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left Column: Form Details & Complementary Architecture Photo */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          <div className="lg:col-span-5 flex flex-col justify-between min-w-0">
             <div>
               <AnimatedSection>
                 <SectionHeading
@@ -101,13 +101,13 @@ export default function ContactSection() {
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <span className="text-xs uppercase tracking-wider text-[#1A1A1A]/70 font-semibold block">
                       Direct Inquiries
                     </span>
                     <a
                       href={`mailto:${BRAND_INFO.email}`}
-                      className="text-sm font-medium text-primary hover:underline underline-offset-4"
+                      className="text-sm font-medium text-primary hover:text-[#1A1A1A] hover:underline underline-offset-4 transition-colors duration-200 break-all sm:break-words"
                     >
                       {BRAND_INFO.email}
                     </a>
@@ -160,7 +160,7 @@ export default function ContactSection() {
           {/* Right Column: Inquiry Form */}
           <div className="lg:col-span-7">
             <AnimatedSection delay={0.2}>
-              <div className="p-8 sm:p-12 rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 shadow-lg">
+              <div className="p-6 sm:p-10 lg:p-12 rounded-3xl sm:rounded-[2.5rem] bg-primary/[0.03] border border-primary/15 shadow-lg">
                 <div className="mb-8 pb-6 border-b border-primary/10">
                   <h3 className="text-2xl font-light text-primary tracking-tight">
                     Commission Request
@@ -230,8 +230,8 @@ export default function ContactSection() {
                       >
                         Phone Number (India)
                       </label>
-                      <div className={`flex rounded-xl overflow-hidden border bg-background/50 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all ${
-                        errors.phone ? "border-red-500" : "border-primary/20"
+                      <div className={`flex h-12 rounded-xl overflow-hidden border bg-white hover:border-primary/50 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25 transition-[border-color,box-shadow] duration-200 ${
+                        errors.phone ? "border-red-500" : "border-primary/25"
                       }`}>
                         <span className="inline-flex items-center px-3.5 bg-primary/10 text-primary text-sm font-medium border-r border-primary/15 select-none font-mono">
                           +91
@@ -248,7 +248,7 @@ export default function ContactSection() {
                             if (errors.phone) setErrors((prev) => ({ ...prev, phone: null }));
                           }}
                           placeholder="98765 43210"
-                          className="w-full bg-transparent px-4 py-2 text-sm text-foreground placeholder:text-foreground/40 focus:outline-none"
+                          className="w-full h-full bg-transparent px-4 py-2 text-sm text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 focus:outline-none"
                         />
                       </div>
                       {errors.phone && (
@@ -273,7 +273,7 @@ export default function ContactSection() {
                       name="projectType"
                       value={formData.projectType}
                       onChange={handleChange}
-                      className="flex h-12 w-full rounded-xl border border-primary/20 bg-background/50 px-4 py-2 text-sm text-foreground transition-all duration-200 focus-visible:outline-none focus-visible:border-primary focus-visible:ring-1 focus-visible:ring-primary cursor-pointer"
+                      className="flex h-12 w-full rounded-xl border border-primary/25 bg-white px-4 py-2 text-sm text-[#1A1A1A] transition-[border-color,box-shadow] duration-200 hover:border-primary/50 focus-visible:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/25 cursor-pointer"
                     >
                       {CONTACT_CONTENT.projectTypes.map((type) => (
                         <option key={type} value={type} className="bg-secondary text-primary">

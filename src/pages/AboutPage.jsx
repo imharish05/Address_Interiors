@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ABOUT_PAGE_CONTENT } from "@/data/siteContent";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { Button } from "@/components/ui/button";
 
 /* ---------- SHARED SPACING + TYPE SYSTEM (same for every section) ---------- */
-const SECTION = "px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24";
-const CONTAINER = "max-w-9xl mx-auto";
+const SECTION = "px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24";
+const CONTAINER = "max-w-7xl mx-auto";
 const EYEBROW =
   "inline-flex items-center px-4 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium bg-primary/10 text-primary border border-primary/20 mb-3.5";
 const H2 =
@@ -18,85 +19,84 @@ const HEAD_GAP = "mb-10 sm:mb-14";
 /* ---------- DATA: Why Choose Us ---------- */
 const WHY_CHOOSE_US = [
   {
-    title: "Custom 3D Design",
+    title: "3D Design Preview",
     description:
-      "Photorealistic 3D renders and material samples, approved before work begins.",
+      "See how your home will look in 3D before we start the work.",
   },
   {
-    title: "German Precision Joinery",
+    title: "Perfect Fitting",
     description:
-      "Factory-made cabinetry with millimeter fit and zero dust on site.",
+      "Carefully made furniture that fits perfectly in your space.",
   },
   {
-    title: "Fixed BOQ Pricing",
+    title: "Clear Pricing",
     description:
-      "Itemized upfront pricing. No hidden costs, no mid-project increases.",
+      "Know the full cost before work begins. No hidden charges.",
   },
   {
-    title: "45-Day Handover",
+    title: "Ready in 45 Days",
     description:
-      "Parallel off-site manufacturing keeps your keys on the committed date.",
+      "We plan and prepare everything to complete your home in 45 days.",
   },
   {
     title: "10-Year Warranty",
     description:
-      "BWR marine plywood and branded German hardware, backed in writing.",
+      "Get a 10-year warranty on selected materials and fittings.",
   },
   {
-    title: "Dedicated Project Manager",
+    title: "Personal Project Manager",
     description:
-      "One point of contact from civil work to final styling.",
+      "One person will guide you and keep you updated throughout the work.",
   },
 ];
 
 /* ---------- DATA: Execution stages ---------- */
 const STAGES = [
   {
-    name: "Consultation & site audit",
-    summary: "We learn how you live and measure the space.",
+    name: "Consultation & Site Visit",
+    summary: "We understand your needs and measure your home.",
     description:
-      "We explore your lifestyle requirements, study architectural plans, and take precise laser measurements of your space.",
+      "We discuss your ideas, understand your daily needs, check your home, and take measurements.",
     deliverables: [
-      "Lifestyle and daily-routine brief",
-      "Laser on-site space audit",
-      "Initial conceptual layout and budget",
+      "Understand your needs and lifestyle",
+      "Visit and measure your home",
+      "Prepare the first design and budget",
     ],
   },
   {
-    name: "3D visuals & material approval",
-    summary: "You see the home before we build it.",
+    name: "3D Design & Material Selection",
+    summary: "See how your home will look before work begins.",
     description:
-      "Our architects craft realistic 3D virtual walkthroughs and tactile material trays for your review and sign-off.",
+      "We create 3D designs of your rooms and help you choose the colours and materials you like.",
     deliverables: [
-      "Photorealistic 3D room renders",
-      "Laminate, stone and fabric swatches",
-      "Itemized fixed BOQ cost sign-off",
+      "3D designs of your rooms",
+      "Choose colours and materials",
+      "Final cost approval before work starts",
     ],
   },
   {
-    name: "Off-site German joinery",
-    summary: "Furniture is made in the factory, not on your floor.",
+    name: "Furniture Making",
+    summary: "Your furniture is made in our factory.",
     description:
-      "Modular cabinetry and custom furniture are fabricated in our facility with millimeter accuracy, while electrical and ceiling work run in parallel at your home.",
+      "We make your furniture in our factory while other home works like electrical and ceiling work are done at your home.",
     deliverables: [
-      "German CNC precision woodwork",
-      "No sawdust or mess on site",
-      "Parallel electrical and ceiling work",
+      "Custom-made furniture",
+      "Less dust and mess at your home",
+      "Electrical and ceiling work done alongside",
     ],
   },
   {
-    name: "Installation & key handover",
-    summary: "We install, inspect and hand you the keys.",
+    name: "Installation & Handover",
+    summary: "We install everything, check the quality, and hand over your home.",
     description:
-      "Our assembly crew installs all fittings, runs a rigorous 50-point quality audit, and delivers your keys on the committed date.",
+      "Our team installs the furniture, checks everything carefully, and hands over your home on the promised date.",
     deliverables: [
-      "Dust-free professional installation",
-      "50-point structural quality check",
-      "On-time handover with 10-year warranty",
+      "Professional furniture installation",
+      "50-point quality check",
+      "On-time handover with a 10-year warranty",
     ],
   },
 ];
-
 export default function AboutPage() {
   const content = ABOUT_PAGE_CONTENT;
   const [activeStage, setActiveStage] = useState(0);
@@ -105,7 +105,7 @@ export default function AboutPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. BANNER */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-24">
         <div className={CONTAINER}>
           {/* Centered Typography Header */}
           <AnimatedSection delay={0.1} className="text-center max-w-4xl mx-auto mb-8 sm:mb-12">
@@ -120,49 +120,51 @@ export default function AboutPage() {
             </p>
           </AnimatedSection>
 
-          {/* Wide Landscape Hero Image with Stats Box at the Bottom End */}
+          {/* Wide Landscape Hero Image with Stats Box */}
           <AnimatedSection delay={0.2} className="max-w-6xl mx-auto">
-            <div className="relative aspect-[16/11] sm:aspect-[16/9] lg:aspect-[2.1/1] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-primary/15">
-              <img
-                src="/images/projects/about-hero.png"
-                alt="Address Interiors living space"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+            <div className="relative">
+              <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[2.1/1] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-primary/15">
+                <img
+                  src="/images/projects/about-hero.png"
+                  alt="Address Interiors living space"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+              </div>
 
-              {/* Stats Box inside the bottom end of the image */}
-              <div className="absolute bottom-3 sm:bottom-5 lg:bottom-6 inset-x-3 sm:inset-x-6 lg:inset-x-8">
-                <div className="bg-secondary/95 backdrop-blur-md rounded-xl sm:rounded-2xl border border-primary/20 p-4 sm:p-5 lg:p-6 shadow-2xl">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-primary/15">
-                    <div className="pt-2 md:pt-0 px-2">
-                      <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight whitespace-nowrap mb-0.5">
+              {/* Stats Box: Below hero on mobile, overlaid inside bottom on md+ */}
+              <div className="relative mt-4 md:mt-0 md:absolute md:bottom-5 lg:bottom-6 md:inset-x-6 lg:inset-x-8">
+                <div className="bg-secondary/95 backdrop-blur-md rounded-xl sm:rounded-2xl border border-primary/20 p-4 sm:p-5 lg:p-6 shadow-xl md:shadow-2xl">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 text-center md:divide-x divide-primary/15">
+                    <div className="px-2">
+                      <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight mb-0.5">
                         5+ Years
                       </p>
-                      <p className="text-[10px] sm:text-xs uppercase tracking-luxury text-[#1A1A1A]/70 font-medium whitespace-nowrap">
+                      <p className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-luxury text-[#1A1A1A]/70 font-medium">
                         Experience
                       </p>
                     </div>
-                    <div className="pt-2 md:pt-0 px-2">
-                      <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight whitespace-nowrap mb-0.5">
+                    <div className="px-2">
+                      <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight mb-0.5">
                         500+
                       </p>
-                      <p className="text-[10px] sm:text-xs uppercase tracking-luxury text-[#1A1A1A]/70 font-medium whitespace-nowrap">
+                      <p className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-luxury text-[#1A1A1A]/70 font-medium">
                         Projects Handed Over
                       </p>
                     </div>
-                    <div className="pt-2 md:pt-0 px-2">
-                      <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight whitespace-nowrap mb-0.5">
+                    <div className="px-2">
+                      <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight mb-0.5">
                         10-Year
                       </p>
-                      <p className="text-[10px] sm:text-xs uppercase tracking-luxury text-[#1A1A1A]/70 font-medium whitespace-nowrap">
+                      <p className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-luxury text-[#1A1A1A]/70 font-medium">
                         Warranty
                       </p>
                     </div>
-                    <div className="pt-2 md:pt-0 px-2">
-                      <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight whitespace-nowrap mb-0.5">
+                    <div className="px-2">
+                      <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight mb-0.5">
                         45-Day
                       </p>
-                      <p className="text-[10px] sm:text-xs uppercase tracking-luxury text-[#1A1A1A]/70 font-medium whitespace-nowrap">
+                      <p className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-luxury text-[#1A1A1A]/70 font-medium">
                         Delivery
                       </p>
                     </div>
@@ -195,31 +197,29 @@ export default function AboutPage() {
               joinery, and complete project execution, so your home is delivered on a
               fixed timeline and a fixed budget.
             </p>
+<div className="divide-y divide-primary/15 border-y border-primary/15 mb-10">
+  {[
+    ["Perfect Furniture Fitting", "Factory-made furniture that fits perfectly with less mess at your home."],
+    ["One Dedicated Team", "One team takes care of everything, from the first step to the final finish."],
+    ["Clear Pricing & Warranty", "No hidden charges, with a written 10-year warranty."],
+  ].map(([title, line]) => (
+    <div
+      key={title}
+      className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6 py-4"
+    >
+      <h3 className="text-base font-medium text-primary">{title}</h3>
+      <p className="text-sm text-[#1A1A1A]/75">{line}</p>
+    </div>
+  ))}
+</div>
 
-            <div className="divide-y divide-primary/15 border-y border-primary/15 mb-10">
-              {[
-                ["German joinery", "Factory-made, millimeter fit, no site dust."],
-                ["Single-point ownership", "One dedicated team from civil work to styling."],
-                ["Fixed BOQ & warranty", "No hidden costs. 10-year written cover."],
-              ].map(([title, line]) => (
-                <div
-                  key={title}
-                  className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6 py-4"
-                >
-                  <h3 className="text-base font-medium text-primary">{title}</h3>
-                  <p className="text-sm text-[#1A1A1A]/75">{line}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex items-end gap-4">
-              <p className="text-5xl font-light text-primary tracking-tight leading-none">
-                {content.whoWeAre.completedProjects} 
+            <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
+              <p className="text-4xl sm:text-5xl font-light text-primary tracking-tight leading-none shrink-0">
+                {content.whoWeAre.completedProjects}
               </p>
-              <p className="text-4xl font-light text-primary tracking-tight leading-none">
-                 homes designed and delivered on time
+              <p className="text-xl sm:text-3xl lg:text-4xl font-light text-primary tracking-tight leading-snug sm:leading-none">
+                homes designed and delivered on time
               </p>
-              
             </div>
           </AnimatedSection>
         </div>
@@ -293,14 +293,17 @@ export default function AboutPage() {
 
           <AnimatedSection delay={0.3} className="text-center mt-12 sm:mt-16">
             <Button asChild size="lg">
-              <Link to="/#contact">Book A Free Site Consultation</Link>
+              <Link to="/#contact" className="flex items-center justify-center gap-2">
+                <span>Book A Free Site Consultation</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
             </Button>
           </AnimatedSection>
         </div>
       </section>
 
       {/* HOW WE WORK */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.025] border-t border-primary/15">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.025] border-t border-primary/15">
         <div className={CONTAINER}>
           <AnimatedSection delay={0.1} className={`max-w-4xl ${HEAD_GAP}`}>
             <span className={EYEBROW}>How We Work</span>
@@ -331,32 +334,32 @@ export default function AboutPage() {
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => setActiveStage(idx)}
-                    className="relative w-full text-left pl-10 py-4 group focus-visible:outline-none"
+                    className="relative w-full text-left pl-10 pr-3 py-4 rounded-xl group cursor-pointer transition-colors duration-200 hover:bg-primary/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
                   >
                     <span
                       aria-hidden="true"
-                      className={`absolute left-0 top-[1.35rem] w-[23px] h-[23px] rounded-full border-2 transition-colors duration-300 flex items-center justify-center ${
+                      className={`absolute left-0 top-[1.35rem] w-[23px] h-[23px] rounded-full border-2 transition-all duration-300 flex items-center justify-center ${
                         isActive
-                          ? "bg-primary border-primary"
+                          ? "bg-primary border-primary scale-110 shadow-sm"
                           : isDone
-                          ? "bg-primary/40 border-primary/40"
-                          : "bg-secondary border-primary/30 group-hover:border-primary"
+                          ? "bg-primary border-primary"
+                          : "bg-white border-primary/50 group-hover:border-primary group-hover:bg-[#1A1A1A] group-hover:border-[#1A1A1A]"
                       }`}
                     >
-                      {isActive && <span className="w-2 h-2 rounded-full bg-secondary" />}
+                      {isActive && <span className="w-2 h-2 rounded-full bg-white" />}
                     </span>
                     <span
-                      className={`block text-lg sm:text-xl tracking-tight transition-colors duration-300 ${
+                      className={`block text-lg sm:text-xl tracking-tight transition-colors duration-200 ${
                         isActive
-                          ? "text-primary font-medium"
-                          : "text-primary/55 font-light group-hover:text-primary"
+                          ? "text-primary font-semibold"
+                          : "text-[#1A1A1A] font-normal group-hover:text-primary"
                       }`}
                     >
                       {s.name}
                     </span>
                     <span
-                      className={`block text-sm mt-0.5 transition-colors duration-300 ${
-                        isActive ? "text-[#1A1A1A]/75" : "text-[#1A1A1A]/40"
+                      className={`block text-sm mt-0.5 transition-colors duration-200 ${
+                        isActive ? "text-[#1A1A1A]/90 font-medium" : "text-[#1A1A1A]/75 group-hover:text-[#1A1A1A]"
                       }`}
                     >
                       {s.summary}
@@ -393,25 +396,29 @@ export default function AboutPage() {
                       ))}
                     </ul>
 
-                    <div className="flex items-center gap-3 mt-8">
-                      <button
+                    <div className="flex flex-wrap items-center gap-3 mt-8">
+                      <Button
                         type="button"
+                        variant="lightOutline"
+                        size="sm"
                         onClick={() => setActiveStage((i) => Math.max(0, i - 1))}
                         disabled={activeStage === 0}
-                        className="px-5 py-2 rounded-full border border-white/40 text-sm text-white hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
+                        className="min-h-[44px] px-5 text-sm"
                       >
                         Previous
-                      </button>
-                      <button
+                      </Button>
+                      <Button
                         type="button"
+                        variant="light"
+                        size="sm"
                         onClick={() =>
                           setActiveStage((i) => Math.min(STAGES.length - 1, i + 1))
                         }
                         disabled={activeStage === STAGES.length - 1}
-                        className="px-5 py-2 rounded-full bg-secondary text-primary text-sm font-medium hover:bg-secondary/90 disabled:opacity-30 transition-colors"
+                        className="min-h-[44px] px-5 text-sm"
                       >
                         Next stage
-                      </button>
+                      </Button>
                     </div>
                   </motion.div>
                 </AnimatePresence>
@@ -422,10 +429,10 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24">
         <div className={CONTAINER}>
           <AnimatedSection delay={0.15}>
-            <div className="relative rounded-3xl bg-primary text-white px-6 py-14 sm:p-16 text-center shadow-2xl flex flex-col items-center overflow-hidden">
+            <div className="relative rounded-3xl bg-primary text-white px-5 py-12 sm:p-16 text-center shadow-2xl flex flex-col items-center overflow-hidden">
               <img
                 src="/images/projects/about-cta.png"
                 alt=""
@@ -433,7 +440,7 @@ export default function AboutPage() {
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
               <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />
-              <div className="relative z-10 flex flex-col items-center max-w-3xl mx-auto">
+              <div className="relative z-10 flex flex-col items-center max-w-3xl mx-auto w-full">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium bg-white/15 text-white border border-white/30 mb-3.5">
                 Let's Start Designing
               </span>
@@ -443,18 +450,23 @@ export default function AboutPage() {
               <p className="text-base text-white/85 max-w-xl mx-auto mb-8 font-light leading-relaxed">
                 Book a free consultation. We'll review your floor plan and style, and share a transparent estimate.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
                 <Button
                   asChild
+                  variant="light"
                   size="lg"
-                  className="bg-white text-primary border border-transparent hover:bg-white/90 hover:text-primary shadow-md font-medium px-8 transition-all duration-200"
+                  className="w-full sm:w-auto px-6 sm:px-8"
                 >
-                  <Link to="/#contact" className="text-primary font-medium">Schedule Free Consultation</Link>
+                  <Link to="/#contact" className="flex items-center justify-center gap-2">
+                    <span>Schedule Free Consultation</span>
+                    <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
+                  </Link>
                 </Button>
                 <Button
                   asChild
+                  variant="lightOutline"
                   size="lg"
-                  className="border border-white/70 bg-transparent text-white hover:bg-white hover:text-primary hover:border-white shadow-sm font-medium px-8 transition-all duration-200"
+                  className="w-full sm:w-auto px-6 sm:px-8"
                 >
                   <Link to="/">Back to Home</Link>
                 </Button>

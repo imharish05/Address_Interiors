@@ -8,7 +8,7 @@ import ImageReveal from "@/components/common/ImageReveal";
 import { Button } from "@/components/ui/button";
 
 /* ---------- SHARED SPACING + TYPE SYSTEM ---------- */
-const SECTION = "px-6 sm:px-8 lg:px-12 py-14 sm:py-20";
+const SECTION = "px-5 sm:px-8 lg:px-12 py-14 sm:py-20";
 const CONTAINER = "max-w-7xl mx-auto";
 const EYEBROW =
   "inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4";
@@ -94,11 +94,11 @@ export default function ProcessPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. HERO: headline + photo stage selector */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-14 sm:pb-20">
+      <section className="px-5 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-12 sm:pb-20">
         <div className={CONTAINER}>
           <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto">
             <span className={EYEBROW}>Studio Methodology & Roadmap</span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-5">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-5">
               The Art of Architectural Realization
             </h1>
             <p className={`${BODY} sm:text-lg`}>
@@ -166,25 +166,27 @@ export default function ProcessPage() {
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
                   <button
+                    type="button"
                     onClick={handlePrev}
-                    className="p-3 rounded-full border border-primary/25 text-primary hover:bg-primary hover:text-white transition-all cursor-pointer group"
+                    className="btn-sweep btn-sweep-primary min-w-[44px] min-h-[44px] flex items-center justify-center p-3 rounded-full border-[1.5px] border-primary bg-white text-primary hover:text-white hover:border-primary hover:-translate-y-0.5 active:scale-95 transition-[color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-sm hover:shadow-md cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
                     aria-label="Previous Stage"
                   >
-                    <ChevronLeft className="w-5 h-5 group-hover:text-white transition-colors" />
+                    <ChevronLeft className="w-5 h-5 transition-transform duration-200 group-hover:-translate-x-0.5" />
                   </button>
                   <button
+                    type="button"
                     onClick={handleNext}
-                    className="p-3 rounded-full border border-primary/25 text-primary hover:bg-primary hover:text-white transition-all cursor-pointer group"
+                    className="btn-sweep btn-sweep-primary min-w-[44px] min-h-[44px] flex items-center justify-center p-3 rounded-full border-[1.5px] border-primary bg-white text-primary hover:text-white hover:border-primary hover:-translate-y-0.5 active:scale-95 transition-[color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-sm hover:shadow-md cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
                     aria-label="Next Stage"
                   >
-                    <ChevronRight className="w-5 h-5 group-hover:text-white transition-colors" />
+                    <ChevronRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </button>
-                  <span className="text-sm text-[#1A1A1A]/70 ml-2">
+                  <span className="text-sm text-[#1A1A1A]/75 font-medium ml-2">
                     {activeStepIndex + 1} of {PROCESS_STEPS.length}
                   </span>
                 </div>
 
-                <Button asChild>
+                <Button asChild className="w-full sm:w-auto">
                   <Link to="/contact">Begin with Stage 01</Link>
                 </Button>
               </div>
@@ -241,9 +243,9 @@ export default function ProcessPage() {
       </section>
 
       {/* 4. FAQ - Clean Luxury Minimalist Accordion */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
         <div className="max-w-4xl mx-auto">
-          <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
               Client Inquiries
             </span>
@@ -264,34 +266,34 @@ export default function ProcessPage() {
                     key={faq.question}
                     className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                       isOpen
-                        ? "bg-white border-primary/35 shadow-md shadow-primary/[0.04]"
-                        : "bg-white/80 hover:bg-white border-primary/15 hover:border-primary/30"
+                        ? "bg-white border-primary shadow-md shadow-primary/[0.06]"
+                        : "bg-white border-primary/20 hover:border-primary hover:shadow-md"
                     }`}
                   >
                     <button
                       type="button"
                       onClick={() => setOpenFaq(isOpen ? -1 : idx)}
                       aria-expanded={isOpen}
-                      className="w-full flex items-center justify-between gap-6 p-6 sm:p-7 text-left cursor-pointer group"
+                      className="w-full min-h-[44px] flex items-center justify-between gap-4 sm:gap-6 p-5 sm:p-7 text-left cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-inset rounded-2xl"
                     >
                       <span
-                        className={`text-base sm:text-lg font-light tracking-tight transition-colors duration-200 ${
-                          isOpen ? "text-primary font-normal" : "text-[#1A1A1A] group-hover:text-primary"
+                        className={`text-base sm:text-lg tracking-tight transition-colors duration-200 ${
+                          isOpen ? "text-primary font-medium" : "text-[#1A1A1A] font-normal group-hover:text-primary"
                         }`}
                       >
                         {faq.question}
                       </span>
 
                       <div
-                        className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
+                        className={`w-10 h-10 rounded-full border-[1.5px] flex items-center justify-center shrink-0 transition-all duration-300 ${
                           isOpen
-                            ? "bg-primary text-white border-primary"
-                            : "border-primary/25 text-primary group-hover:border-primary group-hover:bg-primary/5"
+                            ? "bg-[#1A1A1A] text-white border-[#1A1A1A]"
+                            : "border-primary bg-white text-primary group-hover:bg-primary group-hover:text-white group-hover:border-primary"
                         }`}
                       >
                         <ChevronRight
                           className={`w-4 h-4 transition-transform duration-300 ${
-                            isOpen ? "rotate-90" : ""
+                            isOpen ? "rotate-90" : "group-hover:translate-x-0.5"
                           }`}
                         />
                       </div>
@@ -303,7 +305,7 @@ export default function ProcessPage() {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-1 text-sm sm:text-base text-[#1A1A1A]/75 font-normal leading-relaxed border-t border-primary/10">
+                        <div className="px-5 sm:px-7 pb-5 sm:pb-7 pt-2 text-sm sm:text-base text-[#1A1A1A]/75 font-normal leading-relaxed border-t border-primary/10">
                           <p>{faq.answer}</p>
                         </div>
                       </div>
@@ -331,21 +333,21 @@ export default function ProcessPage() {
               )}
               <div className="absolute inset-0 bg-primary/85" />
 
-              <div className="relative z-10 px-6 py-14 sm:p-16 lg:p-20 text-center flex flex-col items-center text-white">
+              <div className="relative z-10 px-5 py-12 sm:p-16 lg:p-20 text-center flex flex-col items-center text-white">
                 <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-white/15 text-white border border-white/25 mb-4">
                   Begin Stage 01
                 </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-[1.15] max-w-3xl mb-5">
+                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight leading-[1.15] max-w-3xl mb-5">
                   Ready for a Stress-Free, On-Time Interior Transformation?
                 </h2>
                 <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl mb-8">
                   Book an initial consultation to review your floor plan, see realistic 3D renderings, and receive an itemized fixed budget.
                 </p>
-                <div className="flex flex-wrap items-center justify-center gap-4">
-                  <Button asChild size="lg" className="bg-white !text-primary hover:bg-white/95 hover:!text-primary px-8 shadow-lg font-medium">
-                    <Link to="/contact" className="!text-primary font-medium">Schedule Atelier Consultation</Link>
+                <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+                  <Button asChild variant="light" size="lg" className="w-full sm:w-auto px-6 sm:px-8">
+                    <Link to="/contact">Schedule Atelier Consultation</Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
+                  <Button asChild variant="lightOutline" size="lg" className="w-full sm:w-auto">
                     <Link to="/projects">View Curated Residences</Link>
                   </Button>
                 </div>

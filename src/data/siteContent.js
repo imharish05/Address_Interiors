@@ -300,7 +300,7 @@ export const ABOUT_PAGE_CONTENT = {
       "100% Customized 3D Designs before starting on-site work",
       "Factory-finished modular joinery with German precision machinery",
       "End-to-End Project Execution with zero multiple-contractor hassle",
-      "Transparent pricing with clear, itemized Bill of Quantities (BOQ)",
+      "Transparent pricing with clear, itemized Bill of Quantities",
       "10-Year Comprehensive Warranty with dedicated post-handover support",
     ],
     experienceYears: "14+",

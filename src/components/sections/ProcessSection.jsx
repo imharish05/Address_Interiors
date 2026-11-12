@@ -25,7 +25,7 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden border-t border-primary/10"
+      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden border-t border-primary/10"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -40,34 +40,35 @@ export default function ProcessSection() {
 
         {/* Step Progress Navigation Bar */}
         <AnimatedSection delay={0.1} className="mb-8 sm:mb-10">
-          <div className="flex items-center justify-between gap-2 p-2 rounded-2xl bg-primary/[0.03] border border-primary/15 overflow-x-auto scrollbar-none">
+          <div className="flex flex-wrap sm:grid sm:grid-cols-5 gap-1.5 sm:gap-2 p-1.5 sm:p-2 rounded-2xl bg-primary/[0.03] border border-primary/15">
             {PROCESS_STEPS.map((step, idx) => {
               const isActive = idx === activeStepIndex;
               return (
                 <button
                   key={step.step}
+                  type="button"
                   onClick={() => setActiveStepIndex(idx)}
-                  className={`flex items-center gap-2.5 px-4 sm:px-6 py-3 rounded-xl text-xs font-medium tracking-wide transition-all duration-300 ease-out cursor-pointer whitespace-nowrap flex-1 justify-center active:scale-95 group ${
+                  className={`min-h-[44px] flex flex-row sm:flex-col lg:flex-row items-center justify-center gap-1.5 lg:gap-2.5 px-3 sm:px-2 lg:px-5 py-2.5 sm:py-3 rounded-xl text-xs font-medium tracking-wide transition-[color,background-color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer flex-1 basis-[calc(50%-0.25rem)] sm:basis-auto active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2 group ${
                     isActive
-                      ? "bg-primary text-white border border-primary hover:bg-primary/90 hover:text-white shadow-md font-semibold scale-[1.01]"
-                      : "text-primary/80 bg-transparent hover:bg-primary hover:text-white"
+                      ? "bg-primary text-white border-[1.5px] border-primary shadow-md font-semibold"
+                      : "bg-white text-[#1A1A1A] border-[1.5px] border-primary/20 hover:bg-[#1A1A1A] hover:text-white hover:border-[#1A1A1A] hover:shadow-sm"
                   }`}
                   aria-label={`View Stage ${step.step}: ${step.name}`}
                 >
                   <span
                     className={`font-mono text-xs transition-colors duration-200 ${
                       isActive
-                        ? "text-white/90"
-                        : "text-primary/60 group-hover:text-white/90"
+                        ? "text-white"
+                        : "text-primary font-semibold group-hover:text-white"
                     }`}
                   >
                     {step.step}
                   </span>
                   <span
-                    className={`uppercase tracking-luxury text-[11px] sm:text-xs transition-colors duration-200 ${
+                    className={`uppercase tracking-wider sm:tracking-luxury text-[11px] sm:text-[10px] lg:text-xs transition-colors duration-200 ${
                       isActive
                         ? "text-white"
-                        : "text-primary group-hover:text-white"
+                        : "text-[#1A1A1A] group-hover:text-white"
                     }`}
                   >
                     {step.name}
@@ -79,15 +80,15 @@ export default function ProcessSection() {
         </AnimatedSection>
 
         {/* Master Architectural Stage Showcase Card */}
-        <div className="relative rounded-[2.5rem] bg-primary/[0.02] border border-primary/15 p-6 sm:p-10 lg:p-14 shadow-lg overflow-hidden">
+        <div className="relative rounded-3xl sm:rounded-[2.5rem] bg-primary/[0.02] border border-primary/15 p-5 sm:p-10 lg:p-14 shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             {/* Left Column: Stage Editorial Narrative */}
             <div className="lg:col-span-6 flex flex-col justify-between">
               <div>
                 {/* Stage Header Meta */}
-                <div className="flex items-center justify-between pb-4 mb-6 border-b border-primary/10">
-                  <div className="flex items-center gap-3">
-                    <span className="font-mono text-2xl sm:text-3xl font-light text-primary/40">
+                <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-6 border-b border-primary/10">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                    <span className="font-mono text-xl sm:text-3xl font-light text-primary/40">
                       STAGE {activeStep.step}
                     </span>
                     <span className="text-[10px] uppercase tracking-luxury text-primary/60 font-medium px-2.5 py-1 rounded-full bg-primary/5 border border-primary/10">
@@ -143,8 +144,9 @@ export default function ProcessSection() {
 
                 <div className="flex items-center gap-3">
                   <button
+                    type="button"
                     onClick={handlePrev}
-                    className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary/30 text-xs text-primary bg-white/70 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 ease-out cursor-pointer active:scale-95 group shadow-sm select-none"
+                    className="btn-sweep btn-sweep-primary min-h-[44px] flex items-center gap-1.5 px-4 py-2.5 rounded-full border-[1.5px] border-primary text-xs font-medium text-primary bg-white hover:text-white hover:border-primary hover:-translate-y-0.5 transition-[color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer active:scale-[0.97] group shadow-sm hover:shadow-md select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
                     aria-label="Previous process stage"
                   >
                     <ChevronLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform duration-200" />
@@ -152,8 +154,9 @@ export default function ProcessSection() {
                   </button>
 
                   <button
+                    type="button"
                     onClick={handleNext}
-                    className="flex items-center gap-1.5 px-5 py-2 rounded-full bg-primary text-white border border-primary text-xs select-none hover:bg-primary/90 hover:text-white hover:border-primary transition-all duration-300 ease-out cursor-pointer shadow-sm active:scale-95 group select-none"
+                    className="btn-sweep btn-sweep-ink min-h-[44px] flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-primary text-white border-[1.5px] border-primary text-xs font-medium select-none hover:border-[#1A1A1A] hover:text-white hover:-translate-y-0.5 transition-[color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer shadow-[0_6px_18px_-4px_rgba(190,80,55,0.4)] hover:shadow-[0_12px_26px_-6px_rgba(26,26,26,0.4)] active:scale-[0.97] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
                     aria-label="Next process stage"
                   >
                     <span>Next Stage</span>
@@ -179,7 +182,7 @@ export default function ProcessSection() {
                 />
 
                 {/* Floating Architectural Badge */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-secondary/90 backdrop-blur-md border border-primary/15 shadow-lg flex items-center justify-between">
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 p-3 sm:p-4 rounded-2xl bg-secondary/90 backdrop-blur-md border border-primary/15 shadow-lg flex flex-wrap items-center justify-between gap-2">
                   <div>
                     <span className="text-[10px] uppercase tracking-luxury text-primary/60 font-medium block">
                       Active Trajectory
@@ -188,7 +191,7 @@ export default function ProcessSection() {
                       Phase 0{activeStep.step} • {activeStep.name} Execution
                     </span>
                   </div>
-                  <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-primary/10 text-primary">
+                  <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-primary/10 text-primary shrink-0">
                     {activeStep.duration}
                   </span>
                 </div>

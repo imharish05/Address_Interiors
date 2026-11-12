@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex flex-col justify-between pt-28 pb-8 sm:pt-32 sm:pb-10 px-6 sm:px-8 lg:px-12 overflow-hidden bg-secondary"
+      className="relative min-h-[92dvh] flex flex-col justify-between pt-24 pb-6 sm:pt-32 sm:pb-10 px-5 sm:px-8 lg:px-12 overflow-hidden bg-secondary"
     >
       {/* Subtle organic architectural background glow */}
       <div
@@ -44,12 +44,12 @@ export default function HeroSection() {
               </p>
             </AnimatedSection>
 
-            {/* CTAs - Strictly Single Line */}
-            <AnimatedSection delay={0.4} className="flex flex-row flex-nowrap items-center gap-3 sm:gap-4 overflow-x-auto scrollbar-none whitespace-nowrap">
-              <Button asChild size="lg" className="shrink-0 whitespace-nowrap">
-                <a href="#projects" className="flex items-center gap-2">
+            {/* CTAs - Responsive Stack on Mobile, Inline on Tablet/Desktop */}
+            <AnimatedSection delay={0.4} className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full">
+              <Button asChild size="lg" className="w-full sm:w-auto">
+                <a href="#projects" className="flex items-center justify-center gap-2">
                   <span>{HERO_CONTENT.primaryCta}</span>
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </Button>
 
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="shrink-0 whitespace-nowrap"
+                className="w-full sm:w-auto"
               >
                 <a href="#about">{HERO_CONTENT.secondaryCta}</a>
               </Button>
@@ -65,13 +65,13 @@ export default function HeroSection() {
 
             {/* Micro Stats */}
             <AnimatedSection delay={0.5} className="mt-8 pt-6 border-t border-primary/10 w-full">
-              <div className="grid grid-cols-3 gap-6 sm:gap-8">
+              <div className="grid grid-cols-3 gap-3 sm:gap-8">
                 {HERO_CONTENT.stats.map((stat) => (
-                  <div key={stat.label} className="flex flex-col">
-                    <span className="text-2xl sm:text-3xl font-light tracking-tight text-primary">
+                  <div key={stat.label} className="flex flex-col min-w-0">
+                    <span className="text-xl sm:text-3xl font-light tracking-tight text-primary">
                       {stat.value}
                     </span>
-                    <span className="text-[11px] uppercase tracking-wider text-[#1A1A1A]/70 mt-1">
+                    <span className="text-[10px] sm:text-[11px] uppercase tracking-wide sm:tracking-wider text-[#1A1A1A]/70 mt-1 leading-snug break-words">
                       {stat.label}
                     </span>
                   </div>
@@ -89,12 +89,12 @@ export default function HeroSection() {
             >
               {/* Decorative Arch Backdrop Border */}
               <div
-                className="absolute inset-0 translate-x-4 translate-y-4 rounded-t-[10rem] sm:rounded-t-[14rem] rounded-b-3xl border border-primary/20 pointer-events-none"
+                className="absolute inset-0 translate-x-2.5 translate-y-2.5 sm:translate-x-4 sm:translate-y-4 rounded-t-[7rem] sm:rounded-t-[12rem] lg:rounded-t-[14rem] rounded-b-3xl border border-primary/20 pointer-events-none"
                 aria-hidden="true"
               />
 
               {/* Main Visual Image */}
-              <div className="relative z-10 w-full aspect-[4/5] rounded-t-[10rem] sm:rounded-t-[14rem] rounded-b-3xl overflow-hidden shadow-2xl bg-primary/10 group">
+              <div className="relative z-10 w-full aspect-[4/5] rounded-t-[7rem] sm:rounded-t-[12rem] lg:rounded-t-[14rem] rounded-b-3xl overflow-hidden shadow-2xl bg-primary/10 group">
                 <img
                   src={HERO_CONTENT.heroImage}
                   alt="Luxury Minimalist Living Suite with Curved Sofas and Travertine"
@@ -110,16 +110,16 @@ export default function HeroSection() {
                 />
 
                 {/* Floating Architectural Badge */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 rounded-2xl bg-secondary/90 backdrop-blur-md border border-primary/15 shadow-lg flex items-center justify-between">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] font-semibold text-primary">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3.5 sm:p-5 rounded-2xl bg-secondary/90 backdrop-blur-md border border-primary/15 shadow-lg flex items-center justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="text-[11px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.2em] font-semibold text-primary">
                       Signature Commission
                     </p>
-                    <p className="text-sm font-medium text-[#1A1A1A] mt-0.5">
+                    <p className="text-sm font-medium text-[#1A1A1A] mt-0.5 truncate">
                       Sushma Villa
                     </p>
                   </div>
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-[#1A1A1A]/5 text-[#1A1A1A] font-mono font-medium">
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-[#1A1A1A]/5 text-[#1A1A1A] font-mono font-medium shrink-0">
                     2025
                   </span>
                 </div>
@@ -130,18 +130,18 @@ export default function HeroSection() {
       </div>
 
       {/* Subtle Scroll Indicator */}
-      <div className="w-full max-w-7xl mx-auto flex items-center justify-between pt-6 border-t border-[#1A1A1A]/10 text-xs text-[#1A1A1A]/80">
-        <span className="tracking-[0.2em] uppercase font-medium">
+      <div className="w-full max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 pt-6 border-t border-[#1A1A1A]/10 text-[11px] sm:text-xs text-[#1A1A1A]/80">
+        <span className="tracking-[0.14em] sm:tracking-[0.2em] uppercase font-medium">
           {BRAND_INFO.fullName} • Architectural Monograph
         </span>
 
         <a
           href="#about"
-          className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors cursor-pointer py-1"
+          className="btn-sweep btn-sweep-ink inline-flex items-center gap-2 min-h-[44px] px-4 py-2 rounded-full border-[1.5px] border-primary bg-white text-primary font-semibold hover:border-[#1A1A1A] hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-[color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-sm hover:shadow-md cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
           aria-label="Scroll to about section"
         >
           <span className="uppercase tracking-[0.18em]">Discover</span>
-          <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
+          <ArrowDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-y-0.5" />
         </a>
       </div>
     </section>

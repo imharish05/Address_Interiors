@@ -15,16 +15,17 @@ export default function ScrollToTop() {
 
   return (
     <button
+      type="button"
       onClick={scrollToTop}
       aria-label="Scroll to top of page"
       className={cn(
-        "fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-primary text-secondary shadow-lg border border-primary transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 cursor-pointer group hover:bg-secondary hover:text-primary hover:border-primary hover:scale-105 active:scale-95",
+        "btn-sweep btn-sweep-ink fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 min-h-[48px] min-w-[48px] flex items-center justify-center p-3 rounded-full bg-primary text-white shadow-[0_10px_28px_rgba(26,26,26,0.3)] border-2 border-white transition-[color,background-color,border-color,transform,opacity,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2 cursor-pointer group hover:border-white hover:shadow-[0_14px_32px_rgba(0,0,0,0.42)] hover:scale-105 active:scale-95",
         isScrolled
-          ? "opacity-90 translate-y-0 pointer-events-auto hover:opacity-100"
+          ? "opacity-100 translate-y-0 pointer-events-auto"
           : "opacity-0 translate-y-4 pointer-events-none"
       )}
     >
-      <ArrowUp className="w-5 h-5 text-secondary group-hover:text-primary transition-all duration-200 group-hover:-translate-y-0.5" />
+      <ArrowUp className="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-0.5" />
     </button>
   );
 }

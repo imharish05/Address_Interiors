@@ -6,9 +6,11 @@
 
 @layer base {
   :root {
-    /* STRICTLY TWO PRIMARY BRAND COLORS */
+    /* STRICTLY TWO PRIMARY BRAND COLORS + ARCHITECTURAL INK CONTRAST */
     --primary: #BE5037;      /* The Address Interior Terracotta Orange */
+    --primary-deep: #963721; /* Deep Terracotta for elevated contrast states */
     --secondary: #FFFFFF;    /* Pure Luxury White */
+    --ink: #1A1A1A;          /* Obsidian Charcoal for crisp contrast hovers & ink */
 
     --primary-rgb: 190 80 55;
     --secondary-rgb: 255 255 255;
@@ -55,6 +57,18 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
   body {
@@ -90,69 +104,53 @@
     color: #FFFFFF;
   }
 
-  /*
-   * SCOPED RULE:
-   * White/secondary buttons inside dark/text-white/text-secondary/bg-primary containers
-   * MUST always have terracotta text (#BE5037) both in normal state AND when hovered!
-   */
-  .text-white a.bg-white,
-  .text-white a.bg-white *,
-  .text-white button.bg-white,
-  .text-white button.bg-white *,
-  .text-secondary a.bg-white,
-  .text-secondary a.bg-white *,
-  .text-secondary button.bg-white,
-  .text-secondary button.bg-white *,
-  .bg-primary a.bg-white,
-  .bg-primary a.bg-white *,
-  .bg-primary button.bg-white,
-  .bg-primary button.bg-white *,
-  .bg-primary a.bg-secondary,
-  .bg-primary a.bg-secondary *,
-  .bg-primary button.bg-secondary,
-  .bg-primary button.bg-secondary *,
-  a.bg-white.text-primary,
-  a.bg-white.text-primary *,
-  button.bg-white.text-primary,
-  button.bg-white.text-primary * {
-    color: #BE5037 !important;
-    stroke: #BE5037 !important;
+  /* Architectural high-contrast button fill sweep */
+  .btn-sweep {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
   }
 
-  /* Outlined white buttons on dark backgrounds remain crisp white in normal state */
-  button.border-white:not(.bg-white):not(.bg-secondary):not(:hover),
-  button.border-white:not(.bg-white):not(.bg-secondary):not(:hover) *,
-  a.border-white:not(.bg-white):not(.bg-secondary):not(:hover),
-  a.border-white:not(.bg-white):not(.bg-secondary):not(:hover) * {
-    color: #FFFFFF !important;
+  .btn-sweep::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    transform: translateY(104%);
+    transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
   }
 
-  /* When outlined white button is hovered to solid white, its text turns terracotta */
-  .bg-primary a.border-white:hover,
-  .bg-primary a.border-white:hover *,
-  .bg-primary button.border-white:hover,
-  .bg-primary button.border-white:hover *,
-  .text-white a.border-white:hover,
-  .text-white a.border-white:hover *,
-  .text-white button.border-white:hover,
-  .text-white button.border-white:hover * {
-    color: #BE5037 !important;
-    stroke: #BE5037 !important;
+  .btn-sweep:hover:not(:disabled)::before,
+  .btn-sweep:focus-visible:not(:disabled)::before {
+    transform: translateY(0);
   }
 
-  /*
-   * Outline button hover contrast:
-   * When an outline button (border-primary) transitions to solid terracotta (hover:bg-primary),
-   * its text and SVG icon turn crisp white.
-   */
-  button.border-primary[class*="hover:bg-primary"]:hover,
-  button.border-primary[class*="hover:bg-primary"]:hover *,
-  a.border-primary[class*="hover:bg-primary"]:hover,
-  a.border-primary[class*="hover:bg-primary"]:hover *,
-  .group:hover .group-hover\:bg-primary,
-  .group:hover .group-hover\:bg-primary * {
-    color: #FFFFFF !important;
-    stroke: #FFFFFF !important;
+  .btn-sweep-ink::before {
+    background-color: var(--ink);
+  }
+
+  .btn-sweep-primary::before {
+    background-color: var(--primary);
+  }
+
+  .btn-sweep-white::before {
+    background-color: var(--secondary);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-sweep::before {
+      transform: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    .btn-sweep:hover:not(:disabled)::before,
+    .btn-sweep:focus-visible:not(:disabled)::before {
+      transform: none;
+      opacity: 1;
+    }
   }
 
   ::selection {
@@ -182,6 +180,14 @@
 
 /* Custom architectural and luxury utility classes */
 @layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
   .text-balance {
     text-wrap: balance;
   }

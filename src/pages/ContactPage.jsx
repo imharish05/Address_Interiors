@@ -91,7 +91,7 @@ export default function ContactPage() {
   return (
     <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
       {/* 1. HERO HEADER */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 text-center max-w-4xl mx-auto">
+      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 text-center max-w-4xl mx-auto">
         <AnimatedSection delay={0.1}>
           <span className={EYEBROW}>Connect With Our Studio</span>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-4 sm:mb-5">
@@ -104,11 +104,11 @@ export default function ContactPage() {
       </section>
 
       {/* 2. CONTACT DETAILS & FORM */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 border-t border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left Column: Direct Studio Info (Heading in Red, Balance in Black) */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+            <div className="lg:col-span-5 flex flex-col justify-between space-y-8 min-w-0">
               <AnimatedSection delay={0.15} className="space-y-6">
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-light text-primary tracking-tight mb-2">
@@ -124,13 +124,13 @@ export default function ContactPage() {
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
                       <Mail className="w-4 h-4" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <span className="text-xs font-semibold text-[#1A1A1A]/75 block mb-0.5">
                         Direct Inquiries
                       </span>
                       <a
                         href={`mailto:${BRAND_INFO.email}`}
-                        className="text-sm font-medium text-[#1A1A1A] hover:text-primary hover:underline underline-offset-4"
+                        className="text-sm font-medium text-[#1A1A1A] hover:text-primary hover:underline underline-offset-4 transition-colors duration-200 break-all sm:break-words"
                       >
                         {BRAND_INFO.email}
                       </a>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                       </span>
                       <a
                         href={`tel:${BRAND_INFO.phone.replace(/\s+/g, "")}`}
-                        className="text-sm font-medium text-[#1A1A1A] hover:text-primary hover:underline underline-offset-4"
+                        className="text-sm font-medium text-[#1A1A1A] hover:text-primary hover:underline underline-offset-4 transition-colors duration-200"
                       >
                         {BRAND_INFO.phone}
                       </a>
@@ -201,7 +201,7 @@ export default function ContactPage() {
             {/* Right Column: Commission Request Form */}
             <div className="lg:col-span-7">
               <AnimatedSection delay={0.2}>
-                <div className="p-8 sm:p-12 rounded-[2rem] bg-primary/[0.025] border border-primary/15 shadow-xl">
+                <div className="p-5 sm:p-10 lg:p-12 rounded-3xl sm:rounded-[2rem] bg-primary/[0.025] border border-primary/15 shadow-xl">
                   <div className="mb-8 pb-6 border-b border-primary/10">
                     <h2 className="text-2xl sm:text-3xl font-light text-primary tracking-tight">
                       Commission Request
@@ -227,7 +227,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="e.g. Vikramaditya Singhania"
                         aria-invalid={!!errors.name}
-                        className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 border-primary/20 bg-background/60 ${
+                        className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 border-primary/25 bg-white ${
                           errors.name ? "border-red-500 focus-visible:ring-red-500" : ""
                         }`}
                       />
@@ -256,7 +256,7 @@ export default function ContactPage() {
                           onChange={handleChange}
                           placeholder="vikram@residence.com"
                           aria-invalid={!!errors.email}
-                          className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 border-primary/20 bg-background/60 ${
+                          className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 border-primary/25 bg-white ${
                             errors.email ? "border-red-500 focus-visible:ring-red-500" : ""
                           }`}
                         />
@@ -276,8 +276,8 @@ export default function ContactPage() {
                           Phone Number (India)
                         </label>
                         <div
-                          className={`flex rounded-xl overflow-hidden border bg-background/60 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all ${
-                            errors.phone ? "border-red-500" : "border-primary/20"
+                          className={`flex h-12 rounded-xl overflow-hidden border bg-white hover:border-primary/50 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25 transition-[border-color,box-shadow] duration-200 ${
+                            errors.phone ? "border-red-500" : "border-primary/25"
                           }`}
                         >
                           <span className="inline-flex items-center px-3.5 bg-primary/10 text-[#1A1A1A] text-sm font-medium border-r border-primary/15 select-none font-sans">
@@ -295,7 +295,7 @@ export default function ContactPage() {
                               if (errors.phone) setErrors((prev) => ({ ...prev, phone: null }));
                             }}
                             placeholder="98450 12345"
-                            className="w-full bg-transparent px-4 py-2 text-sm text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 focus:outline-none"
+                            className="w-full h-full bg-transparent px-4 py-2 text-sm text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 focus:outline-none"
                           />
                         </div>
                         {errors.phone && (
@@ -320,7 +320,7 @@ export default function ContactPage() {
                         name="projectType"
                         value={formData.projectType}
                         onChange={handleChange}
-                        className="flex h-12 w-full rounded-xl border border-primary/20 bg-background/60 px-4 py-2 text-sm text-[#1A1A1A] transition-all duration-200 focus-visible:outline-none focus-visible:border-primary focus-visible:ring-1 focus-visible:ring-primary cursor-pointer font-sans"
+                        className="flex h-12 w-full rounded-xl border border-primary/25 bg-white px-4 py-2 text-sm text-[#1A1A1A] transition-[border-color,box-shadow] duration-200 hover:border-primary/50 focus-visible:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/25 cursor-pointer font-sans"
                       >
                         {CONTACT_CONTENT.projectTypes.map((type) => (
                           <option key={type} value={type} className="bg-secondary text-[#1A1A1A]">
@@ -346,7 +346,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="Please describe your floor plan, carpet area, aesthetic preferences, and expected move-in timeline..."
                         aria-invalid={!!errors.message}
-                        className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 border-primary/20 bg-background/60 ${
+                        className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 border-primary/25 bg-white ${
                           errors.message ? "border-red-500 focus-visible:ring-red-500" : ""
                         }`}
                       />
@@ -382,10 +382,10 @@ export default function ContactPage() {
       </section>
 
       {/* 3. CLEAN FULL-WIDTH MAP SECTION (Without Overlay Text or Clutter) */}
-      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 border-t border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection delay={0.15}>
-            <div className="relative w-full h-[400px] sm:h-[480px] lg:h-[540px] rounded-3xl overflow-hidden border border-primary/20 shadow-2xl bg-primary/5">
+            <div className="relative w-full h-[300px] sm:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden border border-primary/20 shadow-2xl bg-primary/5">
               <iframe
                 title="Address Interiors Bengaluru Atelier Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.006935261899!2d77.6049219!3d12.9713889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1679a957b01d%3A0x6b4458f33d7b8895!2sRichmond%20Rd%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"

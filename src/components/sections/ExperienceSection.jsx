@@ -10,7 +10,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-primary text-secondary scroll-mt-24 overflow-hidden"
+      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-primary text-secondary scroll-mt-24 overflow-hidden"
     >
       {/* Cinematic Full-bleed Background Architectural Photography with Soft Espresso Overlay */}
       <div className="absolute inset-0 z-0">
@@ -51,7 +51,7 @@ export default function ExperienceSection() {
         </AnimatedSection>
 
         {/* 4 Emotional Living Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
           {EXPERIENCE_CONTENT.features.map((feature, index) => {
             const Icon = icons[index % icons.length];
             return (
@@ -60,24 +60,24 @@ export default function ExperienceSection() {
                 delay={0.15 * index}
                 className="flex"
               >
-                <div className="w-full p-8 rounded-3xl bg-secondary/[0.08] border border-secondary/20 hover:border-secondary/40 hover:bg-secondary/[0.12] transition-all duration-500 flex flex-col justify-between group">
+                <div className="w-full p-6 sm:p-8 rounded-3xl bg-white/[0.12] border border-white/25 hover:border-white/60 hover:bg-white/[0.18] transition-all duration-300 flex flex-col justify-between group">
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-secondary/15 flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-white/20 border border-white/25 flex items-center justify-center text-white mb-8 group-hover:bg-white group-hover:text-primary group-hover:scale-105 transition-all duration-300">
                       <Icon className="w-6 h-6 stroke-[1.5]" />
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-light text-secondary tracking-tight mb-4">
+                    <h3 className="text-xl sm:text-2xl font-light text-white tracking-tight mb-4">
                       {feature.title}
                     </h3>
 
-                    <p className="text-sm text-secondary/85 font-light leading-relaxed">
+                    <p className="text-sm text-white/95 font-normal leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-secondary/20 flex items-center justify-between text-xs text-secondary/70 font-mono">
+                  <div className="mt-8 pt-6 border-t border-white/25 flex items-center justify-between text-xs text-white font-mono">
                     <span>Phase 0{index + 1}</span>
-                    <span className="w-8 h-[1px] bg-secondary/40 group-hover:w-12 transition-all duration-300" />
+                    <span className="w-8 h-[1.5px] bg-white/60 group-hover:w-12 group-hover:bg-white transition-all duration-300" />
                   </div>
                 </div>
               </AnimatedSection>
