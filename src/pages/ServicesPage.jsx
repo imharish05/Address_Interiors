@@ -10,12 +10,10 @@ import {
   Hammer,
   Ruler,
   UserCheck,
-  Award,
-  Sparkles,
-  Compass,
 } from "lucide-react";
 import { SERVICES_DATA } from "@/data/services";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import SmartImage from "@/components/common/SmartImage";
 import { Button } from "@/components/ui/button";
 
 const GUARANTEES = [
@@ -54,27 +52,6 @@ const GUARANTEES = [
     title: "Dedicated Project Manager",
     description:
       "One person will manage your project, coordinate the work, and keep you updated until completion.",
-  },
-];
-
-const SCOPE_PILLARS = [
-  {
-    number: "01",
-    label: "Complete Home Interiors",
-    detail:
-      "From room planning, flooring, and ceilings to furniture and final handover.",
-  },
-  {
-    number: "02",
-    label: "Custom Furniture & Kitchens",
-    detail:
-      "Beautiful kitchens, custom furniture, wardrobes, and dressing rooms made to fit your home.",
-  },
-  {
-    number: "03",
-    label: "Clear Pricing & Warranty",
-    detail:
-      "Know the full cost before work begins, with no hidden charges and a written 10-year warranty.",
   },
 ];
 
@@ -165,11 +142,11 @@ export default function ServicesPage() {
               <div className="group relative w-full flex flex-col justify-between rounded-3xl bg-primary/[0.02] border border-primary/15 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-primary/40 hover:-translate-y-1">
                 {/* Image Container with Category Badge */}
                 <div className="relative aspect-[16/11] overflow-hidden bg-primary/10">
-                  <img
+                  <SmartImage
                     src={service.image}
                     alt={service.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
+                    priority={index < 3}
+                    className="transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-300"
@@ -287,9 +264,11 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-3xl sm:rounded-[2.5rem] bg-primary p-6 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img
-              src="/images/projects/services-cta.png"
+              src="/images/projects/services-cta.jpg"
               alt=""
               aria-hidden="true"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
             <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />

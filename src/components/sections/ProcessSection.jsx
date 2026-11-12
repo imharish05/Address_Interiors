@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, CheckCircle2, ArrowRight, Clock, Layers } from "lucide-react";
+import { ChevronLeft, ChevronRight, CheckCircle2, Clock } from "lucide-react";
 import { PROCESS_STEPS } from "@/data/siteContent";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
-import ImageReveal from "@/components/common/ImageReveal";
+import SmartImage from "@/components/common/SmartImage";
 
 export default function ProcessSection() {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
@@ -169,11 +169,10 @@ export default function ProcessSection() {
             {/* Right Column: High-End Curated Stage Visual */}
             <div className="lg:col-span-6 relative">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-primary/10 group">
-                <img
+                <SmartImage
                   src={activeStep.image}
                   alt={`${activeStep.name} - ${activeStep.title}`}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
+                  className="transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
                 <div

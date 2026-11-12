@@ -4,6 +4,7 @@ import { INSPIRATION_GALLERY } from "@/data/siteContent";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import SectionDivider from "@/components/common/SectionDivider";
+import SmartImage from "@/components/common/SmartImage";
 
 export default function InspirationSection() {
   return (
@@ -42,11 +43,10 @@ export default function InspirationSection() {
                     aspectClasses[item.aspect] || "aspect-[4/3]"
                   }`}
                 >
-                  <img
+                  <SmartImage
                     src={item.image}
                     alt={item.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
+                    className="transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                   />
 
                   {/* Soft Vignette Overlay */}

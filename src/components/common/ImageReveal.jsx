@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
 export default function ImageReveal({
@@ -12,7 +12,19 @@ export default function ImageReveal({
   overlay = true,
   priority = false,
 }) {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = useRef(null);
+  const [status, setStatus] = useState("loading");
+
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth > 0) {
+      setStatus("loaded");
+    } else {
+      setStatus("loading");
+    }
+  }, [src]);
+
+  const isLoaded = status === "loaded";
 
   const archClasses = {
     top: "rounded-t-[8rem] sm:rounded-t-[12rem] rounded-b-2xl",
@@ -25,29 +37,29 @@ export default function ImageReveal({
   return (
     <div
       className={cn(
-        "relative overflow-hidden bg-primary/5 transition-all duration-700",
+        "relative overflow-hidden bg-primary/5",
         aspectRatio,
         archClasses[arch] || archClasses.none,
         className
       )}
     >
-      {/* Skeleton / Ambient backdrop */}
-      <div
-        className={cn(
-          "absolute inset-0 bg-primary/5 transition-opacity duration-700",
-          isLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
-        )}
-      />
+      {/* Architectural skeleton shimmer until decoded */}
+      {status === "loading" && (
+        <Skeleton className="absolute inset-0 w-full h-full z-0" />
+      )}
 
       <img
+        ref={imgRef}
         src={src}
         alt={alt || "Interior Architecture Photography"}
         loading={priority ? "eager" : "lazy"}
         decoding={priority ? "sync" : "async"}
-        onLoad={() => setIsLoaded(true)}
+        fetchPriority={priority ? "high" : undefined}
+        onLoad={() => setStatus("loaded")}
+        onError={() => setStatus("error")}
         className={cn(
-          "w-full h-full object-cover transition-all duration-700 ease-out will-change-transform group-hover:scale-105",
-          isLoaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-sm scale-[1.02]",
+          "w-full h-full object-cover transition-[opacity,transform] duration-500 ease-out group-hover:scale-105",
+          isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-[1.01]",
           imageClassName
         )}
       />

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, MapPin, Maximize2, Calendar, Layers, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import { FEATURED_PROJECTS } from "@/data/projects";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ImageReveal from "@/components/common/ImageReveal";
+import SmartImage from "@/components/common/SmartImage";
 import ProjectSliderBar from "@/components/common/ProjectSliderBar";
 import { Button } from "@/components/ui/button";
 
@@ -20,21 +21,21 @@ const PREVIEW_CARDS = [
     title: "Sushma Villa",
     location: "South City Enclave",
     area: "5,200 sq.ft",
-    image: "/images/projects/sushma-villa-1.png",
+    image: "/images/projects/sushma-villa-1.jpg",
   },
   {
     id: "rahman-residence",
     title: "Rahman Residence",
     location: "Heritage Boulevard",
     area: "4,600 sq.ft",
-    image: "/images/projects/rahman-residence-1.png",
+    image: "/images/projects/rahman-residence-1.jpg",
   },
   {
     id: "cafe-commercial",
     title: "Artisan Cafe & Bistro",
     location: "Urban Promenade",
     area: "3,200 sq.ft",
-    image: "/images/projects/cafe-commercial-1.png",
+    image: "/images/projects/cafe-commercial-1.jpg",
   },
 ];
 
@@ -87,10 +88,11 @@ export default function ProjectsPage() {
                 }}
                 className="group text-left relative rounded-2xl overflow-hidden aspect-[16/10] border border-primary/20 hover:border-primary shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-[border-color,transform,box-shadow] duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
               >
-                <img
+                <SmartImage
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
+                  priority
+                  className="transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
@@ -151,11 +153,10 @@ export default function ProjectsPage() {
 
                     {/* Secondary Inset Image */}
                     <div className="hidden sm:block absolute -bottom-8 -right-4 lg:-right-6 w-5/12 aspect-[4/3] rounded-2xl overflow-hidden border-4 border-secondary shadow-2xl z-20">
-                      <img
+                      <SmartImage
                         src={currentProject.secondaryImage}
                         alt={`${currentProject.title} architectural detail`}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        className="transition-transform duration-700 hover:scale-105"
                       />
                     </div>
                   </div>
@@ -272,11 +273,10 @@ export default function ProjectsPage() {
               <AnimatedSection key={project.id} delay={0.1 * (index + 1)}>
                 <div className="group rounded-3xl bg-secondary border border-primary/15 overflow-hidden shadow-lg hover:shadow-2xl hover:border-primary/40 transition-all duration-500 flex flex-col justify-between h-full">
                   <div className="relative aspect-[16/10] overflow-hidden bg-primary/10">
-                    <img
+                    <SmartImage
                       src={project.image}
                       alt={project.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                      className="transition-transform duration-700 group-hover:scale-[1.06]"
                     />
                     <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-start justify-between gap-2 pointer-events-none">
                       <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-secondary/95 backdrop-blur-md text-primary border border-primary/15 shadow-sm max-w-[65%] truncate">
@@ -354,6 +354,8 @@ export default function ProjectsPage() {
               src="/images/projects/projects-cta.jpg"
               alt=""
               aria-hidden="true"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
             <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />

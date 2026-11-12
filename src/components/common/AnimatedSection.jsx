@@ -16,15 +16,15 @@ export default function AnimatedSection({
     if (shouldReduceMotion) return { opacity: 0 };
     switch (direction) {
       case "up":
-        return { opacity: 0, y: 30 };
+        return { opacity: 0, y: 18 };
       case "down":
-        return { opacity: 0, y: -30 };
+        return { opacity: 0, y: -18 };
       case "left":
-        return { opacity: 0, x: 30 };
+        return { opacity: 0, x: 18 };
       case "right":
-        return { opacity: 0, x: -30 };
+        return { opacity: 0, x: -18 };
       default:
-        return { opacity: 0, y: 30 };
+        return { opacity: 0, y: 18 };
     }
   };
 
@@ -40,9 +40,9 @@ export default function AnimatedSection({
       whileInView={getAnimate()}
       viewport={{ once: true, amount }}
       transition={{
-        duration: 0.7,
-        delay,
-        ease: [0.22, 1, 0.36, 1], // Custom smooth cubic-bezier easing
+        duration: 0.45,
+        delay: Math.min(delay, 0.25),
+        ease: [0.16, 1, 0.3, 1],
       }}
       className={cn("w-full", className)}
     >

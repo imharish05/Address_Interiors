@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { FEATURED_PROJECTS } from "@/data/projects";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ImageReveal from "@/components/common/ImageReveal";
+import SmartImage from "@/components/common/SmartImage";
 import ProjectSliderBar from "@/components/common/ProjectSliderBar";
 
 export default function FeaturedProjectsSection() {
@@ -55,11 +56,10 @@ export default function FeaturedProjectsSection() {
 
                   {/* Secondary Inset Image */}
                   <div className="hidden sm:block absolute -bottom-8 -right-4 lg:-right-6 w-5/12 aspect-[4/3] rounded-2xl overflow-hidden border-4 border-secondary shadow-2xl z-20">
-                    <img
+                    <SmartImage
                       src={currentProject.secondaryImage}
                       alt={`${currentProject.title} architectural detail`}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      className="transition-transform duration-700 hover:scale-105"
                     />
                   </div>
                 </div>
@@ -136,11 +136,10 @@ export default function FeaturedProjectsSection() {
               className="group text-left w-full cursor-pointer rounded-2xl p-4 bg-white border border-primary/15 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-[border-color,transform,box-shadow,background-color] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
             >
               <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-primary/10">
-                <img
+                <SmartImage
                   src={proj.image}
                   alt={proj.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 

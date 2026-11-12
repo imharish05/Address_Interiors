@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { SERVICES_DATA } from "@/data/services";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import SmartImage from "@/components/common/SmartImage";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
@@ -44,11 +45,10 @@ export default function ServicesSection() {
               <div className="group relative w-full flex flex-col justify-between rounded-3xl bg-primary/[0.02] border border-primary/15 overflow-hidden transition-all duration-500 hover:shadow-xl hover:border-primary/40 hover:-translate-y-1">
                 {/* Image Container with Organic Curved Frame */}
                 <div className="relative aspect-[16/11] overflow-hidden bg-primary/10">
-                  <img
+                  <SmartImage
                     src={service.image}
                     alt={service.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
+                    className="transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-300"

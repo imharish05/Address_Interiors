@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   Mail,
   Phone,
@@ -31,18 +32,18 @@ export default function ContactPage() {
 
   const validate = () => {
     const errs = {};
-    if (!formData.name.trim()) errs.name = "Please provide your full name";
+    if (!formData.name.trim()) errs.name = "Please enter your full name";
     if (!formData.email.trim()) {
-      errs.email = "Please provide your email address";
+      errs.email = "Please enter your email address";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errs.email = "Please provide a valid email address";
+      errs.email = "Please enter a valid email address";
     }
     const cleanPhone = formData.phone.replace(/[\s-]/g, "");
     if (cleanPhone && !/^[6-9]\d{9}$/.test(cleanPhone)) {
       errs.phone = "Please enter a valid 10-digit Indian mobile number";
     }
     if (!formData.message.trim()) {
-      errs.message = "Please share details about your project scope";
+      errs.message = "Please tell us a little about your project";
     }
     return errs;
   };
@@ -63,7 +64,7 @@ export default function ContactPage() {
       setErrors(validationErrors);
       setStatusMessage({
         type: "error",
-        text: "Please resolve the highlighted fields before proceeding.",
+        text: "Please check the fields marked above and try again.",
       });
       return;
     }
@@ -72,19 +73,18 @@ export default function ContactPage() {
 
     const formattedPhone = formData.phone ? `+91 ${formData.phone}` : "Not provided";
     const subject = encodeURIComponent(
-      `Private Commission Inquiry: ${formData.projectType} — ${formData.name}`
+      `Project Enquiry: ${formData.projectType} — ${formData.name}`
     );
     const body = encodeURIComponent(
-      `Full Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formattedPhone}\nProject Scope: ${formData.projectType}\n\nProject Narrative:\n${formData.message}`
+      `Full Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formattedPhone}\nProject Type: ${formData.projectType}\n\nProject Details:\n${formData.message}`
     );
 
     const mailtoUrl = `mailto:${BRAND_INFO.email}?subject=${subject}&body=${body}`;
-
     window.location.href = mailtoUrl;
 
     setStatusMessage({
       type: "info",
-      text: `Inquiry draft prepared. If your mail client did not open automatically, please reach us directly at ${BRAND_INFO.email}.`,
+      text: `Your email draft is ready. If your email app did not open, contact us at ${BRAND_INFO.email}.`,
     });
   };
 
@@ -93,7 +93,7 @@ export default function ContactPage() {
       {/* 1. HERO HEADER */}
       <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 text-center max-w-4xl mx-auto">
         <AnimatedSection delay={0.1}>
-          <span className={EYEBROW}>Connect With Our Studio</span>
+          <span className={EYEBROW}>Get in Touch With Us</span>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-4 sm:mb-5">
             {CONTACT_CONTENT.heading}
           </h1>
@@ -107,15 +107,15 @@ export default function ContactPage() {
       <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            {/* Left Column: Direct Studio Info (Heading in Red, Balance in Black) */}
+            {/* Left Column: Contact Details */}
             <div className="lg:col-span-5 flex flex-col justify-between space-y-8 min-w-0">
               <AnimatedSection delay={0.15} className="space-y-6">
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-light text-primary tracking-tight mb-2">
-                    Studio Concierge
+                    Contact Our Team
                   </h2>
                   <p className="text-sm text-[#1A1A1A]/80 leading-relaxed font-normal">
-                    Our architects and project directors are available for scheduled private site visits and atelier consultations.
+                    Our team is here to answer your questions, discuss your plans, and arrange a visit to your site.
                   </p>
                 </div>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <span className="text-xs font-semibold text-[#1A1A1A]/75 block mb-0.5">
-                        Direct Inquiries
+                        Email Us
                       </span>
                       <a
                         href={`mailto:${BRAND_INFO.email}`}
@@ -143,7 +143,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <span className="text-xs font-semibold text-[#1A1A1A]/75 block mb-0.5">
-                        Direct Line
+                        Call Us
                       </span>
                       <a
                         href={`tel:${BRAND_INFO.phone.replace(/\s+/g, "")}`}
@@ -160,7 +160,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <span className="text-xs font-semibold text-[#1A1A1A]/75 block mb-0.5">
-                        Principal Atelier
+                        Office Location
                       </span>
                       <p className="text-sm text-[#1A1A1A] leading-relaxed font-normal">
                         {BRAND_INFO.address}
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <span className="text-xs font-semibold text-[#1A1A1A]/75 block mb-0.5">
-                        Consultation Hours
+                        Working Hours
                       </span>
                       <p className="text-sm text-[#1A1A1A] font-normal">
                         Monday – Saturday: 10:00 AM – 7:00 PM IST
@@ -186,10 +186,10 @@ export default function ContactPage() {
                 {/* Trust Points */}
                 <div className="flex flex-wrap gap-2 pt-2">
                   <span className="inline-flex items-center gap-1.5 text-xs text-[#1A1A1A] bg-primary/5 border border-primary/20 px-3 py-1 rounded-full font-medium">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 100% Custom 3D Design
+                    <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Custom 3D Designs
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-xs text-[#1A1A1A] bg-primary/5 border border-primary/20 px-3 py-1 rounded-full font-medium">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Itemized Fixed BOQ
+                    <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Clear Cost Breakdown
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-xs text-[#1A1A1A] bg-primary/5 border border-primary/20 px-3 py-1 rounded-full font-medium">
                     <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 10-Year Warranty
@@ -198,13 +198,13 @@ export default function ContactPage() {
               </AnimatedSection>
             </div>
 
-            {/* Right Column: Commission Request Form */}
+            {/* Right Column: Project Enquiry Form */}
             <div className="lg:col-span-7">
               <AnimatedSection delay={0.2}>
                 <div className="p-5 sm:p-10 lg:p-12 rounded-3xl sm:rounded-[2rem] bg-primary/[0.025] border border-primary/15 shadow-xl">
                   <div className="mb-8 pb-6 border-b border-primary/10">
                     <h2 className="text-2xl sm:text-3xl font-light text-primary tracking-tight">
-                      Commission Request
+                      Send Us Your Project Details
                     </h2>
                     <p className="text-xs text-[#1A1A1A]/70 mt-1">
                       {CONTACT_CONTENT.demoNotice}
@@ -225,7 +225,7 @@ export default function ContactPage() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="e.g. Vikramaditya Singhania"
+                        placeholder="e.g. Your Name"
                         aria-invalid={!!errors.name}
                         className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 border-primary/25 bg-white ${
                           errors.name ? "border-red-500 focus-visible:ring-red-500" : ""
@@ -254,7 +254,7 @@ export default function ContactPage() {
                           type="email"
                           value={formData.email}
                           onChange={handleChange}
-                          placeholder="vikram@residence.com"
+                          placeholder="you@example.com"
                           aria-invalid={!!errors.email}
                           className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 border-primary/25 bg-white ${
                             errors.email ? "border-red-500 focus-visible:ring-red-500" : ""
@@ -294,7 +294,7 @@ export default function ContactPage() {
                               setFormData((prev) => ({ ...prev, phone: val }));
                               if (errors.phone) setErrors((prev) => ({ ...prev, phone: null }));
                             }}
-                            placeholder="98450 12345"
+                            placeholder="98765 43210"
                             className="w-full h-full bg-transparent px-4 py-2 text-sm text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 focus:outline-none"
                           />
                         </div>
@@ -313,7 +313,7 @@ export default function ContactPage() {
                         htmlFor="projectType"
                         className="block text-sm font-medium text-[#1A1A1A] mb-2"
                       >
-                        Project Type <span className="text-primary">*</span>
+                        What Type of Project Do You Need? <span className="text-primary">*</span>
                       </label>
                       <select
                         id="projectType"
@@ -336,7 +336,7 @@ export default function ContactPage() {
                         htmlFor="message"
                         className="block text-sm font-medium text-[#1A1A1A] mb-2"
                       >
-                        Write a Message <span className="text-primary">*</span>
+                        Tell Us About Your Project <span className="text-primary">*</span>
                       </label>
                       <Textarea
                         id="message"
@@ -344,7 +344,7 @@ export default function ContactPage() {
                         rows={4}
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Please describe your floor plan, carpet area, aesthetic preferences, and expected move-in timeline..."
+                        placeholder="Tell us about your home or office, the rooms you want to design, your preferred style, and when you would like the work to start..."
                         aria-invalid={!!errors.message}
                         className={`text-[#1A1A1A] placeholder:text-[#1A1A1A]/55 border-primary/25 bg-white ${
                           errors.message ? "border-red-500 focus-visible:ring-red-500" : ""
@@ -369,7 +369,7 @@ export default function ContactPage() {
                     {/* Submit Button */}
                     <Button type="submit" size="lg" className="w-full shadow-md">
                       <span className="flex items-center gap-2">
-                        <span>Submit Commission Request</span>
+                        <span>Send Project Enquiry</span>
                         <Send className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </span>
                     </Button>
@@ -381,14 +381,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 3. CLEAN FULL-WIDTH MAP SECTION (Without Overlay Text or Clutter) */}
+      {/* 3. FULL-WIDTH MAP SECTION */}
       <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection delay={0.15}>
             <div className="relative w-full h-[300px] sm:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden border border-primary/20 shadow-2xl bg-primary/5">
               <iframe
-                title="Address Interiors Bengaluru Atelier Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.006935261899!2d77.6049219!3d12.9713889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1679a957b01d%3A0x6b4458f33d7b8895!2sRichmond%20Rd%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                title="Address Interiors Bengaluru Office Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1965.654826236036!2d77.01348845474425!3d11.09495303659021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857f447a68d5d%3A0xcb6ee3430112d243!2sSai%20Techno%20Solutions%20Private%20Limited!5e1!3m2!1sen!2sin!4v1794468306929!5m2!1sen!2sin"
                 className="w-full h-full border-0 grayscale-[15%] contrast-[105%]"
                 allowFullScreen=""
                 loading="lazy"

@@ -5,7 +5,7 @@ export const SERVICES_DATA = [
     category: "Full Sanctuary",
     description:
       "We design beautiful and comfortable homes that match your lifestyle, needs, and personal taste.",
-    image: "/images/projects/service-1.png",
+    image: "/images/projects/service-1.jpg",
     details: [
       "Home Space Planning",
       "Choosing Materials",
@@ -19,7 +19,7 @@ export const SERVICES_DATA = [
     category: "Living Room Design",
     description:
       "Beautiful living rooms designed with comfort, style, and smart use of space for your everyday needs.",
-    image: "/images/projects/service-2.png",
+    image: "/images/projects/service-2.jpg",
     details: [
       "Custom Sofas and Seating",
       "Beautiful Wall Designs",
@@ -33,7 +33,7 @@ export const SERVICES_DATA = [
     category: "Hospitality Interiors",
     description:
       "We create welcoming spaces with comfortable seating, beautiful interiors, and a pleasant atmosphere for everyone.",
-    image: "/images/projects/service-3.png",
+    image: "/images/projects/service-3.jpg",
     details: [
       "Comfortable Seating",
       "Beautiful Interior Design",
@@ -61,7 +61,7 @@ export const SERVICES_DATA = [
     category: "Artisan Craft",
     description:
       "We create custom-made furniture that fits your space, style, and needs using quality materials.",
-    image: "/images/projects/service-5.png",
+    image: "/images/projects/service-5.jpg",
     details: [
       "Custom Wooden Furniture",
       "Quality Materials",
@@ -75,7 +75,7 @@ export const SERVICES_DATA = [
     category: "Office Renovation",
     description:
       "We transform offices into modern and comfortable workspaces with smart layouts, useful furniture, and stylish interiors.",
-    image: "/images/projects/service-6.png",
+    image: "/images/projects/service-6.jpg",
     details: [
       "Office Space Planning",
       "Custom Office Furniture",

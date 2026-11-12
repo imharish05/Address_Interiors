@@ -5,6 +5,7 @@ import { ABOUT_CONTENT } from "@/data/siteContent";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ImageReveal from "@/components/common/ImageReveal";
+import SmartImage from "@/components/common/SmartImage";
 import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
@@ -36,11 +37,10 @@ export default function AboutSection() {
 
                 {/* Secondary Inset Detail Image */}
                 <div className="absolute -bottom-6 right-2 sm:-bottom-10 sm:-right-4 lg:-bottom-12 lg:-right-8 w-5/12 aspect-square z-20 rounded-2xl sm:rounded-3xl overflow-hidden border-4 border-secondary shadow-2xl bg-secondary">
-                  <img
+                  <SmartImage
                     src={ABOUT_CONTENT.secondaryImage}
                     alt="Bespoke honed stone and oak joinery detail"
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                    className="transition-transform duration-700 hover:scale-110"
                   />
                 </div>
               </div>

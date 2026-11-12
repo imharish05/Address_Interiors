@@ -8,7 +8,7 @@ export const BRAND_INFO = {
   location: "Bengaluru • Mumbai • New Delhi",
   email: "concierge@theaddressinterior.com",
   phone: "+91 98450 12345",
-  address: "42 Richmond Road, Level 4, Bengaluru, Karnataka 560025",
+  address: " 2nd Floor, Rathinagiri Road, No : 4/4A, Sathy Road, Karattumedu, Saravanampatti, Coimbatore – 641035, Tamil Nadu.",
   logoUrl: "/logo.png",
 };
 
@@ -19,7 +19,7 @@ export const HERO_CONTENT = {
     "We offer complete interior design, renovation, and modular solutions for your home or office, along with a wide range of furniture and décor to suit your needs.",
   primaryCta: "Explore Our Work",
   secondaryCta: "Discover Our Story",
-  heroImage: "/images/projects/sushma-villa-1.png",
+  heroImage: "/images/projects/sushma-villa-1.jpg",
   stats: [
     { label: "Years of Expertise", value: "5+" },
     { label: "Private Residences Curated", value: "180+" },
@@ -36,8 +36,8 @@ export const ABOUT_CONTENT = {
   ],
   quote: "Good design is not just how it looks; it is about how effortlessly it works for your everyday life.",
   author: "Principal Interior Designer — Address Interiors",
-  image: "/images/projects/rahman-residence-1.png",
-  secondaryImage: "/images/projects/prem-residence-1.png",
+  image: "/images/projects/rahman-residence-1.jpg",
+  secondaryImage: "/images/projects/prem-residence-1.jpg",
   ctaText: "Book A Consultation",
 };
 
@@ -103,7 +103,7 @@ export const EXPERIENCE_CONTENT = {
     },
   ],
 
-  bannerImage: "/images/projects/sushma-villa-2.png",
+  bannerImage: "/images/projects/sushma-villa-2.jpg",
 };
 
 export const PROCESS_STEPS = [
@@ -113,7 +113,7 @@ export const PROCESS_STEPS = [
     title: "Lifestyle Immersion & Spatial Vision",
     duration: "Weeks 1–3",
     focus: "Rituals & Audit",
-    image: "/images/projects/process-step-1.png",
+    image: "/images/projects/process-step-1.jpg",
     description:
       "We begin by understanding your personal rituals, spatial aspirations, and aesthetic affinities through in-depth conversations and on-site architectural audits.",
     deliverables: [
@@ -129,7 +129,7 @@ export const PROCESS_STEPS = [
     title: "Spatial Flow & Material Storyboards",
     duration: "Weeks 4–7",
     focus: "Tactile Identity",
-    image: "/images/projects/process-step-2.png",
+    image: "/images/projects/process-step-2.jpg",
     description:
       "Translating ideas into tactile mood trays, floor plans, circulation models, and preliminary architectural elevations infused with light studies.",
     deliverables: [
@@ -145,7 +145,7 @@ export const PROCESS_STEPS = [
     title: "Precision Detailing & Technical Specifications",
     duration: "Weeks 8–14",
     focus: "Technical Artistry",
-    image: "/images/projects/process-step-3.png",
+    image: "/images/projects/process-step-3.jpg",
     description:
       "Developing 1:20 joinery drawings, custom furniture schematics, lighting layouts, and curated procurement schedules down to the finest hardware.",
     deliverables: [
@@ -161,7 +161,7 @@ export const PROCESS_STEPS = [
     title: "Artisanal Fabrication & Construction Oversight",
     duration: "Month 4 Onward",
     focus: "Master Craft",
-    image: "/images/projects/process-step-4.png",
+    image: "/images/projects/process-step-4.jpg",
     description:
       "Our dedicated project directors coordinate vetted trades, master stonecutters, and cabinetmakers to ensure uncompromising build quality.",
     deliverables: [
@@ -222,7 +222,7 @@ export const INSPIRATION_GALLERY = [
     title: "Sculptural Living Salon",
     category: "Living Lounge",
     aspect: "tall",
-    image: "/images/projects/inspiration-1.png",
+    image: "/images/projects/inspiration-1.jpg",
     description: "Curved velvet seating bathed in natural diffused skylight.",
   },
   {
@@ -230,7 +230,7 @@ export const INSPIRATION_GALLERY = [
     title: "Minimalist Culinary Haven",
     category: "Kitchen & Dining",
     aspect: "wide",
-    image: "/images/projects/inspiration-2.png",
+    image: "/images/projects/inspiration-2.jpg",
     description: "Honed stone island paired with concealed walnut cabinetry.",
   },
   {
@@ -238,7 +238,7 @@ export const INSPIRATION_GALLERY = [
     title: "Tactile Bedroom Sanctuary",
     category: "Master Bedroom",
     aspect: "square",
-    image: "/images/projects/inspiration-3.png",
+    image: "/images/projects/inspiration-3.jpg",
     description: "Integrated acoustic headboard and bouclé lounge chair.",
   },
   {
@@ -246,7 +246,7 @@ export const INSPIRATION_GALLERY = [
     title: "Monolithic Bath Suite",
     category: "Wellness & Bath",
     aspect: "square",
-    image: "/images/projects/inspiration-4.png",
+    image: "/images/projects/inspiration-4.jpg",
     description: "Carved travertine basin and recessed warm glow lighting.",
   },
   {
@@ -254,7 +254,7 @@ export const INSPIRATION_GALLERY = [
     title: "Architectural Library & Study",
     category: "Private Study",
     aspect: "wide",
-    image: "/images/projects/inspiration-5.png",
+    image: "/images/projects/inspiration-5.jpg",
     description: "Floor-to-ceiling smoked oak shelving and reading alcove.",
   },
   {
@@ -262,7 +262,7 @@ export const INSPIRATION_GALLERY = [
     title: "Morning Sun Dining Corner",
     category: "Dining Suite",
     aspect: "tall",
-    image: "/images/projects/inspiration-6.png",
+    image: "/images/projects/inspiration-6.jpg",
     description: "Hand-finished travertine table framed by sheer linen drapes.",
   },
 ];
@@ -287,23 +287,9 @@ export const CONTACT_CONTENT = {
 export const ABOUT_PAGE_CONTENT = {
   badge: "About Address Interiors",
   heroHeading: "Designing Spaces That Reflect Your Lifestyle & Personality",
-  heroSubheading:
-    "Since 2021, Address Interiors has delivered 500+ customized residential and commercial spaces — bringing together contemporary design, functional space planning, and durable craftsmanship.",
-  heroImage: "/images/projects/about-hero.png",
 
   whoWeAre: {
     badge: "Who We Are",
-    title: "Full-Service Interior Design & Execution",
-    description:
-      "Founded in 2012, Address Interiors is a trusted interior design firm offering comprehensive design and execution services across Bengaluru, Mumbai, and New Delhi. We turn empty floor plans into warm, practical, and visually stunning spaces. From complete residential transformations and modular kitchens to custom wardrobes and office spaces, we handle design, manufacturing, civil work, and installation under one roof.",
-    highlights: [
-      "100% Customized 3D Designs before starting on-site work",
-      "Factory-finished modular joinery with German precision machinery",
-      "End-to-End Project Execution with zero multiple-contractor hassle",
-      "Transparent pricing with clear, itemized Bill of Quantities",
-      "10-Year Comprehensive Warranty with dedicated post-handover support",
-    ],
-    experienceYears: "14+",
     completedProjects: "500+",
   },
 
@@ -319,104 +305,4 @@ export const ABOUT_PAGE_CONTENT = {
         "To be the most reliable and customer-first interior design firm, celebrated for innovative space planning, exceptional craftsmanship, and long-term client trust.",
     },
   },
-
-  whyChooseUs: [
-    {
-      number: "01",
-      title: "Customized 3D Designs",
-      description:
-        "Every home is unique. We craft personalized 3D visualizations, material trays, and moodboards matching your exact preferences and budget before execution.",
-      badge: "Tailored Living",
-    },
-    {
-      number: "02",
-      title: "10-Year Material Warranty",
-      description:
-        "We use certified boiling waterproof (BWR) plywood, natural veneers, and branded hardware (Hafele, Hettich, Blum) engineered for decades of durability.",
-      badge: "Quality Assured",
-    },
-    {
-      number: "03",
-      title: "Guaranteed 45-Day Handover",
-      description:
-        "Off-site factory manufacturing and structured project tracking ensure your home is ready for move-in strictly on the agreed date.",
-      badge: "On-Time Delivery",
-    },
-    {
-      number: "04",
-      title: "Transparent & Fixed Pricing",
-      description:
-        "No hidden charges or unexpected budget expansions. Our detailed itemized quotation remains fixed throughout the project timeline.",
-      badge: "Zero Hidden Costs",
-    },
-    {
-      number: "05",
-      title: "Complete Project Execution",
-      description:
-        "Civil changes, electricals, plumbing, false ceiling, painting, modular furniture, and soft styling — all managed by our single in-house team.",
-      badge: "Single Point Contact",
-    },
-    {
-      number: "06",
-      title: "Dedicated Project Manager",
-      description:
-        "A senior site engineer is assigned to your project to share regular photo updates, milestone reports, and perform quality checks.",
-      badge: "Personal Support",
-    },
-  ],
-
-  stats: [
-    { value: "14+", label: "Years of Industry Experience" },
-    { value: "500+", label: "Happy Homes Delivered" },
-    { value: "45+", label: "In-House Designers & Artisans" },
-    { value: "10-Yr", label: "Material Warranty Guaranteed" },
-  ],
-
-  process: [
-    {
-      step: "01",
-      title: "Free Consultation & Site Visit",
-      description:
-        "We understand your lifestyle requirements, take laser site measurements, and explore design ideas and budget ranges.",
-    },
-    {
-      step: "02",
-      title: "3D Design & Material Selection",
-      description:
-        "Our designers present 3D photorealistic views, modular layouts, color palettes, and material swatches for your sign-off.",
-    },
-    {
-      step: "03",
-      title: "Precision Factory Production",
-      description:
-        "Cabinets, wardrobes, and modular components are manufactured in our state-of-the-art facility with dust-free precision.",
-    },
-    {
-      step: "04",
-      title: "Installation & On-Time Handover",
-      description:
-        "Our expert assembly team completes on-site installation, conducts a 50-point quality audit, and hands over your dream keys.",
-    },
-  ],
-
-  leadership: [
-    {
-      name: "Aria Varma",
-      role: "Founder & Principal Interior Designer",
-      bio: "With over 16 years of expertise in residential interior planning, Aria leads our design studio with an eye for balance, ergonomics, and timeless aesthetics.",
-      image: "/images/projects/sushma-villa-1.png",
-    },
-    {
-      name: "Karan Mehta",
-      role: "Head of Project Operations",
-      bio: "Manages on-site execution, vendor standards, and strict milestone tracking to guarantee seamless on-time project deliveries.",
-      image: "/images/projects/kgisl-commercial-1.png",
-    },
-    {
-      name: "Meera Sen",
-      role: "Lead Interior Stylist",
-      bio: "Curates colors, textures, lighting, and soft furnishings that give each home its distinct warmth, comfort, and character.",
-      image: "/images/projects/cafe-commercial-1.png",
-    },
-  ],
 };

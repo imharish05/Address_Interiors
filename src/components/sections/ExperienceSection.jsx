@@ -1,6 +1,5 @@
 import React from "react";
 import { EXPERIENCE_CONTENT } from "@/data/siteContent";
-import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { Sun, VolumeX, Layers, ShieldCheck } from "lucide-react";
 

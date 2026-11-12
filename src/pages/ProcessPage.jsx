@@ -52,24 +52,24 @@ const COMPARISON = [
 
 const FAQS = [
   {
-    question: "How does the Fixed BOQ guarantee work?",
+    question: "How does your fixed project cost work?",
     answer:
-      "Before execution starts, our architectural team drafts a complete itemized Bill of Quantities covering every hinge, square foot of veneer, stone slab, and electrical point. Once signed, the price is legally locked. We absorb market price fluctuations, guaranteeing no unexpected surprises.",
+      "Before starting the work, our team prepares a detailed list of all materials and costs, including hinges, wood, stone, and electrical fittings. Once you approve and sign it, the project cost is fixed. We will not increase the agreed price because of changes in market prices. This means no unexpected extra costs.",
   },
   {
-    question: "Can I inspect the materials in person before approving?",
+    question: "Can I see the materials before choosing them?",
     answer:
-      "Yes. In Stage 02, we invite you to our Richmond Road atelier to review physical material trays with actual veneer cuts, marble slabs, fabric swatches, and hardware samples under specialized warm and cool lighting.",
+      "Yes. During Stage 02, you can visit our office to see and compare different materials. You can check wood finishes, marble, fabrics, and hardware samples under different lighting before making your final choice.",
   },
   {
-    question: "How do you achieve a dust-free site during joinery?",
+    question: "How do you keep my home clean during the work?",
     answer:
-      "All modular cabinetry, wardrobes, and credenzas are fabricated in our state-of-the-art German CNC facility off-site. On-site work is strictly limited to rapid, clean assembly and acoustic alignment, meaning your home stays pristine.",
+      "We prepare most furniture, including cabinets, wardrobes, and storage units, at our factory before bringing them to your home. At your home, our team mainly focuses on fitting and assembling them. This helps reduce dust, noise, and mess during the work.",
   },
   {
-    question: "What is included in the White-Glove Handover?",
+    question: "What happens before you hand over my home?",
     answer:
-      "Stage 05 concludes with a thorough 50-point structural and cosmetic quality audit, professional industrial deep cleaning, curated art and botanical styling, and personal delivery of your keys along with your 10-year warranty certificate.",
+      "Before handing over your home, our team checks the quality of all the work, completes a deep cleaning, and arranges the furniture and decorations. We then hand over your keys along with your 10-year warranty certificate.",
   },
 ];
 
@@ -328,6 +328,8 @@ export default function ProcessPage() {
                   src={ctaImage}
                   alt=""
                   aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               )}

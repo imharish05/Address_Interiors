@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Compass, ShieldCheck, Heart, Layers, SunMedium, VolumeX, Eye } from "lucide-react";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import SmartImage from "@/components/common/SmartImage";
 import { Button } from "@/components/ui/button";
 
 const PILLARS_EXPANDED = [
@@ -10,7 +11,7 @@ const PILLARS_EXPANDED = [
     title: "Timeless Architectural Elegance",
     subtitle: "Enduring Proportions",
     icon: Compass,
-    image: "/images/projects/philosophy-pillar-1.png",
+    image: "/images/projects/philosophy-pillar-1.jpg",
     description:
       "We reject transient fast-furniture trends in favor of architectural purity, balanced sightlines, and sculptural geometries that age with exceptional grace. Every room is designed around natural illumination, proportions, and negative space.",
     principles: [
@@ -26,7 +27,7 @@ const PILLARS_EXPANDED = [
     title: "Everyday Sensory Comfort",
     subtitle: "Tactile Warmth & Living Ease",
     icon: Heart,
-    image: "/images/projects/philosophy-pillar-2.png",
+    image: "/images/projects/philosophy-pillar-2.jpg",
     description:
       "Luxury without genuine physical comfort is merely an unlived showroom. We prioritize ergonomic support, acoustic tranquility, and textiles that invite immediate touch, transforming daily routines into quiet rituals of restorative calm.",
     principles: [
@@ -42,7 +43,7 @@ const PILLARS_EXPANDED = [
     title: "Artisanal Integrity & Precision Joinery",
     subtitle: "Master Craftsmanship",
     icon: ShieldCheck,
-    image: "/images/projects/philosophy-pillar-3.png",
+    image: "/images/projects/philosophy-pillar-3.jpg",
     description:
       "From German CNC-machined cabinetry fabricated off-site to hand-rubbed timber stains and concealed hardware, our in-house architects and master joiners deliver zero-compromise precision with a 10-year structural warranty.",
     principles: [
@@ -128,10 +129,11 @@ export default function PhilosophyPage() {
           <div className="lg:col-span-5 relative">
             <AnimatedSection delay={0.2}>
               <div className="relative rounded-[2rem] overflow-hidden border border-primary/20 shadow-2xl bg-primary/5">
-                <img
+                <SmartImage
                   src="/images/projects/philosophy-hero.jpg"
                   alt="Address Interiors architectural living space"
-                  className="w-full aspect-[4/5] object-cover"
+                  wrapperClassName="aspect-[4/5]"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
@@ -193,11 +195,11 @@ export default function PhilosophyPage() {
                     {/* Visual Column */}
                     <div className={`lg:col-span-6 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
                       <div className="relative rounded-3xl overflow-hidden border border-primary/20 shadow-xl group">
-                        <img
+                        <SmartImage
                           src={pillar.image}
                           alt={pillar.title}
-                          className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
-                          loading="lazy"
+                          wrapperClassName="aspect-[4/3]"
+                          className="transition-transform duration-700 group-hover:scale-105"
                         />
                         <div className="absolute top-4 left-4 flex items-center gap-2 bg-secondary/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-primary/15 text-primary text-xs font-medium">
                           <IconComponent className="w-3.5 h-3.5" />
@@ -294,6 +296,8 @@ export default function PhilosophyPage() {
               src="/images/projects/philosophy-cta.jpg"
               alt=""
               aria-hidden="true"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
             <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />

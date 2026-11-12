@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ABOUT_PAGE_CONTENT } from "@/data/siteContent";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import SmartImage from "@/components/common/SmartImage";
 import { Button } from "@/components/ui/button";
 
 /* ---------- SHARED SPACING + TYPE SYSTEM (same for every section) ---------- */
@@ -124,10 +125,10 @@ export default function AboutPage() {
           <AnimatedSection delay={0.2} className="max-w-6xl mx-auto">
             <div className="relative">
               <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[2.1/1] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-primary/15">
-                <img
-                  src="/images/projects/about-hero.png"
+                <SmartImage
+                  src="/images/projects/about-hero.jpg"
                   alt="Address Interiors living space"
-                  className="w-full h-full object-cover"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
               </div>
@@ -181,10 +182,9 @@ export default function AboutPage() {
         <div className={`${CONTAINER} grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center`}>
           <AnimatedSection direction="right" delay={0.1} className="lg:col-span-5">
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
-              <img
-                src="/images/projects/about-story.png"
+              <SmartImage
+                src="/images/projects/about-story.jpg"
                 alt="Address Interiors modular joinery"
-                className="w-full h-full object-cover"
               />
             </div>
           </AnimatedSection>
@@ -434,9 +434,11 @@ export default function AboutPage() {
           <AnimatedSection delay={0.15}>
             <div className="relative rounded-3xl bg-primary text-white px-5 py-12 sm:p-16 text-center shadow-2xl flex flex-col items-center overflow-hidden">
               <img
-                src="/images/projects/about-cta.png"
+                src="/images/projects/about-cta.jpg"
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
               <div className="absolute inset-0 bg-primary/85 backdrop-blur-[1px]" />

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, ArrowUpRight } from "lucide-react";
 import { PRIMARY_NAV_LINKS } from "@/data/navigation";
 import { BRAND_INFO } from "@/data/siteContent";
-import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { cn } from "@/lib/utils";
@@ -23,8 +22,6 @@ const SECTION_IDS = [
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
-  const isScrolled = useScrollPosition(60);
   const activeSection = useActiveSection(SECTION_IDS);
 
   const isHomePage = location.pathname === "/";

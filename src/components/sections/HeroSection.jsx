@@ -3,7 +3,7 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { HERO_CONTENT, BRAND_INFO } from "@/data/siteContent";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import AnimatedSection from "@/components/common/AnimatedSection";
+import SmartImage from "@/components/common/SmartImage";
 
 export default function HeroSection() {
   return (
@@ -24,28 +24,22 @@ export default function HeroSection() {
       {/* Main Hero Grid */}
       <div className="max-w-7xl mx-auto w-full my-auto py-4 lg:py-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Text Column */}
+          {/* Left Text Column (renders immediately for fast FCP/LCP) */}
           <div className="lg:col-span-6 flex flex-col items-start z-10">
-            <AnimatedSection delay={0.1}>
-              <Badge variant="default" className="mb-6">
-                {HERO_CONTENT.tagline}
-              </Badge>
-            </AnimatedSection>
+            <Badge variant="default" className="mb-6">
+              {HERO_CONTENT.tagline}
+            </Badge>
 
-            <AnimatedSection delay={0.2}>
-              <h1 className="text-4xl sm:text-6xl lg:text-[4rem] font-light tracking-tight text-primary leading-[1.08] text-balance mb-6">
-                {HERO_CONTENT.heading}
-              </h1>
-            </AnimatedSection>
+            <h1 className="text-4xl sm:text-6xl lg:text-[4rem] font-light tracking-tight text-primary leading-[1.08] text-balance mb-6">
+              {HERO_CONTENT.heading}
+            </h1>
 
-            <AnimatedSection delay={0.3}>
-              <p className="text-base sm:text-lg text-[#1A1A1A]/90 font-normal leading-relaxed text-balance max-w-xl mb-10">
-                {HERO_CONTENT.subheading}
-              </p>
-            </AnimatedSection>
+            <p className="text-base sm:text-lg text-[#1A1A1A]/90 font-normal leading-relaxed text-balance max-w-xl mb-10">
+              {HERO_CONTENT.subheading}
+            </p>
 
             {/* CTAs - Responsive Stack on Mobile, Inline on Tablet/Desktop */}
-            <AnimatedSection delay={0.4} className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full">
               <Button asChild size="lg" className="w-full sm:w-auto">
                 <a href="#projects" className="flex items-center justify-center gap-2">
                   <span>{HERO_CONTENT.primaryCta}</span>
@@ -61,10 +55,10 @@ export default function HeroSection() {
               >
                 <a href="#about">{HERO_CONTENT.secondaryCta}</a>
               </Button>
-            </AnimatedSection>
+            </div>
 
             {/* Micro Stats */}
-            <AnimatedSection delay={0.5} className="mt-8 pt-6 border-t border-primary/10 w-full">
+            <div className="mt-8 pt-6 border-t border-primary/10 w-full">
               <div className="grid grid-cols-3 gap-3 sm:gap-8">
                 {HERO_CONTENT.stats.map((stat) => (
                   <div key={stat.label} className="flex flex-col min-w-0">
@@ -77,16 +71,12 @@ export default function HeroSection() {
                   </div>
                 ))}
               </div>
-            </AnimatedSection>
+            </div>
           </div>
 
           {/* Right Visual Column — Cinematic Asymmetric Arch Frame */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
-            <AnimatedSection
-              delay={0.3}
-              direction="left"
-              className="relative w-full max-w-md lg:max-w-none"
-            >
+            <div className="relative w-full max-w-md lg:max-w-none">
               {/* Decorative Arch Backdrop Border */}
               <div
                 className="absolute inset-0 translate-x-2.5 translate-y-2.5 sm:translate-x-4 sm:translate-y-4 rounded-t-[7rem] sm:rounded-t-[12rem] lg:rounded-t-[14rem] rounded-b-3xl border border-primary/20 pointer-events-none"
@@ -95,12 +85,11 @@ export default function HeroSection() {
 
               {/* Main Visual Image */}
               <div className="relative z-10 w-full aspect-[4/5] rounded-t-[7rem] sm:rounded-t-[12rem] lg:rounded-t-[14rem] rounded-b-3xl overflow-hidden shadow-2xl bg-primary/10 group">
-                <img
+                <SmartImage
                   src={HERO_CONTENT.heroImage}
                   alt="Luxury Minimalist Living Suite with Curved Sofas and Travertine"
-                  fetchPriority="high"
-                  loading="eager"
-                  className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                  priority
+                  className="transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
 
                 {/* Ambient Bottom Gradient */}
@@ -124,7 +113,7 @@ export default function HeroSection() {
                   </span>
                 </div>
               </div>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </div>
