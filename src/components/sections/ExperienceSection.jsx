@@ -9,7 +9,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-primary text-secondary scroll-mt-24 overflow-hidden"
+      className="relative py-14 sm:py-16 lg:py-20 px-5 sm:px-8 lg:px-12 bg-primary text-secondary scroll-mt-20 overflow-hidden"
     >
       {/* Cinematic Full-bleed Background Architectural Photography with Soft Espresso Overlay */}
       <div className="absolute inset-0 z-0">

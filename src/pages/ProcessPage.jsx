@@ -8,14 +8,14 @@ import ImageReveal from "@/components/common/ImageReveal";
 import { Button } from "@/components/ui/button";
 
 /* ---------- SHARED SPACING + TYPE SYSTEM ---------- */
-const SECTION = "px-5 sm:px-8 lg:px-12 py-14 sm:py-20";
+const SECTION = "px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20";
 const CONTAINER = "max-w-7xl mx-auto";
 const EYEBROW =
   "inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4";
 const H2 =
   "text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.15]";
 const BODY = "text-base text-[#1A1A1A]/80 leading-relaxed font-normal";
-const HEAD_GAP = "mb-10 sm:mb-14";
+const HEAD_GAP = "mb-10 sm:mb-12";
 
 const COMPARISON = [
   {
@@ -92,9 +92,9 @@ export default function ProcessPage() {
   };
 
   return (
-    <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
+    <div className="pt-20 overflow-hidden bg-secondary">
       {/* 1. HERO: headline + photo stage selector */}
-      <section className="px-5 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-12 sm:pb-20">
+      <section className="px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-16 pb-14 sm:pb-16 lg:pb-20">
         <div className={CONTAINER}>
           <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto">
             <span className={EYEBROW}>Studio Methodology & Roadmap</span>
@@ -243,9 +243,9 @@ export default function ProcessPage() {
       </section>
 
       {/* 4. FAQ - Clean Luxury Minimalist Accordion */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
+      <section className={`${SECTION} bg-primary/[0.02] border-y border-primary/10`}>
         <div className="max-w-4xl mx-auto">
-          <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
               Client Inquiries
             </span>

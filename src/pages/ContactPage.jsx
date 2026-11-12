@@ -89,9 +89,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
+    <div className="pt-20 overflow-hidden bg-secondary">
       {/* 1. HERO HEADER */}
-      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 text-center max-w-4xl mx-auto">
+      <section className="px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-16 pb-14 sm:pb-16 lg:pb-20">
+        <div className="max-w-4xl mx-auto text-center">
         <AnimatedSection delay={0.1}>
           <span className={EYEBROW}>Get in Touch With Us</span>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-primary tracking-tight leading-[1.1] mb-4 sm:mb-5">
@@ -101,10 +102,11 @@ export default function ContactPage() {
             {CONTACT_CONTENT.subheading}
           </p>
         </AnimatedSection>
+        </div>
       </section>
 
       {/* 2. CONTACT DETAILS & FORM */}
-      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 border-t border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left Column: Contact Details */}
@@ -382,7 +384,7 @@ export default function ContactPage() {
       </section>
 
       {/* 3. FULL-WIDTH MAP SECTION */}
-      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 border-t border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection delay={0.15}>
             <div className="relative w-full h-[300px] sm:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden border border-primary/20 shadow-2xl bg-primary/5">

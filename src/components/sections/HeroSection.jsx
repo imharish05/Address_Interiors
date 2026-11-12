@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92dvh] flex flex-col justify-between pt-24 pb-6 sm:pt-32 sm:pb-10 px-5 sm:px-8 lg:px-12 overflow-hidden bg-secondary"
+      className="relative min-h-[88dvh] flex flex-col justify-between pt-24 pb-8 sm:pt-28 sm:pb-10 px-5 sm:px-8 lg:px-12 overflow-hidden bg-secondary"
     >
       {/* Subtle organic architectural background glow */}
       <div

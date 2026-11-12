@@ -85,9 +85,10 @@ const SENSORY_DIMENSIONS = [
 
 export default function PhilosophyPage() {
   return (
-    <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
+    <div className="pt-20 overflow-hidden bg-secondary">
       {/* 1. DISTINCT EDITORIAL ASYMMETRIC SPLIT HERO */}
-      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 max-w-7xl mx-auto border-b border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-16 pb-14 sm:pb-16 lg:pb-20 border-b border-primary/10">
+        <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left: Editorial Manifesto */}
           <div className="lg:col-span-7">
@@ -163,12 +164,13 @@ export default function PhilosophyPage() {
             </AnimatedSection>
           </div>
         </div>
+        </div>
       </section>
 
       {/* 2. THREE FOUNDATIONAL PILLARS (DEEP DIVE) */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.02]">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 bg-primary/[0.02]">
         <div className="max-w-7xl mx-auto">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
               The Three Pillars
             </span>
@@ -180,7 +182,7 @@ export default function PhilosophyPage() {
             </p>
           </AnimatedSection>
 
-          <div className="space-y-16 sm:space-y-24">
+          <div className="space-y-12 sm:space-y-16">
             {PILLARS_EXPANDED.map((pillar, index) => {
               const isEven = index % 2 === 1;
               const IconComponent = pillar.icon;
@@ -251,8 +253,9 @@ export default function PhilosophyPage() {
       </section>
 
       {/* 3. SENSORY LIVING DIMENSIONS */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto">
-        <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 border-t border-primary/10">
+        <div className="max-w-7xl mx-auto">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
             Sensory Architecture
           </span>
@@ -286,10 +289,11 @@ export default function PhilosophyPage() {
             );
           })}
         </div>
+        </div>
       </section>
 
       {/* 4. CALL TO ACTION BANNER */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 border-t border-primary/10">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-3xl sm:rounded-[2.5rem] bg-primary p-6 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img

@@ -3,14 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 import { INSPIRATION_GALLERY } from "@/data/siteContent";
 import SectionHeading from "@/components/common/SectionHeading";
 import AnimatedSection from "@/components/common/AnimatedSection";
-import SectionDivider from "@/components/common/SectionDivider";
 import SmartImage from "@/components/common/SmartImage";
 
 export default function InspirationSection() {
   return (
     <section
       id="inspiration"
-      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden border-t border-primary/10"
+      className="relative py-14 sm:py-16 lg:py-20 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-20 overflow-hidden border-t border-primary/10"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -24,7 +23,7 @@ export default function InspirationSection() {
         </AnimatedSection>
 
         {/* Asymmetrical Masonry Gallery */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 sm:gap-8">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 sm:gap-8 -mb-6 sm:-mb-8">
           {INSPIRATION_GALLERY.map((item, index) => {
             const aspectClasses = {
               tall: "aspect-[4/5] sm:aspect-[3/4]",
@@ -83,9 +82,6 @@ export default function InspirationSection() {
             );
           })}
         </div>
-
-        {/* Abstract Architectural Separator */}
-        <SectionDivider variant="contour" className="mt-8" />
       </div>
     </section>
   );

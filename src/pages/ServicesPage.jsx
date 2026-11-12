@@ -65,9 +65,10 @@ const HERO_FACTS = [
 
 export default function ServicesPage() {
   return (
-    <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
+    <div className="pt-20 overflow-hidden bg-secondary">
       {/* 1. HERO & SERVICES SHOWCASE */}
-      <section className="px-5 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-14 sm:pb-20 lg:pb-24 max-w-7xl mx-auto">
+      <section className="px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-16 pb-14 sm:pb-16 lg:pb-20">
+        <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center pb-10 sm:pb-14 border-b border-primary/15">
             {/* Left: Heading, description, action */}
@@ -202,12 +203,13 @@ export default function ServicesPage() {
             </AnimatedSection>
           ))}
         </div>
+        </div>
       </section>
 
       {/* 4. OUR GUARANTEES */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 bg-primary/[0.02] border-y border-primary/10">
         <div className="max-w-7xl mx-auto">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
               Our Promise
             </span>
@@ -260,7 +262,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 5. BOTTOM CTA BANNER */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-3xl sm:rounded-[2.5rem] bg-primary p-6 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img

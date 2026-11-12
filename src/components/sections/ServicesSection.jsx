@@ -11,7 +11,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative pt-6 sm:pt-8 lg:pt-10 pb-16 sm:pb-20 lg:pb-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden"
+      className="relative py-14 sm:py-16 lg:py-20 px-5 sm:px-8 lg:px-12 bg-secondary border-t border-primary/10 scroll-mt-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header with Title and Narrative */}

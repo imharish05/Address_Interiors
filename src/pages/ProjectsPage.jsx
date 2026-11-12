@@ -55,9 +55,10 @@ export default function ProjectsPage() {
         );
 
   return (
-    <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
+    <div className="pt-20 overflow-hidden bg-secondary">
       {/* 1. DISTINCT VISUAL GALLERY MOSAIC STARTING HERO */}
-      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 max-w-7xl mx-auto border-b border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-16 pb-14 sm:pb-16 lg:pb-20 border-b border-primary/10">
+        <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           {/* Top Title Block */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
@@ -113,11 +114,13 @@ export default function ProjectsPage() {
             ))}
           </div>
         </AnimatedSection>
+        </div>
       </section>
 
       {/* 2. FEATURED PROJECT SPOTLIGHT */}
-      <section id="spotlight" className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto scroll-mt-28">
-        <AnimatedSection className="w-full mb-8">
+      <section id="spotlight" className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 scroll-mt-24">
+        <div className="max-w-7xl mx-auto">
+        <AnimatedSection className="w-full mb-10 sm:mb-12">
           <ProjectSliderBar
             projects={FEATURED_PROJECTS}
             activeId={activeTab}
@@ -140,7 +143,7 @@ export default function ProjectsPage() {
                 className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
               >
                 {/* Left: Dual Imagery */}
-                <div className="lg:col-span-7 relative sm:pb-8 lg:pb-0">
+                <div className="lg:col-span-7 relative sm:pb-8">
                   <div className="relative z-10">
                     <ImageReveal
                       key={currentProject.id}
@@ -229,12 +232,13 @@ export default function ProjectsPage() {
             </AnimatePresence>
           </div>
         </AnimatedSection>
+        </div>
       </section>
 
       {/* 3. ALL RESIDENCES ARCHIVE GRID */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.02] border-y border-primary/10">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 bg-primary/[0.02] border-y border-primary/10">
         <div className="max-w-7xl mx-auto">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
             <span className="inline-block px-3.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
               Comprehensive Archive
             </span>
@@ -247,7 +251,7 @@ export default function ProjectsPage() {
           </AnimatedSection>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pb-6 mb-6 sm:mb-8">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-8 sm:mb-10">
             {PROJECT_CATEGORIES.map((cat) => {
               const isActive = selectedCategory === cat;
               return (
@@ -334,7 +338,8 @@ export default function ProjectsPage() {
       </section>
 
       {/* 4. CLIENT TESTIMONIAL HIGHLIGHT */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 max-w-5xl mx-auto text-center">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20 border-b border-primary/10">
+        <div className="max-w-5xl mx-auto text-center">
         <AnimatedSection>
           <span className="font-serif text-6xl text-primary/30 block mb-2">“</span>
           <p className="text-xl sm:text-2xl lg:text-3xl font-light text-primary tracking-tight leading-relaxed mb-6">
@@ -344,10 +349,11 @@ export default function ProjectsPage() {
             Julian & Claire Montgomery — <span className="text-primary font-normal">Kensington Enclave Residence</span>
           </div>
         </AnimatedSection>
+        </div>
       </section>
 
       {/* 5. BOTTOM CTA BANNER */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24">
+      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-3xl sm:rounded-[2.5rem] bg-primary p-6 sm:p-14 lg:p-20 text-white overflow-hidden shadow-2xl">
             <img

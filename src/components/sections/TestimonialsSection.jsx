@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden border-t border-primary/10"
+      className="relative py-14 sm:py-16 lg:py-20 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-20 overflow-hidden border-t border-primary/10"
     >
       <div className="max-w-5xl mx-auto">
         {/* Header */}
@@ -88,7 +88,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Transparent Sample Content Disclaimer */}
-        <p className="text-center text-[11px] text-primary/45 uppercase tracking-widest mt-8 font-light">
+        <p className="text-center text-[11px] text-primary/65 uppercase tracking-widest mt-6 font-medium">
           Sample client impressions curated for portfolio presentation
         </p>
       </div>

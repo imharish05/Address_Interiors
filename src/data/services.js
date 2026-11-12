@@ -10,7 +10,7 @@ export const SERVICES_DATA = [
       "Home Space Planning",
       "Choosing Materials",
       "Lighting Design",
-      "Comfortable Room Design",
+      "Comfortable Design",
     ],
   },
   {
@@ -21,10 +21,10 @@ export const SERVICES_DATA = [
       "Beautiful living rooms designed with comfort, style, and smart use of space for your everyday needs.",
     image: "/images/projects/service-2.jpg",
     details: [
-      "Custom Sofas and Seating",
+      "Sofas and Seating",
       "Beautiful Wall Designs",
       "Decorative Elements",
-      "Stylish Furniture and Finishes",
+      "Stylish Finishes",
     ],
   },
   {
@@ -50,8 +50,8 @@ export const SERVICES_DATA = [
     image: "/images/projects/service-4.jpg",
     details: [
       "Custom Bed Designs",
-      "Wardrobes and Dressing Units",
-      "Window Curtains and Blinds",
+      "Wardrobes and Dressing ",
+      " Curtains and Blinds",
       "Beautiful Wall Designs",
     ],
   },
@@ -63,7 +63,7 @@ export const SERVICES_DATA = [
       "We create custom-made furniture that fits your space, style, and needs using quality materials.",
     image: "/images/projects/service-5.jpg",
     details: [
-      "Custom Wooden Furniture",
+      "Wooden Furnitures",
       "Quality Materials",
       "Custom Sofa and Seating",
       "Unique Furniture Designs",

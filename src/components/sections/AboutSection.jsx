@@ -12,7 +12,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 overflow-hidden"
+      className="relative py-14 sm:py-16 lg:py-20 px-5 sm:px-8 lg:px-12 bg-secondary border-t border-primary/10 scroll-mt-20 overflow-hidden"
     >
       {/* Decorative subtle ambient wave in background */}
       <div
@@ -23,7 +23,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-center">
           {/* Left Column: Asymmetrical Curved Imagery & Floating Accent */}
-          <div className="lg:col-span-6 relative pb-6 sm:pb-10 lg:pb-0">
+          <div className="lg:col-span-6 relative pb-6 sm:pb-10 lg:pb-12">
             <AnimatedSection direction="right" delay={0.1}>
               {/* Main Lifestyle Architectural Photo */}
               <div className="relative z-10">
@@ -68,7 +68,7 @@ export default function AboutSection() {
 
             {/* Pull Quote Box */}
             <AnimatedSection delay={0.5} className="w-full my-6">
-              <div className="p-6 sm:p-7 rounded-2xl bg-primary/5 border-l-2 border-primary">
+              <div className="p-6 sm:p-7 rounded-2xl bg-primary/5 border border-primary/15">
                 <blockquote className="text-base sm:text-lg font-light italic text-[#1A1A1A] tracking-tight leading-snug">
                   {ABOUT_CONTENT.quote}
                 </blockquote>

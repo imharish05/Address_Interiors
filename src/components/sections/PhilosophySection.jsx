@@ -7,7 +7,7 @@ export default function PhilosophySection() {
   return (
     <section
       id="philosophy"
-      className="relative pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 lg:pb-8 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
+      className="relative py-14 sm:py-16 lg:py-20 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-20 border-t border-primary/10 overflow-hidden"
     >
       {/* Abstract architectural contour SVG in background */}
       <div

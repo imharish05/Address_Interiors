@@ -8,14 +8,14 @@ import SmartImage from "@/components/common/SmartImage";
 import { Button } from "@/components/ui/button";
 
 /* ---------- SHARED SPACING + TYPE SYSTEM (same for every section) ---------- */
-const SECTION = "px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24";
+const SECTION = "px-5 sm:px-8 lg:px-12 py-14 sm:py-16 lg:py-20";
 const CONTAINER = "max-w-7xl mx-auto";
 const EYEBROW =
   "inline-flex items-center px-4 py-1.5 rounded-full text-xs uppercase tracking-luxury font-medium bg-primary/10 text-primary border border-primary/20 mb-3.5";
 const H2 =
   "text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.15]";
 const BODY = "text-base text-[#1A1A1A]/80 leading-relaxed";
-const HEAD_GAP = "mb-10 sm:mb-14";
+const HEAD_GAP = "mb-10 sm:mb-12";
 
 /* ---------- DATA: Why Choose Us ---------- */
 const WHY_CHOOSE_US = [
@@ -104,9 +104,9 @@ export default function AboutPage() {
   const stage = STAGES[activeStage];
 
   return (
-    <div className="pt-24 lg:pt-28 overflow-hidden bg-secondary">
+    <div className="pt-20 overflow-hidden bg-secondary">
       {/* 1. BANNER */}
-      <section className="px-5 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-24">
+      <section className="px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-16 pb-14 sm:pb-16 lg:pb-20">
         <div className={CONTAINER}>
           {/* Centered Typography Header */}
           <AnimatedSection delay={0.1} className="text-center max-w-4xl mx-auto mb-8 sm:mb-12">
@@ -122,7 +122,7 @@ export default function AboutPage() {
           </AnimatedSection>
 
           {/* Wide Landscape Hero Image with Stats Box */}
-          <AnimatedSection delay={0.2} className="max-w-6xl mx-auto">
+          <AnimatedSection delay={0.2} className="max-w-7xl mx-auto">
             <div className="relative">
               <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[2.1/1] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-primary/15">
                 <SmartImage
@@ -303,7 +303,7 @@ export default function AboutPage() {
       </section>
 
       {/* HOW WE WORK */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24 bg-primary/[0.025] border-t border-primary/15">
+      <section className={`${SECTION} bg-primary/[0.025] border-t border-primary/15`}>
         <div className={CONTAINER}>
           <AnimatedSection delay={0.1} className={`max-w-4xl ${HEAD_GAP}`}>
             <span className={EYEBROW}>How We Work</span>
@@ -429,7 +429,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-5 sm:px-8 lg:px-12 py-14 sm:py-20 lg:py-24">
+      <section className={`${SECTION} border-t border-primary/10`}>
         <div className={CONTAINER}>
           <AnimatedSection delay={0.15}>
             <div className="relative rounded-3xl bg-primary text-white px-5 py-12 sm:p-16 text-center shadow-2xl flex flex-col items-center overflow-hidden">

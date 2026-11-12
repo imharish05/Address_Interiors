@@ -17,11 +17,11 @@ export default function FeaturedProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-24 border-t border-primary/10 overflow-hidden"
+      className="relative py-14 sm:py-16 lg:py-20 px-5 sm:px-8 lg:px-12 bg-secondary scroll-mt-20 border-t border-primary/10 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header + Horizontal Project Slider */}
-        <AnimatedSection className="w-full mb-8 sm:mb-10">
+        <AnimatedSection className="w-full mb-10 sm:mb-12">
           <ProjectSliderBar
             projects={FEATURED_PROJECTS}
             activeId={activeTab}
@@ -43,7 +43,7 @@ export default function FeaturedProjectsSection() {
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
             >
               {/* Left: Project Imagery with Secondary Inset */}
-              <div className="lg:col-span-7 relative sm:pb-8 lg:pb-0">
+              <div className="lg:col-span-7 relative sm:pb-8">
                 <div className="relative z-10">
                   <ImageReveal
                     key={currentProject.id}
