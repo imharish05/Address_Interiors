@@ -19,7 +19,7 @@ export const SERVICES_DATA = [
     category: "Living Room Design",
     description:
       "Beautiful living rooms designed with comfort, style, and smart use of space for your everyday needs.",
-    image: "/images/projects/service-2.jpg",
+    image: "/images/projects/balu-residence-2.jpg",
     details: [
       "Sofas and Seating",
       "Beautiful Wall Designs",
