@@ -76,6 +76,17 @@ const STAGES = [
     ],
   },
   {
+    name: "Final Design & Project Planning",
+    summary: "Approve the design, materials, budget, and schedule before work begins.",
+    description:
+      "We review the final design with you, confirm the materials and project cost, and agree on a clear work schedule.",
+    deliverables: [
+      "Final design and material list",
+      "Approved project cost",
+      "Agreed timeline for the work",
+    ],
+  },
+  {
     name: "Furniture Making",
     summary: "Your furniture is made in our factory.",
     description:
@@ -308,7 +319,7 @@ export default function AboutPage() {
           <AnimatedSection delay={0.1} className={`max-w-4xl ${HEAD_GAP}`}>
             <span className={EYEBROW}>How We Work</span>
             <h2 className={`${H2} mb-4`}>
-              Four simple steps from first call to handover
+              Five simple steps from first call to handover
             </h2>
             <p className={BODY}>
               We guide you through each step, from planning your home to the final handover.
@@ -322,7 +333,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 relative" role="tablist" aria-label="Project stages">
               <span
                 aria-hidden="true"
-                className="absolute left-[11px] top-3 bottom-3 w-px bg-primary/25 hidden"
+                className="absolute left-[11px] top-3 bottom-3 w-px bg-primary/25"
               />
               {STAGES.map((s, idx) => {
                 const isActive = idx === activeStage;
