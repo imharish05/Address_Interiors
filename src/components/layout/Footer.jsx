@@ -62,14 +62,6 @@ export default function Footer() {
               </p>
             </div>
 
-            <div
-              className="mt-8 pt-6 border-t border-white/25 space-y-1 text-sm text-white"
-            >
-              <p className="text-white">
-                {BRAND_INFO.established} • International Practice
-              </p>
-              <p className="text-white">{BRAND_INFO.location}</p>
-            </div>
           </div>
 
           {/* Quick Navigation */}
