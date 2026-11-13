@@ -121,10 +121,6 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
             <Link to="/contact">Private Consultation</Link>
           </Button>
 
-          <div className="text-xs text-[#1A1A1A]/75 space-y-1 pt-2 font-medium">
-            <p>{BRAND_INFO.location}</p>
-            <p>{BRAND_INFO.phone}</p>
-          </div>
         </div>
       </div>
     </div>
