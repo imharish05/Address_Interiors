@@ -222,7 +222,7 @@ export default function ProjectsPage() {
 
                     <Button asChild size="lg" className="w-full sm:w-auto">
                       <Link to="/contact" className="flex items-center justify-center gap-2">
-                        <span>Inquire Similar Commission</span>
+                        <span>Enquire Similar Commission</span>
                         <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </Button>
@@ -324,7 +324,7 @@ export default function ProjectsPage() {
 
                       <Button asChild variant="outline" className="w-full group/btn">
                         <Link to="/contact" className="flex items-center justify-center gap-2">
-                          <span>Inquire About This Style</span>
+                          <span>Enquire About This Style</span>
                           <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                         </Link>
                       </Button>

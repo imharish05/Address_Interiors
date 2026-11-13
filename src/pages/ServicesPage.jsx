@@ -187,7 +187,7 @@ export default function ServicesPage() {
                       </ul>
                     </div>
 
-                    {/* Inquire Button */}
+                    {/* Enquire Button */}
                     <Button asChild variant="outline" className="w-full group/btn">
                       <Link
                         to="/contact"

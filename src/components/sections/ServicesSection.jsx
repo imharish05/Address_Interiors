@@ -27,7 +27,7 @@ export default function ServicesSection() {
           <AnimatedSection delay={0.2} className="w-full sm:w-auto md:self-end shrink-0">
             <Button asChild variant="outline" className="w-full sm:w-auto">
               <Link to="/contact" className="flex items-center justify-center gap-2">
-                <span>Inquire Custom Scope</span>
+                <span>Enquire Custom Scope</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </Button>
