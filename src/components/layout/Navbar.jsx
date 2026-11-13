@@ -108,7 +108,7 @@ export default function Navbar() {
               onClick={(e) => handleNavClick(e, "/contact")}
               className="btn-sweep btn-sweep-ink hidden lg:inline-flex items-center gap-1.5 min-h-[44px] text-xs uppercase tracking-[0.18em] text-primary hover:text-white px-5 py-2.5 rounded-full bg-white border-[1.5px] border-white hover:border-[#1A1A1A] transition-[color,background-color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] group shadow-[0_6px_18px_-4px_rgba(0,0,0,0.22)] hover:shadow-[0_12px_26px_-6px_rgba(0,0,0,0.45)] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
             >
-              <span>Inquire</span>
+              <span>Enquire</span>
               <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
 

@@ -289,7 +289,7 @@ export const CONTACT_CONTENT = {
   subheading:
     "We accept a limited number of residential commissions each year to ensure uncompromising studio dedication.",
   demoNotice:
-    "Inquiry concierge — in production, this connects to our client team. Selecting submit will prepare a direct email draft.",
+    "Enquiry concierge — in production, this connects to our client team. Selecting submit will prepare a direct email draft.",
   projectTypes: [
     "Full Home Transformation",
     "Luxury Living Suite",

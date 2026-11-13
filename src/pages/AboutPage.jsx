@@ -308,10 +308,10 @@ export default function AboutPage() {
           <AnimatedSection delay={0.1} className={`max-w-4xl ${HEAD_GAP}`}>
             <span className={EYEBROW}>How We Work</span>
             <h2 className={`${H2} mb-4`}>
-              From first call to key handover, in four stages
+              Four simple steps from first call to handover
             </h2>
             <p className={BODY}>
-              Select a stage to see what we do and what you receive.
+              We guide you through each step, from planning your home to the final handover.
             </p>
           </AnimatedSection>
 
@@ -322,7 +322,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 relative" role="tablist" aria-label="Project stages">
               <span
                 aria-hidden="true"
-                className="absolute left-[11px] top-3 bottom-3 w-px bg-primary/25"
+                className="absolute left-[11px] top-3 bottom-3 w-px bg-primary/25 hidden"
               />
               {STAGES.map((s, idx) => {
                 const isActive = idx === activeStage;
@@ -350,8 +350,8 @@ export default function AboutPage() {
                     </span>
                     <span
                       className={`block text-lg sm:text-xl tracking-tight transition-colors duration-200 ${
-                        isActive
-                          ? "text-primary font-semibold"
+                      isActive
+                        ? "text-primary font-semibold"
                           : "text-[#1A1A1A] font-normal group-hover:text-primary"
                       }`}
                     >
@@ -383,11 +383,11 @@ export default function AboutPage() {
                     <h3 className="text-2xl sm:text-3xl font-light text-white tracking-tight mb-4">
                       {stage.name}
                     </h3>
-                    <p className="text-base text-white/85 leading-relaxed mb-8 max-w-xl">
+                    <p className="text-base text-white/85 leading-relaxed mb-6 max-w-xl">
                       {stage.description}
                     </p>
 
-                    <p className="text-sm text-white/65 mb-1">You receive</p>
+                    <p className="text-sm text-white/65 mb-1">What we do</p>
                     <ul className="divide-y divide-white/20 border-y border-white/20">
                       {stage.deliverables.map((item) => (
                         <li key={item} className="py-3 text-base text-white">
@@ -396,7 +396,7 @@ export default function AboutPage() {
                       ))}
                     </ul>
 
-                    <div className="flex flex-wrap items-center gap-3 mt-8">
+                    <div className="flex flex-wrap items-center gap-3 mt-6">
                       <Button
                         type="button"
                         variant="lightOutline"
