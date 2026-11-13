@@ -126,8 +126,8 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[2.1/1] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-primary/15">
                 <SmartImage
-                  src="/images/projects/about-hero.jpg"
-                  alt="Address Interiors living space"
+                  src="/images/projects/balu-residence-1.jpg"
+                  alt="Address Interiors architectural residence and interiors"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
@@ -291,9 +291,9 @@ export default function AboutPage() {
             ))}
           </AnimatedSection>
 
-          <AnimatedSection delay={0.3} className="text-center mt-12 sm:mt-16">
-            <Button asChild size="lg">
-              <Link to="/#contact" className="flex items-center justify-center gap-2">
+          <AnimatedSection delay={0.3} className="flex justify-center mt-10 sm:mt-12">
+            <Button asChild size="default" className="w-auto inline-flex max-w-fit px-6 sm:px-7 py-2.5 text-xs sm:text-sm font-medium">
+              <Link to="/#contact" className="inline-flex items-center justify-center gap-2">
                 <span>Book A Free Site Consultation</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>

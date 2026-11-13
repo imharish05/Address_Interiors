@@ -17,7 +17,7 @@ export default function InspirationSection() {
           <SectionHeading
             badge="Visual Anthology"
             title="Moments of Living Architecture"
-            subtitle="An editorial exploration of textured minimalism, natural illumination, and tactile finishes curated by Address Interiors."
+            subtitle="A look at real homes we have designed, with details that make everyday living more comfortable."
             align="center"
           />
         </AnimatedSection>

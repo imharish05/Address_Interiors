@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="fixed top-0 left-0 right-0 z-40 py-3.5 sm:py-4 shadow-md border-b border-white/15 text-white"
+        className="fixed top-0 left-0 right-0 z-40 py-3.5 shadow-md border-b border-white/15 text-white"
         style={{ backgroundColor: "#BE5037" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between gap-4">

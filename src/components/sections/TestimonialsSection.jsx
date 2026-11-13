@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
           <SectionHeading
             badge="Client Perspectives"
             title="Voices of Sanctuary"
-            subtitle="Reflections from patrons whose domestic landscapes were reimagined by our studio."
+            subtitle="A few words from the owners of homes designed by Address Interiors."
             align="center"
           />
         </AnimatedSection>
@@ -86,11 +86,6 @@ export default function TestimonialsSection() {
             </div>
           </div>
         </div>
-
-        {/* Transparent Sample Content Disclaimer */}
-        <p className="text-center text-[11px] text-primary/65 uppercase tracking-widest mt-6 font-medium">
-          Sample client impressions curated for portfolio presentation
-        </p>
       </div>
     </section>
   );
