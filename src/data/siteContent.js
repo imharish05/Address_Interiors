@@ -193,23 +193,44 @@ export const TESTIMONIALS_DATA = [
   {
     id: 1,
     quote: "Our home feels so warm and welcoming. The soft colours, thoughtful lighting, and comfortable rooms make every day here feel special.",
-    author: "Sushma Villa owners",
+    author: "Sushma Villa",
     residence: "South City Enclave",
     project: "Sushma Villa — 5,200 sq.ft",
   },
   {
     id: 2,
     quote: "We love coming home to the calm feel of our spaces. The gentle curves, warm wood, and soft lighting make it both beautiful and comfortable for our family.",
-    author: "Rahman Residence owners",
+    author: "Rahman Residence",
     residence: "Heritage Boulevard",
     project: "Rahman Residence — 4,600 sq.ft",
   },
   {
     id: 3,
     quote: "Our home is simple, bright, and easy to keep organised. The built-in storage works so well, and the natural wood makes every room feel cosy.",
-    author: "Prem Residence owners",
+    author: "Prem Residence",
     residence: "Emerald Hills",
     project: "Prem Residence — 3,850 sq.ft",
+  },
+  {
+    id: 4,
+    quote: "We wanted a café where people would feel comfortable staying a while. The warm wood, soft seating, and welcoming layout have made AT 26 a lovely place to gather.",
+    author: "AT 26 ",
+    residence: "Urban Promenade",
+    project: "AT 26 — 3,200 sq.ft",
+  },
+  {
+    id: 5,
+    quote: "Our new office feels open, calm, and welcoming. The meeting rooms help our team focus, and the relaxed lounge gives everyone a comfortable place to connect.",
+    author: "Sai Techno Solutions ",
+    residence: "Creative Quarter",
+    project: "Sai Techno Solutions — 4,100 sq.ft",
+  },
+  {
+    id: 6,
+    quote: "The new workspace gives our team room to work together and quiet spaces to focus. The bright rooms, glass meeting areas, and wood details make it feel comfortable every day.",
+    author: "KGISL",
+    residence: "Tech Horizon Campus",
+    project: "KGISL — 8,500 sq.ft",
   },
 ];
 export const INSPIRATION_GALLERY = [
