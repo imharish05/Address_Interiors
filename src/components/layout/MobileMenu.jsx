@@ -101,7 +101,7 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
                 className={`group min-h-[44px] text-lg sm:text-xl tracking-wide transition-all duration-200 flex items-center justify-between py-2.5 px-4 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] ${
                   isActive
                     ? "bg-white text-[#1A1A1A] font-medium shadow-md rounded-full"
-                    : "text-[#1A1A1A] font-normal hover:bg-white/20"
+                    : "text-white font-normal hover:bg-white/15"
                 }`}
               >
                 <span>{link.name}</span>
@@ -112,7 +112,7 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
         </nav>
 
         {/* Bottom CTA & Info */}
-        <div className="pt-5 border-t border-white/25 flex flex-col gap-4 shrink-0">
+        {/* <div className="pt-5 border-t border-white/25 flex flex-col gap-4 shrink-0">
           <Button
             asChild
             className="w-full"
@@ -121,7 +121,7 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
             <Link to="/contact">Private Consultation</Link>
           </Button>
 
-        </div>
+        </div> */}
       </div>
     </div>
   );

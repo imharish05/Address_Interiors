@@ -77,18 +77,18 @@ const STAGES = [
   },
   {
     name: "Final Design & Project Planning",
-    summary: "Approve the design, materials, budget, and schedule before work begins.",
+    summary: "Confirm the final design, cost, and schedule before work begins.",
     description:
-      "We review the final design with you, confirm the materials and project cost, and agree on a clear work schedule.",
+      "We finalize the design and materials with you, confirm the project cost, and plan the work schedule together.",
     deliverables: [
-      "Final design and material list",
-      "Approved project cost",
-      "Agreed timeline for the work",
+      "Final design and material selections",
+      "Confirmed project cost",
+      "Clear work schedule",
     ],
   },
   {
     name: "Furniture Making",
-    summary: "Your furniture is made in our factory.",
+    summary: "Custom furniture is made while site work is prepared.",
     description:
       "We make your furniture in our factory while other home works like electrical and ceiling work are done at your home.",
     deliverables: [
@@ -319,10 +319,10 @@ export default function AboutPage() {
           <AnimatedSection delay={0.1} className={`max-w-4xl ${HEAD_GAP}`}>
             <span className={EYEBROW}>How We Work</span>
             <h2 className={`${H2} mb-4`}>
-              Five simple steps from first call to handover
+              Five clear steps from first call to handover
             </h2>
             <p className={BODY}>
-              We guide you through each step, from planning your home to the final handover.
+              From the first visit to the final checks, we keep you informed at every step.
             </p>
           </AnimatedSection>
 
@@ -333,7 +333,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 relative" role="tablist" aria-label="Project stages">
               <span
                 aria-hidden="true"
-                className="absolute left-[11px] top-3 bottom-3 w-px bg-primary/25"
+                className="absolute left-[11px] top-3 bottom-0 w-px bg-primary/25"
               />
               {STAGES.map((s, idx) => {
                 const isActive = idx === activeStage;
