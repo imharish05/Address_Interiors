@@ -57,22 +57,22 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
       onClick={onClose}
     >
       <div
-        className="w-[90vw] max-w-sm h-dvh bg-secondary text-primary p-5 sm:p-6 flex flex-col justify-between shadow-2xl overflow-y-auto"
+        className="w-[90vw] max-w-sm h-dvh bg-primary text-white p-5 sm:p-6 flex flex-col justify-between shadow-2xl overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between pb-5 border-b border-primary/10 shrink-0">
+        <div className="flex items-center justify-between pb-5 border-b border-white/25 shrink-0">
           <Link to="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center min-h-[44px]">
             <img
               src="/logo.png"
               alt={BRAND_INFO.fullName}
-              className="h-9 w-auto object-contain rounded-md"
+              className="h-12 w-auto object-contain rounded-md"
             />
           </Link>
 
           <button
             onClick={onClose}
-            className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2.5 rounded-full bg-white border-[1.5px] border-primary/40 text-primary hover:bg-primary hover:text-white hover:border-primary hover:rotate-90 active:scale-95 transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2"
+            className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2.5 rounded-full bg-white/15 border-[1.5px] border-white/50 text-white hover:bg-white hover:text-primary hover:border-white hover:rotate-90 active:scale-95 transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
             aria-label="Close menu"
           >
             <X className="w-6 h-6" />
@@ -112,7 +112,7 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
         </nav>
 
         {/* Bottom CTA & Info */}
-        <div className="pt-5 border-t border-primary/10 flex flex-col gap-4 shrink-0">
+        <div className="pt-5 border-t border-white/25 flex flex-col gap-4 shrink-0">
           <Button
             asChild
             className="w-full"
