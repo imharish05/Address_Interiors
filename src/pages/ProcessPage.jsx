@@ -247,7 +247,7 @@ export default function ProcessPage() {
         <div className="max-w-4xl mx-auto">
           <AnimatedSection delay={0.1} className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
-              Client Inquiries
+              Client Enquiries
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-[1.15] mb-4">
               Frequently Asked Questions

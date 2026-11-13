@@ -85,7 +85,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Studio & Inquiries */}
+          {/* Studio & Enquiries */}
           <div className="lg:col-span-4 flex flex-col justify-between min-w-0">
             <div>
               <h4 className="text-xs uppercase tracking-[0.2em] font-semibold text-white mb-5">
@@ -94,7 +94,7 @@ export default function Footer() {
               <div className="space-y-4 text-sm text-white">
                 <div className="min-w-0">
                   <span className="block text-[11px] text-white uppercase tracking-widest font-semibold mb-1">
-                    Client Inquiries
+                    Client Enquiries
                   </span>
                   <a
                     href={`mailto:${BRAND_INFO.email}`}
