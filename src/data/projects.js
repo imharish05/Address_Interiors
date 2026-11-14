@@ -1,7 +1,7 @@
 export const FEATURED_PROJECTS = [
   {
     id: "sushma-villa",
-    blogTitle: "Sushma Villa: a sculpted façade in stone, timber, and brick",
+    blogTitle: "Sushma Villa: a sculpted facade in stone, timber, and brick",
     blogExcerpt: "A curved balcony, patterned brick screen, and layered stone give Sushma Villa a distinctive street presence. Warm timber and garden planting soften its crisp architectural lines.",
     blogCategory: "RESIDENTIAL DESIGN",
     blogStory: [
