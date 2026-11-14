@@ -70,7 +70,7 @@ export default function Footer() {
               Exploration
             </h4>
             <ul className="space-y-1.5">
-              {PRIMARY_NAV_LINKS.map((link) => (
+              {[...PRIMARY_NAV_LINKS, { name: "Blogs", href: "/blogs" }].map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
@@ -85,7 +85,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Studio & Enquiries */}
+          {/* Studio & E+nquiries */}
           <div className="lg:col-span-4 flex flex-col justify-between min-w-0">
             <div>
               <h4 className="text-xs uppercase tracking-[0.2em] font-semibold text-white mb-5">

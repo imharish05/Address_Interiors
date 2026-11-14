@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { X, ArrowRight } from "lucide-react";
 import { PRIMARY_NAV_LINKS } from "@/data/navigation";
 import { BRAND_INFO } from "@/data/siteContent";
-import { Button } from "@/components/ui/button";
 
 export default function MobileMenu({ isOpen, onClose, activeSection }) {
   const location = useLocation();
@@ -57,7 +56,7 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
       onClick={onClose}
     >
       <div
-        className="w-[90vw] max-w-sm h-dvh bg-primary text-[#1A1A1A] p-5 sm:p-6 flex flex-col justify-between shadow-2xl overflow-y-auto"
+        className="w-[90vw] max-w-sm h-full min-h-dvh bg-primary text-[#1A1A1A] p-5 sm:p-6 flex flex-col justify-start shadow-2xl overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -80,8 +79,8 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
         </div>
 
         {/* Links */}
-        <nav className="flex flex-col gap-2 sm:gap-3 my-5">
-          {PRIMARY_NAV_LINKS.map((link) => {
+        <nav className="flex flex-col gap-2 sm:gap-3 mt-5">
+          {[...PRIMARY_NAV_LINKS, { name: "Blogs", href: "/blogs" }].map((link) => {
             let isActive = false;
 
             if (link.href === "/") {

@@ -15,30 +15,6 @@ const PROJECT_CATEGORIES = [
   "Commercial",
 ];
 
-const PREVIEW_CARDS = [
-  {
-    id: "sushma-villa",
-    title: "Sushma Villa",
-    location: "South City Enclave",
-    area: "5,200 sq.ft",
-    image: "/images/projects/sushma-villa-1.jpg",
-  },
-  {
-    id: "rahman-residence",
-    title: "Rahman Residence",
-    location: "Heritage Boulevard",
-    area: "4,600 sq.ft",
-    image: "/images/projects/rahman-residence-1.jpg",
-  },
-  {
-    id: "cafe-commercial",
-    title: "Artisan Cafe & Bistro",
-    location: "Urban Promenade",
-    area: "3,200 sq.ft",
-    image: "/images/projects/cafe-commercial-1.jpg",
-  },
-];
-
 export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState(FEATURED_PROJECTS[0].id);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -78,7 +54,7 @@ export default function ProjectsPage() {
 
           {/* 3-Image Panoramic Preview Gallery Strip */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            {PREVIEW_CARDS.map((item) => (
+            {FEATURED_PROJECTS.slice(0, 3).map((item) => (
               <button
                 key={item.id}
                 type="button"

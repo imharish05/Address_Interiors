@@ -48,8 +48,8 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="fixed top-0 left-0 right-0 z-40 py-3.5 shadow-md border-b border-white/15 text-white"
-        style={{ backgroundColor: "#BE5037" }}
+        className="fixed top-0 left-0 right-0 z-40 py-0 shadow-md border-b border-white/15 text-white"
+        style={{ backgroundColor: "#BE5037", height: "76px", isolation: "isolate" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between gap-4">
           {/* Studio Brand Logo */}
@@ -62,13 +62,13 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt={BRAND_INFO.fullName}
-              className="h-11 sm:h-14 w-auto max-w-[190px] sm:max-w-[230px] object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              className="h-[60px] sm:h-[68px] w-auto max-w-[220px] sm:max-w-[250px] object-contain transition-transform duration-300 group-hover:scale-[1.02]"
             />
           </Link>
 
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8"
+            className="hidden min-[1100px]:flex items-center gap-4 lg:gap-7 xl:gap-8"
             aria-label="Main Navigation"
           >
             {PRIMARY_NAV_LINKS.map((link) => {
@@ -106,7 +106,7 @@ export default function Navbar() {
             <Link
               to="/contact"
               onClick={(e) => handleNavClick(e, "/contact")}
-              className="btn-sweep btn-sweep-ink hidden lg:inline-flex items-center gap-1.5 min-h-[44px] text-xs uppercase tracking-[0.18em] text-primary hover:text-white px-5 py-2.5 rounded-full bg-white border-[1.5px] border-white hover:border-[#1A1A1A] transition-[color,background-color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] group shadow-[0_6px_18px_-4px_rgba(0,0,0,0.22)] hover:shadow-[0_12px_26px_-6px_rgba(0,0,0,0.45)] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+              className="btn-sweep btn-sweep-ink hidden min-[1100px]:inline-flex items-center gap-1.5 min-h-[44px] text-xs uppercase tracking-[0.18em] text-primary hover:text-white px-5 py-2.5 rounded-full bg-white border-[1.5px] border-white hover:border-[#1A1A1A] transition-[color,background-color,border-color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] group shadow-[0_6px_18px_-4px_rgba(0,0,0,0.22)] hover:shadow-[0_12px_26px_-6px_rgba(0,0,0,0.45)] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
             >
               <span>Enquire</span>
               <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -115,7 +115,7 @@ export default function Navbar() {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2.5 rounded-full bg-white/15 border border-white/60 text-white hover:bg-white hover:text-[#1A1A1A] hover:border-white hover:scale-105 active:scale-95 transition-all duration-200 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2.5 rounded-full bg-white/15 border border-white/60 text-white hover:bg-white hover:text-[#1A1A1A] hover:border-white hover:scale-105 active:scale-95 transition-all duration-200 min-[1100px]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
               aria-label="Open mobile navigation menu"
               aria-expanded={mobileMenuOpen}
             >

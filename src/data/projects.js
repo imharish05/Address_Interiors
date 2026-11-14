@@ -1,6 +1,14 @@
 export const FEATURED_PROJECTS = [
   {
     id: "sushma-villa",
+    blogTitle: "Sushma Villa: a sculpted façade in stone, timber, and brick",
+    blogExcerpt: "A curved balcony, patterned brick screen, and layered stone give Sushma Villa a distinctive street presence. Warm timber and garden planting soften its crisp architectural lines.",
+    blogCategory: "RESIDENTIAL DESIGN",
+    blogStory: [
+      "Sushma Villa makes a strong first impression with a tall arched screen, a curved balcony edge, and a mix of pale stone and dark timber. The composition feels modern, while the brick lattice brings a finely textured detail to the façade.",
+      "Glass balcony rails keep the upper levels visually open. Timber soffits warm the deep balcony and entry, while planting softens the stone surfaces and connects the home to its garden setting.",
+      "Inside, the same warm palette continues through a bright kitchen and welcoming living area. The project brings architecture and everyday comfort together through clear forms, natural finishes, and carefully placed greenery.",
+    ],
     title: "Sushma Villa",
     category: "Residential",
     location: "South City Enclave",
@@ -16,6 +24,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "rahman-residence",
+    blogTitle: "Rahman Residence: a bright, connected home at Heritage Boulevard",
+    blogExcerpt: "At the Rahman Residence, a sunlit living and dining area brings the family together. Tall windows, warm timber frames, and a calm neutral palette give the open interior its character.",
+    blogCategory: "RESIDENTIAL DESIGN",
+    blogStory: [
+      "The Rahman Residence at Heritage Boulevard centres on a bright shared living and dining space. Tall windows bring daylight into the room, while the open connection between seating and dining makes the layout feel naturally social.",
+      "Timber door frames and ceiling details add warmth against pale walls and a light floor. Soft curtains filter the window light, and a restrained mix of upholstered seating keeps the large room comfortable rather than formal.",
+      "A compact dining setting sits close to the living area, with clear routes into adjoining rooms. The result is an interior that feels open and connected while giving each everyday activity its own place.",
+    ],
     title: "Rahman Residence",
     category: "Residential",
     location: "Heritage Boulevard",
@@ -31,6 +47,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "prem-residence",
+    blogTitle: "Prem Residence: a warmly lit modern home at Emerald Hills",
+    blogExcerpt: "The Prem Residence pairs crisp white volumes with charcoal stone, timber screens, and planted terraces. At dusk, warm lighting brings depth to the clean-lined exterior.",
+    blogCategory: "RESIDENTIAL DESIGN",
+    blogStory: [
+      "At Emerald Hills, the Prem Residence is defined by white exterior planes, dark stone, and slender timber screens. The strong horizontal lines give the façade a calm, contemporary character.",
+      "A covered terrace extends the living space outdoors. Timber slats filter light across the seating area, while planters along the upper levels add greenery to the crisp geometry.",
+      "As evening falls, warm lights pick out the textures and make the entrance feel welcoming. The exterior balances a clear modern form with natural materials and planted edges.",
+    ],
     title: "Prem Residence",
     category: "Residential",
     location: "Emerald Hills",
@@ -46,6 +70,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "balu-residence",
+    blogTitle: "Balu Residence: a contemporary home in Jallipatti",
+    blogExcerpt: "Balu Residence combines broad concrete frames, crisp white walls, and a sheltered terrace. Its exterior pairs bold contemporary lines with timber and a distinctive brick screen.",
+    blogCategory: "RESIDENTIAL DESIGN",
+    blogStory: [
+      "Balu Residence in Jallipatti uses bold concrete frames to define its balconies and sheltered entrance. Pale walls and dark stone create a clear contrast, while the projecting roof gives the home a strong profile.",
+      "A covered upper terrace is screened with patterned brick and shaded by a light pergola. Planting runs along the edge, adding a softer layer to the architectural lines and creating a private outdoor retreat.",
+      "Inside, warm timber and a bright living space continue the balance between strong structure and comfortable family life. The design feels contemporary and grounded in tactile materials.",
+    ],
     title: "Balu Residence",
     category: "Residential",
     location: "Jallipatti",
@@ -61,6 +93,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "ram-residence",
+    blogTitle: "Ram Residence: a light-filled dining space on Greenway Avenue",
+    blogExcerpt: "A double-height dining room, timber ceiling detail, and textured feature wall give Ram Residence a generous, crafted feel. Large openings bring the garden into view.",
+    blogCategory: "RESIDENTIAL DESIGN",
+    blogStory: [
+      "The dining space at Ram Residence is given a generous sense of height, with a full-height textured wall drawing the eye upward. A timber-lined ceiling detail frames the room and adds warmth to the pale interior.",
+      "Large glazed doors open the dining area toward the garden, bringing greenery and daylight into view. A simple dining table and upholstered chairs sit at the centre, leaving the architecture in focus.",
+      "Timber joinery and light stone surfaces carry a restrained palette through the room. Together, the open proportions and framed views make this a welcoming place for shared meals.",
+    ],
     title: "Ram Residence",
     category: "Residential",
     location: "Greenway Avenue",
@@ -76,6 +116,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "vikki-residence",
+    blogTitle: "Vikki Residence: an open-air retreat at Hillcrest Colony",
+    blogExcerpt: "A rooftop lounge at Vikki Residence pairs a glass canopy and timber pergola with a built-in planter and patterned brick screen. It creates a shaded place to gather outdoors.",
+    blogCategory: "RESIDENTIAL DESIGN",
+    blogStory: [
+      "At Vikki Residence, the rooftop terrace becomes an outdoor room beneath a light pergola and glass canopy. A long built-in bench follows the edge, with a raised planter bringing greenery close to the seating.",
+      "A patterned brick screen adds privacy while allowing air and light to pass through. Timber, masonry, and planting make the terrace feel sheltered without closing it in.",
+      "With room to sit together and views across the neighbourhood, this rooftop setting extends the home beyond its interior and creates a calm place to pause outdoors.",
+    ],
     title: "Vikki Residence",
     category: "Residential",
     location: "Hillcrest Colony",
@@ -91,6 +139,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "cafe-commercial",
+    blogExcerpt: "AT 26 opens onto Urban Promenade through a full-height glass frontage. Its illuminated sign, warm pendant lights, and timber details make the café inviting after dark.",
+    blogTitle: "AT 26: a glowing café frontage at Urban Promenade",
+    blogCategory: "HOSPITALITY DESIGN",
+    blogStory: [
+      "AT 26 makes its presence known along Urban Promenade with an illuminated café sign and a full-height glass frontage. From the street, warm interior lighting offers a clear view into the space.",
+      "Timber details, pendant lights, and closely arranged tables create an intimate dining room behind the glass. The open frontage connects the café to the surrounding promenade while giving guests a comfortable place to settle in.",
+      "After dark, the glowing sign and warm light make AT 26 a welcoming stop along the street. The design balances visibility from outside with a relaxed atmosphere inside.",
+    ],
     title: "AT 26",
     category: "Commercial",
     location: "Urban Promenade",
@@ -99,13 +155,21 @@ export const FEATURED_PROJECTS = [
     headline: "A cosy café with warm lights, wood details, and comfortable seats.",
     description:
       "AT 26 has soft seating, warm wood floors, and a welcoming counter. Large windows bring in daylight and give guests a comfortable place to meet, relax, and enjoy a meal.",
-    image: "/images/projects/cafe-commercial-1.jpg",
-    secondaryImage: "/images/projects/cafe-commercial-2.jpg",
+      image: "/images/projects/cafe-commercial-2.jpg",
+     secondaryImage: "/images/projects/cafe-commercial-1.jpg",
     palette: ["Oak Wood", "Terrazzo Stone", "Textured Walls", "Warm Fabric"],
     tags: ["Commercial", "Cafe & Bistro", "Hospitality Design", "Acoustic Ceiling"],
   },
   {
     id: "kgisl-commercial",
+    blogTitle: "KGISL: a connected workplace at Tech Horizon Campus",
+    blogExcerpt: "At KGISL, glazed meeting rooms sit beside a shared work area. Perforated timber panels, clear sightlines, and indoor planting bring warmth and connection to the office.",
+    blogCategory: "WORKPLACE DESIGN",
+    blogStory: [
+      "At the KGISL workspace, glazed meeting rooms keep conversations visible while giving them a defined place. The shared work area sits just outside, making it easy to move between focused discussions and desk work.",
+      "Perforated timber panels add texture to the glass-lined interior. Indoor plants soften the work area, while a restrained palette keeps the room bright and composed.",
+      "The layout brings teams together without closing off the office. Clear sightlines and practical shared spaces make collaboration part of the everyday workplace.",
+    ],
     title: "KGISL",
     category: "Commercial",
     location: "Tech Horizon Campus",
@@ -121,6 +185,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "sai-commercial",
+    blogTitle: "Sai Techno Solutions: a distinctive welcome in the Creative Quarter",
+    blogExcerpt: "A sculpted reception desk, glowing display shelves, and a bold orange feature wall make Sai Techno Solutions memorable from the moment you enter.",
+    blogCategory: "WORKPLACE DESIGN",
+    blogStory: [
+      "At Sai Techno Solutions, the reception makes the company identity part of the interior. A sculpted pale counter sits before a vivid orange display wall, where integrated lighting highlights the objects on show.",
+      "Warm wood tones and amber lighting continue into the open corridor. Seating and planting create a welcoming arrival space, while the clear walkway leads naturally into the office.",
+      "The design makes room for both concentration and conversation, with a clear layout that supports the team’s everyday work.",
+    ],
     title: "Sai Techno Solutions",
     category: "Commercial",
     location: "Creative Quarter",
@@ -136,6 +208,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "pony-commercial",
+    blogTitle: "Bilbo Pony Salon & Pony Turf: active spaces at City Sports Complex",
+    blogExcerpt: "An aerial view of Bilbo Pony Salon & Pony Turf shows multiple courts connected by shared paths and seating. Distinct playing surfaces and perimeter planting organise the complex.",
+    blogCategory: "RECREATION DESIGN",
+    blogStory: [
+      "Bilbo Pony Salon & Pony Turf at City Sports Complex brings several games into one clearly organised outdoor setting. From above, the courts sit alongside one another, each with its own playing surface and boundary.",
+      "Walkways connect the activity areas, with planting and small seating points creating breaks between games. Lighting across the site supports evening use and helps define the courts after sunset.",
+      "The layout makes it easy to move between sports and gather around them. It is planned for active play as well as the time people spend watching and meeting.",
+    ],
     title: "Bilbo Pony Salon & Pony Turf",
     category: "Commercial",
     location: "City Sports Complex",

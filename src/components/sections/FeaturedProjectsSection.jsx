@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import { ArrowUpRight, MapPin } from "lucide-react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { FEATURED_PROJECTS } from "@/data/projects";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ImageReveal from "@/components/common/ImageReveal";
 import SmartImage from "@/components/common/SmartImage";
-import ProjectSliderBar from "@/components/common/ProjectSliderBar";
+
+// The homepage portfolio showcases the nine projects other than Sushma Villa.
+const HOMEPAGE_PORTFOLIO_PROJECTS = FEATURED_PROJECTS.filter(
+  (project) => project.id !== "sushma-villa"
+);
 
 export default function FeaturedProjectsSection() {
-  const [activeTab, setActiveTab] = useState(FEATURED_PROJECTS[0].id);
-  const shouldReduceMotion = useReducedMotion();
+  const [activeTab, setActiveTab] = useState(HOMEPAGE_PORTFOLIO_PROJECTS[0].id);
 
   const currentProject =
-    FEATURED_PROJECTS.find((p) => p.id === activeTab) || FEATURED_PROJECTS[0];
+    HOMEPAGE_PORTFOLIO_PROJECTS.find((p) => p.id === activeTab) || HOMEPAGE_PORTFOLIO_PROJECTS[0];
 
   return (
     <section
@@ -22,26 +24,34 @@ export default function FeaturedProjectsSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header + Horizontal Project Slider */}
         <AnimatedSection className="w-full mb-10 sm:mb-12">
-          <ProjectSliderBar
-            projects={FEATURED_PROJECTS}
-            activeId={activeTab}
-            onChange={setActiveTab}
-            eyebrow="Portfolio Showcase"
-            heading="Curated Private Residences"
-          />
+          <div className="flex flex-col gap-5 sm:gap-6">
+            <div>
+              <span className="inline-block px-3.5 py-1 rounded-full text-xs uppercase tracking-luxury font-medium bg-primary/10 text-primary border border-primary/20 mb-2">
+                Portfolio Showcase
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-tight text-primary text-balance">
+                Curated Private Residences
+              </h2>
+            </div>
+            <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1" role="group" aria-label="Choose a portfolio project">
+              {HOMEPAGE_PORTFOLIO_PROJECTS.map((project) => (
+                <button
+                  key={project.id}
+                  type="button"
+                  aria-pressed={activeTab === project.id}
+                  onClick={() => setActiveTab(project.id)}
+                  className={`min-h-[44px] px-4 sm:px-5 py-2 text-xs sm:text-sm font-medium tracking-wide rounded-full whitespace-nowrap shrink-0 border transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2 ${activeTab === project.id ? "bg-primary text-white border-primary" : "bg-white text-[#1A1A1A] border-[#1A1A1A]/15 hover:bg-[#1A1A1A] hover:text-white"}`}
+                >
+                  {project.title}
+                </button>
+              ))}
+            </div>
+          </div>
         </AnimatedSection>
 
         {/* Active Featured Project Hero Feature */}
         <div className="relative rounded-3xl bg-primary/[0.02] border border-primary/15 p-5 sm:p-10 lg:p-12 mb-10 sm:mb-12 shadow-lg overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentProject.id}
-              initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, x: 18 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, x: -18 }}
-              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
-            >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
               {/* Left: Project Imagery with Secondary Inset */}
               <div className="lg:col-span-7 relative sm:pb-8">
                 <div className="relative z-10">
@@ -122,13 +132,12 @@ export default function FeaturedProjectsSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+          </div>
         </div>
 
         {/* Alternating Secondary Project Visual Showcase */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {FEATURED_PROJECTS.filter((p) => p.id !== activeTab).map((proj) => (
+          {HOMEPAGE_PORTFOLIO_PROJECTS.map((proj) => (
             <button
               key={proj.id}
               type="button"
