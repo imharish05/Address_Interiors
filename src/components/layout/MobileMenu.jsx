@@ -100,7 +100,7 @@ export default function MobileMenu({ isOpen, onClose, activeSection }) {
                 className={`group min-h-[44px] text-lg sm:text-xl tracking-wide transition-all duration-200 flex items-center justify-between py-2.5 px-4 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] ${
                   isActive
                     ? "bg-white text-[#1A1A1A] font-medium shadow-md rounded-full"
-                    : "text-white font-normal hover:bg-white/15"
+                    : "text-white font-normal hover:bg-transparent"
                 }`}
               >
                 <span>{link.name}</span>

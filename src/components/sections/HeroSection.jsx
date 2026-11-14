@@ -59,13 +59,13 @@ export default function HeroSection() {
 
             {/* Micro Stats */}
             <div className="mt-8 pt-6 border-t border-primary/10 w-full">
-              <div className="grid grid-cols-3 gap-3 sm:gap-8">
+              <div className="grid grid-cols-3 gap-2 sm:gap-8">
                 {HERO_CONTENT.stats.map((stat) => (
-                  <div key={stat.label} className="flex flex-col min-w-0">
+                  <div key={stat.label} className="flex min-w-0 flex-col text-center sm:text-left">
                     <span className="text-xl sm:text-3xl font-light tracking-tight text-primary">
                       {stat.value}
                     </span>
-                    <span className="text-[10px] sm:text-[11px] uppercase tracking-wide sm:tracking-wider text-[#1A1A1A]/70 mt-1 leading-snug break-words">
+                    <span className="mt-1 min-h-[3.8em] text-[9px] uppercase leading-[1.35] tracking-[0.04em] text-[#1A1A1A]/70 sm:min-h-0 sm:text-[11px] sm:leading-snug sm:tracking-wider">
                       {stat.label}
                     </span>
                   </div>
