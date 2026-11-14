@@ -291,11 +291,11 @@ export const CONTACT_CONTENT = {
   demoNotice:
     "Enquiry concierge — in production, this connects to our client team. Selecting submit will prepare a direct email draft.",
   projectTypes: [
-    "Full Home Transformation",
+    "Full Home Interiors",
     "Luxury Living Suite",
     "Bespoke Kitchen & Dining",
     "Master Bedroom Retreat",
-    "Full Home interior"
+    "Corporate Office Interiors"
   ],
 };
 
