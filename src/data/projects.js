@@ -209,12 +209,12 @@ export const FEATURED_PROJECTS = [
   {
     id: "pony-commercial",
     blogTitle: "Bilbo Pony Salon & Pony Turf: active spaces at City Sports Complex",
-    blogExcerpt: "An aerial view of Bilbo Pony Salon & Pony Turf shows multiple courts connected by shared paths and seating. Distinct playing surfaces and perimeter planting organise the complex.",
+    blogExcerpt: "Bilbo Pony Salon & Pony Turf brings two very different settings together: an aerial sports complex with multiple courts, and a salon interior with mirrored styling stations and warm ring lights.",
     blogCategory: "RECREATION DESIGN",
     blogStory: [
-      "Bilbo Pony Salon & Pony Turf at City Sports Complex brings several games into one clearly organised outdoor setting. From above, the courts sit alongside one another, each with its own playing surface and boundary.",
-      "Walkways connect the activity areas, with planting and small seating points creating breaks between games. Lighting across the site supports evening use and helps define the courts after sunset.",
-      "The layout makes it easy to move between sports and gather around them. It is planned for active play as well as the time people spend watching and meeting.",
+      "Bilbo Pony Salon & Pony Turf brings sports and personal grooming together under one project. The turf view shows several courts arranged side by side, with clear boundaries and paths linking the different play areas.",
+      "The salon has a very different character: dark styling chairs and glossy workstations sit beneath warm circular pendant lights. Tall mirrors with illuminated edges repeat along a ribbed feature wall, while the large front window opens the room to the street.",
+      "Together, the two spaces make Bilbo Pony Salon & Pony Turf a mixed-use destination for both active recreation and salon services. The contrast between the open courts and the intimate, carefully lit salon gives each part its own identity while keeping them within one project story.",
     ],
     title: "Bilbo Pony Salon & Pony Turf",
     category: "Commercial",
